@@ -6,8 +6,8 @@
 	}
 
 	function cloneImages() {
-		var titleImage = doc.querySelector( '.nejs-title img' ),
-			numberOfImages = 7;
+		var titleImage = doc.querySelector( '.nejs-title object, .nejs-title img' ),
+			numberOfImages = 6;
 
 		if( titleImage ) {
 			for( var j=1, k=numberOfImages; j<k; j++ ) {
