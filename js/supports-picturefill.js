@@ -1,7 +1,9 @@
-/*! Picturefill - Responsive Images that work today. (and mimic the proposed Picture element with divs). Author: Scott Jehl, Filament Group, 2012 | License: MIT/GPLv3 */
+/*!
+ * Picturefill - Responsive Images that work today. (and mimic the proposed Picture element with divs).
+ * Author: Scott Jehl, Filament Group, 2012 | License: MIT/GPLv3 */
 
 (function( w, doc ){
-	
+
 	// Enable strict mode
 	"use strict";
 
@@ -20,12 +22,12 @@
 
 				var sources = ps[ i ].getElementsByTagName( "div" ),
 					matches = [];
-			
+
 				// See if which sources match
 				for( var j = 0, jl = sources.length; j < jl; j++ ){
 					var test = sources[ j ].getAttribute( "data-supports" );
 
-					// if there's no media specified, OR w.matchMedia is supported 
+					// if there's no supports specified, OR the specified test is supported 
 					if( !test || supports[ test ] ){
 						matches.push( sources[ j ] );
 					}
@@ -36,17 +38,13 @@
 
 			if( matches.length ){
 				if( !picImg ){
-					picImg = doc.createElement( "img" );
-
-					alt = ps[ i ].getAttribute( "data-alt" );
-					if( alt ) {
-						picImg.alt = alt;
-					}
+					picImg = doc.createElement( "object" );
+					picImg.setAttribute( "type", "image/svg+xml" );
 
 					ps[ i ].insertBefore( picImg, ps[ i ].firstChild );
 				}
-				
-				picImg.src =  matches.pop().getAttribute( "data-src" );
+
+				picImg.setAttribute( "data", matches.pop().getAttribute( "data-src" ) );
 			}
 			else if( picImg ){
 				ps[ i ].removeChild( picImg );
@@ -54,7 +52,7 @@
 		}
 		}
 	};
-	
+
 	// Run on resize and domready (w.load as a fallback)
 	if( w.addEventListener ){
 		w.addEventListener( "DOMContentLoaded", function(){
@@ -67,5 +65,5 @@
 	else if( w.attachEvent ){
 		w.attachEvent( "onload", w.picturefill );
 	}
-	
+
 }( this, this.document ));
