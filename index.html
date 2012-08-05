@@ -9,15 +9,28 @@
 	<body>
 		<div data-picture class="nejs-title" tabindex="0">
 			<div data-src="img/nebraska-with-text-black.png" data-alt="NebraskaJS Logo"></div>
-			<div data-supports="svg" data-src="img/nebraska-outline-with-text.svg" data-alt="NebraskaJS Logo"></div>
+			<div data-supports="svg" data-src="img/nebraska-outline-with-text-transparent.svg" data-alt="NebraskaJS Logo"></div>
 			<noscript><img src="img/nebraska-with-text-black.png" alt="NebraskaJS Logo"></noscript>
+		</div>
+		<div class="content">
+
 		</div>
 		<!-- Image credit: http://en.wikipedia.org/wiki/File:Map_of_Nebraska.svg -->
 		<!--
-		Sections:
-		Next Meeting; Calendar
-		Attendee Map, X Attendees Served
-		Presentation Archives
+		Development Notes:
+		* Using supports-picturefill to only replace with SVG when browser supports it
+		* Using svg as <object> so that I can manipulate it using CSS: transforms and animations.
+		* Don't use svg as <img> most browsers don't support CSS manipulation
+
+		TODO: 
+		* Add opera and ms prefixes
+		* Inline SVG CSS so that it isn't a separate HTTP req.
+
+		Content:
+		* Sections:
+		* Next Meeting; Calendar
+		* Attendee Map, X Attendees Served
+		* Presentation Archives
 		-->
 
 		<script src="js/supports-picturefill.js"></script>
