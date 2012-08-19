@@ -14,10 +14,13 @@
 .nejs-title img {
 	width: 100%;
 	-webkit-transform-style: preserve-3d;
-	-webkit-transition: all 1s;
 	-moz-transform-style: preserve-3d;
-	-moz-transition: all 1s;
+	-ms-transform-style: preserve-3d;
 	transform-style: preserve-3d;
+
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	-ms-transition: all 1s;
 	transition: all 1s;
 }
 
@@ -28,11 +31,14 @@
 	background-color: #111;
 	border-color: #fff;
 }
+/* This break hards in Safari 6 */
 .nejs-title:focus object,
 .nejs-title:active object,
 .nejs-title:hover object {
 	width: 200%; /* scale(1.6) is blurry, changing width maintains sharp SVG */
+
 	-webkit-transform: rotate3d(1, 1, 1, 15deg) translate3d(100px, 0, 0);
 	-moz-transform: rotate3d(1, 1, 1, 15deg) translate3d(100px, 0, 0);
+	-ms-transform: rotate3d(1, 1, 1, 15deg) translate3d(100px, 0, 0);
 	transform: rotate3d(1, 1, 1, 15deg) translate3d(100px, 0, 0);
 }
