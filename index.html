@@ -7,33 +7,32 @@
 		<link href="css/title.css" rel="stylesheet">
 	</head>
 	<body>
-		<div data-picture class="nejs-title" tabindex="0">
-			<div data-src="img/nebraska-with-text-black.png" data-alt="NebraskaJS Logo"></div>
-			<div data-supports="svg" data-src="img/nebraska-outline-with-text-transparent.svg" data-alt="NebraskaJS Logo"></div>
-			<noscript><img src="img/nebraska-with-text-black.png" alt="NebraskaJS Logo"></noscript>
-		</div>
-		<div class="content">
+		<header>
+			<a href="/" class="nejs-title">
+				<object data="img/nebraska-outline-with-text-transparent.svg" type="image/svg+xml">
+					<img src="img/nebraska-outline.png" alt="NebraskaJS Logo">
+				</object>
+			</a>
+		</header>
 
-		</div>
 		<!-- Image credit: http://en.wikipedia.org/wiki/File:Map_of_Nebraska.svg -->
 		<!--
 		Development Notes:
-		* Using supports-picturefill to only replace with SVG when browser supports it
-		* Using svg as <object> so that I can manipulate it using CSS: transforms and animations.
+		* Using svg as <object> so that I can manipulate it using CSS: transforms and animations, and get free fallback to png.
 		* Don't use svg as <img> most browsers don't support CSS manipulation
 
 		TODO: 
 		* Add opera and ms prefixes
 		* Inline SVG CSS so that it isn't a separate HTTP req.
+		* How to combine page CSS with SVG CSS when using external <object> embed? I believe you can do this with inline SVG.
 
 		Content:
 		* Sections:
 		* Next Meeting; Calendar
 		* Attendee Map, X Attendees Served
 		* Presentation Archives
-		-->
 
-		<script src="js/supports-picturefill.js"></script>
 		<script src="js/title.js"></script>
+		-->
 	</body>
 </html>

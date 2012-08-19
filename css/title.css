@@ -3,10 +3,11 @@
 	margin-left: 3em;
 	padding: 3em 1em;
 	background-color: #222;
-	height: 100%;
 	float: left;
 	position: fixed;
 	top: 0;
+	border: 1px dotted transparent;
+	border-top: none;
 }
 
 .nejs-title object,
@@ -20,80 +21,18 @@
 	transition: all 1s;
 }
 
-.nejs-title object:nth-child(1) {
-	-webkit-transform: rotate3d(1, 1, 1, -75deg);
-	-moz-transform: rotate3d(1, 1, 1, -75deg);
-	transform: rotate3d(1, 1, 1, -75deg);
-	z-index: 3;
+.nejs-title:focus,
+.nejs-title:active,
+.nejs-title:focus {
+	outline: 0;
+	background-color: #111;
+	border-color: #fff;
 }
-.nejs-title object:nth-child(2) {
-	-webkit-transform: rotate3d(1, 1, 1, -60deg);
-	-moz-transform: rotate3d(1, 1, 1, -60deg);
-	transform: rotate3d(1, 1, 1, -60deg);
-	z-index: 4;
-}
-.nejs-title object:nth-child(3) {
-	-webkit-transform: rotate3d(1, 1, 1, -45deg);
-	-moz-transform: rotate3d(1, 1, 1, -45deg);
-	transform: rotate3d(1, 1, 1, -45deg);
-	z-index: 5;
-}
-.nejs-title object:nth-child(4) {
-	-webkit-transform: rotate3d(1, 1, 1, -30deg);
-	-moz-transform: rotate3d(1, 1, 1, -30deg);
-	transform: rotate3d(1, 1, 1, -30deg);
-	z-index: 6;
-}
-.nejs-title object:nth-child(5) {
-	-webkit-transform: rotate3d(1, 1, 1, -15deg);
-	-moz-transform: rotate3d(1, 1, 1, -15deg);
-	transform: rotate3d(1, 1, 1, -15deg);
-	z-index: 7;
-}
-.nejs-title object:nth-child(6) {
-	-webkit-transform: rotate3d(1, 1, 1, 0deg);
-	-moz-transform: rotate3d(1, 1, 1, 0deg);
-	transform: rotate3d(1, 1, 1, 0deg);
-	z-index: 8;
-}
-
+.nejs-title:focus object,
 .nejs-title:active object,
 .nejs-title:hover object {
 	width: 200%; /* scale(1.6) is blurry, changing width maintains sharp SVG */
-}
-.nejs-title:active object:nth-child(1),
-.nejs-title:hover object:nth-child(1) {
-	-webkit-transform: rotate3d(1, 1, 1, -15deg) translate3d(400px, 0, 0);
-	-moz-transform: rotate3d(1, 1, 1, -15deg) translate3d(400px, 0, 0);
-	transform: rotate3d(1, 1, 1, -15deg) translate3d(400px, 0, 0);
-}
-.nejs-title:active object:nth-child(2),
-.nejs-title:hover object:nth-child(2) {
-	-webkit-transform: rotate3d(1, 1, 1, 0deg) translate3d(400px, 0, 0);
-	-moz-transform: rotate3d(1, 1, 1, 0deg) translate3d(400px, 0, 0);
-	transform: rotate3d(1, 1, 1, 0deg) translate3d(400px, 0, 0);
-}
-.nejs-title:active object:nth-child(3),
-.nejs-title:hover object:nth-child(3) {
-	-webkit-transform: rotate3d(1, 1, 1, 15deg) translate3d(400px, 0, 0);
-	-moz-transform: rotate3d(1, 1, 1, 15deg) translate3d(400px, 0, 0);
-	transform: rotate3d(1, 1, 1, 15deg) translate3d(400px, 0, 0);
-}
-.nejs-title:active object:nth-child(4),
-.nejs-title:hover object:nth-child(4) {
-	-webkit-transform: rotate3d(1, 1, 1, 30deg) translate3d(400px, 0, 0);
-	-moz-transform: rotate3d(1, 1, 1, 30deg) translate3d(400px, 0, 0);
-	transform: rotate3d(1, 1, 1, 30deg) translate3d(400px, 0, 0);
-}
-.nejs-title:active object:nth-child(5),
-.nejs-title:hover object:nth-child(5) {
-	-webkit-transform: rotate3d(1, 1, 1, 45deg) translate3d(400px, 0, 0);
-	-moz-transform: rotate3d(1, 1, 1, 45deg) translate3d(400px, 0, 0);
-	transform: rotate3d(1, 1, 1, 45deg) translate3d(400px, 0, 0);
-}
-.nejs-title:active object:nth-child(6),
-.nejs-title:hover object:nth-child(6) {
-	-webkit-transform: rotate3d(1, 1, 1, 60deg) translate3d(400px, 0, 0);
-	-moz-transform: rotate3d(1, 1, 1, 60deg) translate3d(400px, 0, 0);
-	transform: rotate3d(1, 1, 1, 60deg) translate3d(400px, 0, 0);
+	-webkit-transform: rotate3d(1, 1, 1, 15deg) translate3d(100px, 0, 0);
+	-moz-transform: rotate3d(1, 1, 1, 15deg) translate3d(100px, 0, 0);
+	transform: rotate3d(1, 1, 1, 15deg) translate3d(100px, 0, 0);
 }

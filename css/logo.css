@@ -7,7 +7,6 @@
 	90% 	{ fill: red; }
 }
 
-path#Nebraska {
-	fill: yellow;
-	-webkit-animation: rainbow 10s linear infinite;
+svg:hover path#Nebraska {
+	-webkit-animation: rainbow 3s linear infinite;
 }
