@@ -22,8 +22,9 @@ Changes to the Logo must be updated at these locations:
 * Content: Add Next Meeting, Presentation Archives
 * Add opera and ms prefixes
 * Concat CSS
-* Add node.js static site generator, move away from raw html files
-* Add SocialCount
-* Comprehensive font-face testing
+* Comprehensive font-face testing (looks a little off on iOS)
 * Add link to lanyrd http://lanyrd.com/series/nebraskajs/
 * Add link to speakerdeck http://speakerdeck.com/nebraskajs/
+* Add node.js static site generator, move away from raw html files
+* Add SocialCount to main page and posts
+* Add disqus for comments on posts
