@@ -2,19 +2,63 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>NebraskaJS</title>
 		<link href="css/global.css" rel="stylesheet">
-		<link href="css/title.css" rel="stylesheet">
+		<link href="css/social.css" rel="stylesheet">
+		<link href="http://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
 	</head>
 	<body>
-		<header>
-			<a href="/" class="nejs-title">
-				<object data="img/nebraska-outline-with-text-transparent.svg" type="image/svg+xml">
-					<img src="img/nebraska-outline.png" alt="NebraskaJS Logo">
-				</object>
-			</a>
-		</header>
-
+		<!-- TODO: max-width on main column for better line length (and center) -->
+		<div class="rail">
+			<header>
+				<a href="/" class="nejs-title">
+					<object data="img/nebraska-outline-with-text-transparent.svg" type="image/svg+xml">
+						<img src="img/nebraska-outline.png" alt="NebraskaJS Logo">
+					</object>
+					<img src="img/cornfield-800.png" class="nejs-title-img">
+					<div class="nejs-title-bar"></div>
+					<h1>NebraskaJS</h1>
+				</a>
+			</header>
+			<aside>
+				<div class="social">
+					<a href="http://www.meetup.com/nebraskajs/" class="meetup">Join our Meetup</a>
+					<a href="//twitter.com/nebraskajs" class="twitter"><i class="foundicon-twitter"></i> Twitter</a>
+					<a href="//github.com/nebraskajs/" class="github"><i class="foundicon-github"></i> GitHub</a>
+					<a href="//www.facebook.com/nebraskajs" class="facebook"><i class="foundicon-facebook"></i> Facebook</a>
+					<a href="//plus.google.com/115220697074331366039/posts"class="googleplus"><i class="foundicon-google-plus"></i> Google Plus</a>
+				</div>
+			</aside>
+		</div>
+		<div class="main" data-role="main">
+			<article>
+				<p>NebraskaJS was founded in fall of 2009 by local front-end heros <a href="https://twitter.com/jdsharp">Jonathan Sharp</a>, <a href="https://twitter.com/amwirick">Andrew Wirick</a>, and <a href="https://twitter.com/eliperelman">Eli Perelman</a>. It was originally focused solely on jQuery, but later expanded to include other front end technologies.</p>
+				<p>In 2012, group leadership duties were passed on to <a href="https://twitter.com/zachleat">Zach Leatherman</a> and the group decided to move away from a jQuery focus toward a more generic JavaScript focus.</p>
+				<p>Our goals:
+					<ul>
+						<li>Encourage open source/community contributions by our members. A portion of every meeting is dedicated to small lightning talks on GitHub issues that members in the community have contributed to (no issue too small).</li>
+						<li>Sharing workflow and useful tools. Small coding exercises dedicated to showing how others work can expose useful tips and tricks to separate the wheat from the chaff in development tooling.</li>
+						<li>All presentations are recorded and published online, in the hopes that it will improve the quality of presentations and offer nice exposure and incentive to present.</li>
+					</ul>
+					We seek to bring together the developer and designer community in and around Omaha and cover interesting topics relevant to front end web development. Come <a href="http://meetup.com/nebraskajs/">join us</a> for an informative event and a great community!
+				</p>
+				<em>This is the group formerly known as Omaha jQuery Meetup (2009) and Omaha Front-End Web &amp; jQuery (2011).</em>
+			</article>
+			<article>
+				<h2>Presenters (in order of appearance)</h2>
+				<ol>
+					<li>Jonathan Sharp: <a href="https://twitter.com/jdsharp">@jdsharp</a></li>
+					<li>Andrew Wirick: <a href="https://twitter.com/amwirick">@amwirick</a></li>
+					<li>Adam Lassek: <a href="https://twitter.com/alassek">@alassek</a></li>
+					<li>Eli Perelman: <a href="https://twitter.com/eliperelman">@eliperelman</a>, <a href="http://eliperelman.com/">Blog</a></li>
+					<li>Zach Leatherman: <a href="https://twitter.com/zachleat">@zachleat</a>, <a href="http://zachleat.com/web/">Blog</a></li>
+					<li>Nick Nisi: <a href="https://twitter.com/nicknisi">@nicknisi</a>, <a href="http://nicknisi.com/blog/">Blog</a></li>
+					<li>Dan Vega: <a href="https://twitter.com/cfaddict">@cfaddict</a></li>
+				</ol>
+				<a href="https://twitter.com/nebraskajs/presenters">Twitter List of Presenters</a>
+			</article>
+		</div>
 		<!-- Image credit: http://en.wikipedia.org/wiki/File:Map_of_Nebraska.svg -->
 		<!--
 		Development Notes:
@@ -23,16 +67,12 @@
 
 		TODO: 
 		* Add opera and ms prefixes
-		* Inline SVG CSS so that it isn't a separate HTTP req.
-		* How to combine page CSS with SVG CSS when using external <object> embed? I believe you can do this with inline SVG.
 
 		Content:
 		* Sections:
 		* Next Meeting; Calendar
 		* Attendee Map, X Attendees Served
 		* Presentation Archives
-
-		<script src="js/title.js"></script>
 		-->
 	</body>
 </html>
