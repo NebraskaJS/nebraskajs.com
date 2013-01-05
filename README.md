@@ -18,9 +18,7 @@ Changes to the Logo must be updated at these locations:
 * [Nebraska Image](http://en.wikipedia.org/wiki/File:Map_of_Nebraska.svg)
 
 ### TODOs
-* max-width on main column for better line length (and center)
 * Content: Add Next Meeting, Presentation Archives
-* Add opera and ms prefixes
 * Concat CSS
 * Comprehensive font-face testing (looks a little off on iOS)
 * Add link to lanyrd http://lanyrd.com/series/nebraskajs/
@@ -28,3 +26,5 @@ Changes to the Logo must be updated at these locations:
 * Add node.js static site generator, move away from raw html files
 * Add SocialCount to main page and posts
 * Add disqus for comments on posts
+* Fix non-WebKit issue with image mask.Does this work? http://generic.cx/for/webkit/test.html https://github.com/Modernizr/Modernizr/blob/master/feature-detects/css-mask.js
+* Collapsed menu for single column layout.
