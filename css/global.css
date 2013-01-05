@@ -3,27 +3,36 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
+
+/* Yellow border */
 html {
 	background-color: #f4d93a;
 	padding: .3em;
 }
+@media (min-width: 47em) {
+	html {
+		padding: 1em;
+	}
+}
+
+/* Layout */
 .rail {
 	text-align: center;
 	padding: 2em;
 }
-.main {
+.content {
 	text-align: left;
 	padding: 1em;
 	background-color: #fff;
 	background-color: rgba(255,255,255,.6);
 	min-height: 40em;
 }
+.main {
+	max-width: 36em;
+	margin: 0 auto;
+}
 
-@media (min-width: 21em) {
-	html {
-		padding: 1em;
-	}
-	/* Layout */
+@media (min-width: 47em) {
 	.rail {
 		text-align: left;
 		position: absolute;
@@ -31,7 +40,7 @@ html {
 		top: 0;
 		padding: 4em 0 0 3em;
 	}
-	.main {
+	.content {
 		padding: 2em;
 		margin-left: 18em;
 	}
@@ -53,7 +62,6 @@ h1 {
 }
 
 /* Social links */
-
 .social {
 	max-width: 14em;
 	display: inline-block;
@@ -63,119 +71,119 @@ h1 {
 	-webkit-transition: all .2s;
 	-moz-transition: all .2s;
 	-ms-transition: all .2s;
+	-o-transition: all .2s;
 	transition: all .2s;
 }
-	.social a:first-child {
-		border-radius: .3em .3em 0 0;
-	}
-	.social a:last-child {
-		border-radius: 0 0 .3em .3em;
-	}
-	.social:hover,
-	.social:focus {
-		background-color: #fff;
-		background-color: rgba(255,255,255,.5);
-	}
-	.social a {
-		text-decoration: none;
-		display: inline-block;
-		padding: .4em 1em;
-		width: 100%;
-		opacity: .9;
-		font-size: 1.25em;
-		line-height: 220%;
-	}
-	.social i {
-		font-size: 2em;
-		vertical-align: middle;
-		margin-right: .2em;
-	}
-	.social a:hover,
-	.social a:focus {
-		opacity: 1;
-		background-color: #fff;
-		font-weight: bold;
-	}
-	.social a:focus {
-		outline: 1px dotted #fff;
-	}
-	.social a:link,
-	.social a:visited {
-		color: #999;
-	}
-	.github:link:hover,
-	.github:link:focus,
-	.github:visited:hover,
-	.github:visited:focus {
-		color: #000;
-	}
-	.facebook:link:hover,
-	.facebook:link:focus,
-	.facebook:visited:hover,
-	.facebook:visited:focus {
-		color: #38539b;
-	}
-	.twitter:link:hover,
-	.twitter:link:focus,
-	.twitter:visited:hover,
-	.twitter:visited:focus {
-		color: #00c9ff;
-	}
-	.googleplus:link:hover,
-	.googleplus:link:focus,
-	.googleplus:visited:hover,
-	.googleplus:visited:focus {
-		color: #ec3a1f;
-	}
-	.meetup:link:hover,
-	.meetup:link:focus,
-	.meetup:visited:hover,
-	.meetup:visited:focus {
-		color: #e51937;
-	}
+.social a:first-child {
+	border-radius: .3em .3em 0 0;
+}
+.social a:last-child {
+	border-radius: 0 0 .3em .3em;
+}
+.social:hover,
+.social:focus {
+	background-color: #fff;
+	background-color: rgba(255,255,255,.5);
+}
+.social a {
+	text-decoration: none;
+	display: inline-block;
+	padding: .4em 1em;
+	width: 100%;
+	opacity: .9;
+	font-size: 1.25em;
+	line-height: 220%;
+}
+.social i {
+	font-size: 2em;
+	vertical-align: middle;
+	margin-right: .2em;
+}
+.social a:hover,
+.social a:focus {
+	opacity: 1;
+	background-color: #fff;
+	font-weight: bold;
+}
+.social a:focus {
+	outline: 1px dotted #fff;
+}
+.social a:link,
+.social a:visited {
+	color: #999;
+}
+.github:link:hover,
+.github:link:focus,
+.github:visited:hover,
+.github:visited:focus {
+	color: #000;
+}
+.facebook:link:hover,
+.facebook:link:focus,
+.facebook:visited:hover,
+.facebook:visited:focus {
+	color: #38539b;
+}
+.twitter:link:hover,
+.twitter:link:focus,
+.twitter:visited:hover,
+.twitter:visited:focus {
+	color: #00c9ff;
+}
+.googleplus:link:hover,
+.googleplus:link:focus,
+.googleplus:visited:hover,
+.googleplus:visited:focus {
+	color: #ec3a1f;
+}
+.meetup:link:hover,
+.meetup:link:focus,
+.meetup:visited:hover,
+.meetup:visited:focus {
+	color: #e51937;
+}
 
 /* banner logo */
 .nejs-title {
 	position: relative;
 	width: 100%;
-	border: 1px dotted transparent;
-	border-top: none;
 	display: block;
-	margin-bottom: 3em;
+	margin: 0 auto 3em;
 	text-decoration: none;
+	max-width: 20em;
+}
+@media (min-width: 47em) {
+	.nejs-title {
+		max-width: 14em;
+	}
 }
 .nejs-title h1 {
 	font-size: 1.8em;
 	text-align: center;
 }
-	@media (min-width: 21em) {
-		.nejs-title {
-			max-width: 14em;
-		}
-	}
-	.nejs-title:focus .nejs-title-img,
-	.nejs-title:active .nejs-title-img,
-	.nejs-title:hover .nejs-title-img {
-		opacity: 1;
-		-webkit-filter: grayscale(0%);
-	}
-	.nejs-title-img {
-		position: absolute;
-		top: 0;
-		left: 0;
-		-webkit-mask-image: url(../img/nebraska-outline-with-text-transparent.svg);
-		-webkit-filter: grayscale(100%);
-		opacity: .1;
-	}
-	.nejs-title-img {
-		-webkit-transition: opacity 1s;
-		-moz-transition: opacity 1s;
-		-ms-transition: opacity 1s;
-		transition: opacity 1s;
-	}
+.nejs-title:focus .nejs-title-img,
+.nejs-title:active .nejs-title-img,
+.nejs-title:hover .nejs-title-img {
+	opacity: 1;
+	-webkit-filter: grayscale(0%);
+}
+.nejs-title-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-mask-image: url(../img/nebraska-outline-with-text-transparent.svg);
+	-webkit-filter: grayscale(100%);
+	opacity: .1;
+}
+.nejs-title-img {
+	-webkit-transition: opacity 1s;
+	-moz-transition: opacity 1s;
+	-ms-transition: opacity 1s;
+	transition: opacity 1s;
+}
 
-	.nejs-title-img,
-	.nejs-title object {
-		width: 100%;
-		z-index: 1;
-	}
+.nejs-title-img,
+.nejs-title object {
+	width: 100%;
+	z-index: 1;
+}
