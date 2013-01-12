@@ -3,6 +3,14 @@ NebraskaJS
 
 Web site for Nebraska programmers dedicated to the JavaScript programming language.
 
+### Building the Site
+
+Using [Jekyll](https://github.com/mojombo/jekyll). Just run the following command from the root directory.
+
+    jekyll
+
+Output is generated into the `_site` directory.  As is, the site's hierarchy (subfolders for posts) means that all of the resources are referenced using absolute urls and the site must be hosted at `/`. Set up a Virtual Host for the `_site` directory and modify your `/etc/hosts` to map that to a local development domain of your choosing.
+
 ### Logo Image Guidelines
 
 Changes to the Logo must be updated at these locations:
@@ -12,6 +20,9 @@ Changes to the Logo must be updated at these locations:
 * [Meetup](http://www.meetup.com/nebraskajs/)
 * [Facebook](https://www.facebook.com/nebraskajs)
 * [Google Plus](https://plus.google.com/115220697074331366039/posts)
+* [LinkedIn](http://www.linkedin.com/groups/NebraskaJS-4790018)
+* [Speakerdeck](speakerdeck.com/nebraskajs/)
+* [Lanyrd](http://lanyrd.com/series/nebraskajs/)
 * favicon.ico, 32x32 (for HiDPI)
 
 ### Credits
