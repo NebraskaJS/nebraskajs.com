@@ -58,21 +58,35 @@ body {
 }
 h1 {
 	color: #222;
-	font-size: 240%;
+	font-size: 2.4em;
+	line-height: 110%;
+}
+h1:first-child {
+	margin-top: 0;
+}
+code {
+	font-family: Consolas, monospace;
+	font-size: .875em;
 }
 
 /* Social links */
 .social {
+	display: block;
 	max-width: 14em;
-	display: inline-block;
 	text-align: left;
 	border-radius: .3em;
+	margin: 0 auto;
 
 	-webkit-transition: all .2s;
 	-moz-transition: all .2s;
 	-ms-transition: all .2s;
 	-o-transition: all .2s;
 	transition: all .2s;
+}
+@media (min-width: 47em) {
+	.social {
+		margin: 0;
+	}
 }
 .social a:first-child {
 	border-radius: .3em .3em 0 0;
@@ -142,6 +156,18 @@ h1 {
 .meetup:visited:focus {
 	color: #e51937;
 }
+.social.other {
+	margin-top: 1em;
+}
+.social.other a {
+	padding: .4em 1em;
+	font-size: 1em;
+	line-height: 160%;
+}
+.social.other a:focus,
+.social.other a:hover {
+	font-weight: normal;
+}
 
 /* banner logo */
 .nejs-title {
@@ -186,4 +212,42 @@ h1 {
 .nejs-title object {
 	width: 100%;
 	z-index: 1;
+}
+
+/* Posts and Content */
+.posts,
+.events {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.posts li,
+.events li {
+	padding: 0.5em 0;
+}
+.posts a,
+.events a {
+	font-weight: bold;
+	font-size: 1.6em;
+	line-height: 110%;
+}
+.presenters {
+	list-style: disc;
+}
+
+/* FitVids */
+.fluid-width-video-wrapper {
+	width: 100%;
+	position: relative;
+	padding: 0;
+	padding-top: 56.25%;
+}
+.fluid-width-video-wrapper iframe,
+.fluid-width-video-wrapper object,
+.fluid-width-video-wrapper embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
