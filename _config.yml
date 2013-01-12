@@ -1,0 +1,4 @@
+safe: false
+markdown: rdiscount
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink: /:year/:title/

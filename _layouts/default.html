@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>NebraskaJS</title>
+		<link href="/css/global.css" rel="stylesheet">
+		<link href="/css/social.css" rel="stylesheet">
+		<link href="http://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+	</head>
+	<body>
+		<div class="rail">
+			<header>
+				<a href="/" class="nejs-title">
+					<object data="/img/nebraska-outline-with-text-transparent.svg" type="image/svg+xml">
+						<img src="/img/nebraska-outline.png" alt="NebraskaJS Logo">
+					</object>
+					<img src="/img/cornfield-400.png" class="nejs-title-img">
+					<div class="nejs-title-bar"></div>
+					<h1>NebraskaJS</h1>
+				</a>
+			</header>
+			<aside>
+				<div class="social">
+					<a href="http://www.meetup.com/nebraskajs/" class="meetup">Join our Meetup</a>
+					<a href="//twitter.com/nebraskajs" class="twitter"><i class="foundicon-twitter"></i> Twitter</a>
+					<a href="//github.com/nebraskajs/" class="github"><i class="foundicon-github"></i> GitHub</a>
+					<a href="//www.facebook.com/nebraskajs" class="facebook"><i class="foundicon-facebook"></i> Facebook</a>
+					<a href="//plus.google.com/115220697074331366039/posts" class="googleplus"><i class="foundicon-google-plus"></i> Google Plus</a>
+					<a href="http://www.linkedin.com/groups/NebraskaJS-4790018" class="linkedin"><i class="foundicon-linkedin"></i> LinkedIn</a>
+				</div>
+				<div class="social other">
+					<a href="https://speakerdeck.com/nebraskajs">Slides on SpeakerDeck</a>
+					<a href="http://techomaha.com/tag/nebraskajs/">Videos on Tech Omaha</a>
+					<!--<a href="http://lanyrd.com/series/nebraskajs/">Events on Lanyrd</a>-->
+				</div>
+			</aside>
+		</div>
+		<div class="content">
+			<div class="main" data-role="main">
+				{{ content }}
+			</div><!-- /.main -->
+		</div><!-- /.content -->
+		<!--
+		Development Notes:
+		* Using svg as <object> so that I can manipulate it using CSS: transforms and animations, and get free fallback to png.
+		* Don't use svg as <img> most browsers don't support CSS manipulation
+		-->
+	</body>
+</html>

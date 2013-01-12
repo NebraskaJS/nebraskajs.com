@@ -12,18 +12,15 @@ Changes to the Logo must be updated at these locations:
 * [Meetup](http://www.meetup.com/nebraskajs/)
 * [Facebook](https://www.facebook.com/nebraskajs)
 * [Google Plus](https://plus.google.com/115220697074331366039/posts)
+* favicon.ico, 32x32 (for HiDPI)
 
 ### Credits
 * [Zurb Foundation Icon Font 2, Social Set](http://www.zurb.com/playground/foundation-icons)
 * [Nebraska Image](http://en.wikipedia.org/wiki/File:Map_of_Nebraska.svg)
 
 ### TODOs
-* Content: Add Next Meeting, Presentation Archives
 * Concat CSS
 * Comprehensive font-face testing (looks a little off on iOS)
-* Add link to lanyrd http://lanyrd.com/series/nebraskajs/
-* Add link to speakerdeck http://speakerdeck.com/nebraskajs/
-* Add node.js static site generator, move away from raw html files
 * Add SocialCount to main page and posts
 * Add disqus for comments on posts
 * Fix non-WebKit issue with image mask.Does this work? http://generic.cx/for/webkit/test.html https://github.com/Modernizr/Modernizr/blob/master/feature-detects/css-mask.js
