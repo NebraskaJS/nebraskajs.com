@@ -62,6 +62,11 @@ body {
 :visited {
 	color: #3c624b;
 }
+:active,
+:link:hover,
+:visited:hover {
+	color: #d94625;
+}
 h1 {
 	color: #222;
 	font-size: 2.4em;
