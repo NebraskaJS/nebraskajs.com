@@ -62,7 +62,7 @@ body {
 :visited {
 	color: #3c624b;
 }
-:active,
+:link:active,
 :link:hover,
 :visited:hover {
 	color: #d94625;
