@@ -1,20 +1,16 @@
 ---
 layout: default
-title:
 ---
 
 <article>
-	<h2>Next Event:</h2>
-	<ul class="events">
-		<li><a href="http://www.meetup.com/nebraskajs/events/97861512/">05 Mar 2013</a></li>
-	</ul>
+	<h2>Next Event: <a href="http://www.meetup.com/nebraskajs/events/97861512/">05 Mar 2013</a></h2>
 </article>
 
 <article>
 	<h2>Presentations</h2>
 	<ul class="posts">
 		{% for post in site.posts %}
-			<li><a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }})</li>
+			<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 		{% endfor %}
 	</ul>
 </article>
@@ -29,9 +25,6 @@ title:
 		<li>Zach Leatherman: <a href="https://twitter.com/zachleat">@zachleat</a>, <a href="http://zachleat.com/web/">Blog</a></li>
 		<li>Nick Nisi: <a href="https://twitter.com/nicknisi">@nicknisi</a>, <a href="http://nicknisi.com/blog/">Blog</a></li>
 		<li>Dan Vega: <a href="https://twitter.com/cfaddict">@cfaddict</a></li>
-	</ol>
-	<h3>Lightning Talks</h3>
-	<ol class="presenters">
 		<li>Collin Forrester: <a href="https://twitter.com/cforrester07">@cforrester07</a></li>
 	</ol>
 	<p><em>Ordered by presentation date. Also available as a <a href="https://twitter.com/nebraskajs/presenters">Twitter List</a>.</em></p>

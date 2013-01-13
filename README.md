@@ -37,5 +37,5 @@ Changes to the Logo must be updated at these locations:
 * Fix non-WebKit issue with image mask.Does this work? http://generic.cx/for/webkit/test.html https://github.com/Modernizr/Modernizr/blob/master/feature-detects/css-mask.js
 * Collapsed menu (vertically) for single column layout.
 * .htaccess with caching, gzip rules
-* LinkedIn sidebar link hover color
-* Default and :visited link colors
+* Analytics
+* Kuler Color Theme https://kuler.adobe.com/#themeID/2209535

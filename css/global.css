@@ -56,6 +56,12 @@ body {
 	font-size: 100%;
 	line-height: 140%;
 }
+:link {
+	color: #67a281;
+}
+:visited {
+	color: #3c624b;
+}
 h1 {
 	color: #222;
 	font-size: 2.4em;
@@ -63,6 +69,9 @@ h1 {
 }
 h1:first-child {
 	margin-top: 0;
+}
+h2 {
+	font-size: 1.4em;
 }
 code {
 	font-family: Consolas, monospace;
@@ -156,6 +165,12 @@ code {
 .meetup:visited:focus {
 	color: #e51937;
 }
+.linkedin:link:hover,
+.linkedin:link:focus,
+.linkedin:visited:hover,
+.linkedin:visited:focus {
+	color: #1374af;
+}
 .social.other {
 	margin-top: 1em;
 }
@@ -227,8 +242,7 @@ code {
 }
 .posts a,
 .events a {
-	font-weight: bold;
-	font-size: 1.6em;
+	font-size: 1.9em;
 	line-height: 110%;
 }
 .presenters {
