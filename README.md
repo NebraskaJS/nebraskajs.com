@@ -30,7 +30,6 @@ Changes to the Logo must be updated at these locations:
 * [Nebraska Image](http://en.wikipedia.org/wiki/File:Map_of_Nebraska.svg)
 
 ### TODOs
-* Concat CSS
 * Comprehensive font-face testing (looks a little off on iOS, Firefox)
 * Add SocialCount to main page and posts
 * Fix non-WebKit issue with image mask.Does this work? http://generic.cx/for/webkit/test.html https://github.com/Modernizr/Modernizr/blob/master/feature-detects/css-mask.js
