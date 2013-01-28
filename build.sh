@@ -8,7 +8,7 @@ echo
 echo "Compressing CSS...\c"
 
 rm css/*-min.css
-yuicompressor -o '.css$:-min.css' css/*.css
+java -jar node_modules/yuicompressor/build/yuicompressor-2.4.7.jar -o '.css$:-min.css' css/*.css
 
 echo "done."
 
