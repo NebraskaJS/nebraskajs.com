@@ -4,6 +4,15 @@
 	box-sizing: border-box;
 }
 
+.a11y-only {
+	position: absolute !important;
+	height: 1px;
+	width: 1px; 
+	overflow: hidden;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
 /* Yellow border */
 html {
 	background-color: #f4d93a;
@@ -83,9 +92,24 @@ code {
 	font-size: .875em;
 }
 
-/* Social links */
-.social {
+/* Menu Button */
+.menu-title {
+	font-size: 1.5em;
+	text-decoration: none;
+	color: #666;
 	display: block;
+	margin-bottom: 1em;
+}
+.menu-title span {
+	margin-left: .4em;
+}
+
+/* Social links */
+#social:target {
+	display: block;
+}
+.social {
+	display: none;
 	max-width: 14em;
 	text-align: left;
 	border-radius: .3em;
@@ -98,7 +122,11 @@ code {
 	transition: all .2s;
 }
 @media (min-width: 47em) {
+	.menu-title {
+		display: none;
+	}
 	.social {
+		display: block;
 		margin: 0;
 	}
 }
