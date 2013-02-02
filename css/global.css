@@ -121,6 +121,7 @@ code {
 	opacity: .9;
 	font-size: 1.25em;
 	line-height: 220%;
+	font-weight: bold;
 }
 .social i {
 	font-size: 2em;
@@ -131,7 +132,6 @@ code {
 .social a:focus {
 	opacity: 1;
 	background-color: #fff;
-	font-weight: bold;
 }
 .social a:focus {
 	outline: 1px dotted #fff;
@@ -184,6 +184,7 @@ code {
 	font-size: 1em;
 	line-height: 160%;
 }
+.social.other a,
 .social.other a:focus,
 .social.other a:hover {
 	font-weight: normal;
