@@ -5,9 +5,13 @@ Web site for Nebraska programmers dedicated to the JavaScript programming langua
 
 ### Building the Site
 
-Using [Jekyll](https://github.com/mojombo/jekyll). Just run the following command from the root directory.
+Use [NPM](http://npmjs.org) to install the dependencies.
 
-    jekyll
+    npm install
+
+[Jekyll](https://github.com/mojombo/jekyll) is not available in npm, so you'll need to install it separately. Then, run the build script:
+
+    ./build.sh
 
 Output is generated into the `_site` directory.  As is, the site's hierarchy (subfolders for posts) means that all of the resources are referenced using absolute urls and the site must be hosted at `/`. Set up a Virtual Host for the `_site` directory and modify your `/etc/hosts` to map that to a local development domain of your choosing.
 
