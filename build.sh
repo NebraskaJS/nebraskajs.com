@@ -5,11 +5,15 @@
 
 echo
 
-echo "Compressing CSS...\c"
+echo "Compressing CSS...\n"
 
 rm css/*-min.css
 java -jar node_modules/yuicompressor/build/yuicompressor-2.4.7.jar -o '.css$:-min.css' css/*.css
 
-echo "done."
+echo "Running Jekyll...\n"
+
+jekyll
+
+echo "Done."
 
 echo
