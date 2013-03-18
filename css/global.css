@@ -13,6 +13,10 @@
 	clip: rect(1px, 1px, 1px, 1px);
 }
 
+img {
+	max-width: 100%;
+}
+
 /* Yellow border */
 html {
 	background-color: #f4d93a;
