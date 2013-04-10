@@ -37,7 +37,8 @@ html {
 	text-align: left;
 	padding: 1em;
 	background-color: #fff;
-	background-color: rgba(255,255,255,.6);
+	background-color: rgba(255,255,255,.9);
+	color: #525252;
 	min-height: 40em;
 }
 .main {
@@ -51,6 +52,7 @@ html {
 		position: absolute;
 		left: 0;
 		top: 0;
+		width: 17em;
 		padding: 4em 0 0 3em;
 	}
 	.content {
