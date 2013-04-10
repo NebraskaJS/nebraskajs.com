@@ -1,8 +1,16 @@
 {
-  "name": "nebraskajs",
-  "version": "0.0.1",
-  "private": true,
-  "dependencies": {
-    "yuicompressor": "latest"
-  }
+	"name": "nebraskajs",
+	"version": "0.0.1",
+	"homepage": "http://github.com/nebraskajs/nebraskajs.com/",
+	"author": {
+		"name": "Zach Leatherman"
+	},
+	"private": true,
+	"dependencies": {
+		"yuicompressor": "latest",
+		"cssmin": "latest"
+	},
+	"licenses": {
+		"MIT": true
+	}
 }
