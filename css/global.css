@@ -280,7 +280,6 @@ body {
 .supports-mask .nejs-title:active .nejs-title-img,
 .supports-mask .nejs-title:hover .nejs-title-img {
 	opacity: 1;
-	/*-webkit-filter: grayscale(0%);*/
 }
 .nejs-title-img {
 	position: absolute;
@@ -296,7 +295,6 @@ body {
 	-moz-transition: opacity 1s;
 	-ms-transition: opacity 1s;
 	transition: opacity 1s;
-	/*-webkit-filter: grayscale(100%);*/
 	opacity: .1;
 }
 .nejs-title-img {
@@ -305,10 +303,14 @@ body {
 
 .nejs-title-img,
 .nejs-title object {
-	max-width: 35%;
+	max-width: 100px;
+	max-height: 50px;
 	float: left;
-	margin-top: -1em;
+	margin-top: -.6em;
 	margin-right: 1em;
+}
+.nejs-title object {
+	height: auto;
 }
 
 @media (min-width: 47em) {
@@ -324,6 +326,7 @@ body {
 	.nejs-title object {
 		float: none;
 		max-width: 100%;
+		max-height: 100%;
 		margin-top: 0;
 		margin-right: 0;
 	}
