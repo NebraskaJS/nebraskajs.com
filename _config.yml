@@ -2,3 +2,5 @@ safe: false
 markdown: rdiscount
 # https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink: /:year/:title/
+# If package.json, grunt.js are listed below the js directory gets excluded. Why?
+exclude: node_modules, README.md, build.sh
