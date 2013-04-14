@@ -13,22 +13,22 @@ layout: default
 
 <article>
 	<div class="maxw">
+		<h2>Presenters</h2>
+	</div>
+	{% include presenters.html %}
+	<div class="maxw">
+		<p><em>Ordered by presentation date. Also available as a <a href="https://twitter.com/nebraskajs/presenters">Twitter List</a>.</em></p>
+	</div>
+</article>
+
+<article>
+	<div class="maxw">
 		<h2>Presentations</h2>
 		<ul class="posts">
 			{% for post in site.posts %}
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 			{% endfor %}
 		</ul>
-	</div>
-</article>
-
-<article>
-	<div class="maxw">
-		<h2>Presenters</h2>
-	</div>
-	{% include presenters.html %}
-	<div class="maxw">
-		<p><em>Ordered by presentation date. Also available as a <a href="https://twitter.com/nebraskajs/presenters">Twitter List</a>.</em></p>
 	</div>
 </article>
 
