@@ -14,6 +14,7 @@
 
 img {
 	max-width: 100%;
+	border: none;
 }
 
 /* Yellow border */
@@ -40,7 +41,7 @@ html {
 	color: #525252;
 	min-height: 40em;
 }
-.main {
+.maxw {
 	max-width: 36em;
 	margin: 0 auto;
 }
@@ -57,6 +58,7 @@ html {
 	.content {
 		padding: 2em;
 		margin-left: 18em;
+		position: relative;
 	}
 }
 
@@ -348,8 +350,52 @@ body {
 	font-size: 1.9em;
 	line-height: 110%;
 }
+
+/* Presenters List */
 .presenters {
-	list-style: disc;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.presenters li {
+	display: inline-block;
+	vertical-align: top;
+	padding: 1em 0;
+	min-width: 8.8em;
+}
+.presenters .name {
+	display: none;
+}
+.presenters a {
+	text-decoration: none;
+	display: block;
+}
+.presenters i {
+	font-size: 1.4em;
+}
+.presenters img {
+	width: 5em;
+	height: 5em;
+	margin-right: .3em;
+	float: left;
+	border-radius: 50%;
+	-webkit-filter: grayscale(70%);
+	filter: gray; /* IE6-9 */
+	-webkit-transition: all .6s ease;
+	-moz-transition: all .6s ease;
+	transition: all .6s ease;
+}
+.presenters img:focus,
+.presenters img:hover {
+	-webkit-filter: none;
+	filter: none;
+}
+@media (min-width: 47em) {
+	.presenters {
+		/*position: absolute;
+		left: 0;
+		right: 0;*/
+	}
 }
 
 /* FitVids */

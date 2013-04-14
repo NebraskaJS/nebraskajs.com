@@ -3,48 +3,48 @@ layout: default
 ---
 
 <article>
-	<h2>Next Event: May 7, 2013 by <a href="https://twitter.com/jmhobbs">John Hobbs</a> and <a href="https://twitter.com/amwirick">Andrew Wirick</a></h2>
-	<ol class="posts">
-		<li><a href="http://www.meetup.com/nebraskajs/events/97824442/">Grunt, Yeoman, Yo, and Bower</a></li>
-	</ol>
+	<div class="maxw">
+		<h2>Next Event: May 7, 2013 by <a href="https://twitter.com/jmhobbs">John Hobbs</a> and <a href="https://twitter.com/amwirick">Andrew Wirick</a></h2>
+		<ol class="posts">
+			<li><a href="http://www.meetup.com/nebraskajs/events/97824442/">Grunt, Yeoman, Yo, and Bower</a></li>
+		</ol>
+	</div>
 </article>
 
 <article>
-	<h2>Presentations</h2>
-	<ul class="posts">
-		{% for post in site.posts %}
-			<li><a href="{{ post.url }}">{{ post.title }}</a></li>
-		{% endfor %}
-	</ul>
-</article>
-
-<article>
-	<h2>Presenters</h2>
-	<ol class="presenters">
-		<li>Jonathan Sharp: <a href="https://twitter.com/jdsharp">@jdsharp</a></li>
-		<li>Andrew Wirick: <a href="https://twitter.com/amwirick">@amwirick</a></li>
-		<li>Adam Lassek: <a href="https://twitter.com/alassek">@alassek</a></li>
-		<li>Eli Perelman: <a href="https://twitter.com/eliperelman">@eliperelman</a>, <a href="http://eliperelman.com/">Blog</a></li>
-		<li>Zach Leatherman: <a href="https://twitter.com/zachleat">@zachleat</a>, <a href="http://zachleat.com/web/">Blog</a></li>
-		<li>Nick Nisi: <a href="https://twitter.com/nicknisi">@nicknisi</a>, <a href="http://nicknisi.com/blog/">Blog</a></li>
-		<li>Dan Vega: <a href="https://twitter.com/cfaddict">@cfaddict</a></li>
-		<li>Collin Forrester: <a href="https://twitter.com/cforrester07">@cforrester07</a></li>
-		<li>John Christopher: <a href="https://twitter.com/jgchristopher">@jgchristopher</a></li>
-	</ol>
-	<p><em>Ordered by presentation date. Also available as a <a href="https://twitter.com/nebraskajs/presenters">Twitter List</a>.</em></p>
-</article>
-
-<article>
-	<h2>About NebraskaJS</h2>
-	<p>NebraskaJS was founded in fall of 2009 by local front-end heros <a href="https://twitter.com/jdsharp">Jonathan Sharp</a>, <a href="https://twitter.com/amwirick">Andrew Wirick</a>, and <a href="https://twitter.com/eliperelman">Eli Perelman</a>. It was originally focused solely on jQuery, but later expanded to include other front end technologies.</p>
-	<p>In 2012, group leadership duties were passed on to <a href="https://twitter.com/zachleat">Zach Leatherman</a> and the group decided to move away from a jQuery focus toward a more generic JavaScript focus.</p>
-	<p>Our goals:
-		<ul>
-			<li>Encourage open source/community contributions by our members. A portion of every meeting is dedicated to small lightning talks on GitHub issues that members in the community have contributed to (no issue too small).</li>
-			<li>Sharing workflow and useful tools. Small coding exercises dedicated to showing how others work can expose useful tips and tricks to separate the wheat from the chaff in development tooling.</li>
-			<li>All presentations are recorded and published online, in the hopes that it will improve the quality of presentations and offer nice exposure and incentive to present.</li>
+	<div class="maxw">
+		<h2>Presentations</h2>
+		<ul class="posts">
+			{% for post in site.posts %}
+				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+			{% endfor %}
 		</ul>
-		We seek to bring together the developer and designer community in and around Omaha and cover interesting topics relevant to front end web development. Come <a href="http://meetup.com/nebraskajs/">join us</a> for an informative event and a great community!
-	</p>
-	<em>This is the group formerly known as Omaha jQuery Meetup (2009) and Omaha Front-End Web &amp; jQuery (2011).</em>
+	</div>
+</article>
+
+<article>
+	<div class="maxw">
+		<h2>Presenters</h2>
+	</div>
+	{% include presenters.html %}
+	<div class="maxw">
+		<p><em>Ordered by presentation date. Also available as a <a href="https://twitter.com/nebraskajs/presenters">Twitter List</a>.</em></p>
+	</div>
+</article>
+
+<article>
+	<div class="maxw">
+		<h2>About NebraskaJS</h2>
+		<p>NebraskaJS was founded in fall of 2009 by local front-end heros <a href="https://twitter.com/jdsharp">Jonathan Sharp</a>, <a href="https://twitter.com/amwirick">Andrew Wirick</a>, and <a href="https://twitter.com/eliperelman">Eli Perelman</a>. It was originally focused solely on jQuery, but later expanded to include other front end technologies.</p>
+		<p>In 2012, group leadership duties were passed on to <a href="https://twitter.com/zachleat">Zach Leatherman</a> and the group decided to move away from a jQuery focus toward a more generic JavaScript focus.</p>
+		<p>Our goals:
+			<ul>
+				<li>Encourage open source/community contributions by our members. A portion of every meeting is dedicated to small lightning talks on GitHub issues that members in the community have contributed to (no issue too small).</li>
+				<li>Sharing workflow and useful tools. Small coding exercises dedicated to showing how others work can expose useful tips and tricks to separate the wheat from the chaff in development tooling.</li>
+				<li>All presentations are recorded and published online, in the hopes that it will improve the quality of presentations and offer nice exposure and incentive to present.</li>
+			</ul>
+			We seek to bring together the developer and designer community in and around Omaha and cover interesting topics relevant to front end web development. Come <a href="http://meetup.com/nebraskajs/">join us</a> for an informative event and a great community!
+		</p>
+		<em>This is the group formerly known as Omaha jQuery Meetup (2009) and Omaha Front-End Web &amp; jQuery (2011).</em>
+	</div>
 </article>

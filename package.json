@@ -8,7 +8,9 @@
 	"private": true,
 	"dependencies": {
 		"yuicompressor": "latest",
-		"cssmin": "latest"
+		"cssmin": "latest",
+		"ejs": "latest",
+		"request": "latest"
 	},
 	"licenses": {
 		"MIT": true
