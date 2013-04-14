@@ -23,6 +23,16 @@
 
 	if( featureTest( 'MaskRepeat', 'maskRepeat' ) ) {
 		document.documentElement.className += ' supports-mask';
+
+		// Add the image for masking
+		//<img src="/img/cornfield-640.jpg" class="nejs-title-img">
+		var title = doc.querySelector( '.nejs-title' );
+		if( title ) {
+			var cornfield = new Image();
+			cornfield.src = '/img/cornfield-640.jpg';
+			cornfield.className = 'nejs-title-img';
+			title.appendChild( cornfield );
+		}
 	}
 
 	// Add @font-face
