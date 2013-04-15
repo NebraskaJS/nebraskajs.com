@@ -1,6 +1,6 @@
 <ol class="presenters">
 <% presenters.forEach(function( presenter ){ %>
-	<li>
+	<li class="<%= presenter.github %>">
 		<a href="https://github.com/<%= presenter.github %>/">
 			<img src="<%= presenter.avatar_url %>" alt="<%= presenter.name %>">
 			<span class="name"><%= presenter.name %></span>
@@ -10,6 +10,6 @@
 <% if( presenter.blog ) { %>
 		<a href="<%= presenter.blog %>">Blog</a>
 <% } %>
-<% }) %>
 	</li>
+<% }) %>
 </ol>
