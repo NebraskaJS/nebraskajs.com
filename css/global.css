@@ -412,12 +412,14 @@ body {
 	text-align: center;
 }
 /* 1 */
+.presenters .alassek a:first-child:after,
 .presenters .collinforrester a:first-child:after,
 .presenters .cfaddict a:first-child:after,
 .presenters .jgchristopher a:first-child:after {
 	display: block;
 	content: "1";
 }
+.presenters .alassek img,
 .presenters .collinforrester img,
 .presenters .cfaddict img,
 .presenters .jgchristopher img {
