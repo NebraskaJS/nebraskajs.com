@@ -39,7 +39,6 @@ html {
 	background-color: #fff;
 	background-color: rgba(255,255,255,.9);
 	color: #525252;
-	min-height: 40em;
 }
 .maxw {
 	max-width: 36em;
@@ -59,6 +58,7 @@ html {
 		padding: 2em;
 		margin-left: 18em;
 		position: relative;
+		min-height: 52em;
 	}
 }
 
@@ -454,21 +454,8 @@ body {
 			0 0 0 11px rgba(0,0,0,.2);
 }
 /* 6 */
-.presenters .jdsharp a:first-child:after {
-	display: block;
-	content: "X";
-}
 .presenters .jdsharp img {
-		box-shadow:
-			0 0 0 2px rgba(0,0,0,.6),
-			0 0 0 3px #fff,
-			0 0 0 5px rgba(0,0,0,.5),
-			0 0 0 6px #fff,
-			0 0 0 8px rgba(0,0,0,.4),
-			0 0 0 9px #fff,
-			0 0 0 11px rgba(0,0,0,.3),
-			0 0 0 12px #fff,
-			0 0 0 14px rgba(0,0,0,.2);
+		box-shadow: 0 0 0 10px rgba(244, 217, 58, .9);
 }
 
 /* FitVids */
