@@ -15,10 +15,19 @@ presenters.github.forEach(function( username, j ) {
 });
 
 function fetchGitHubUser( username ) {
-	request.get('https://api.github.com/users/' + username, function ( error, response, body ) {
+	var url = 'https://api.github.com/users/' + username;
+	console.log( 'fetching: ' + url);
+	request({
+		uri: url,
+		headers: {
+			'User-Agent': 'Mozilla/1.0 (zachleat)'
+		}
+	}, function ( error, response, body ) {
 		console.log( response.statusCode );
 		if( error ) {
 			console.log( 'Error: ', error );
+		} else if( response.statusCode == 403 ) {
+			console.log( body );
 		} else if( response.statusCode == 200 ) {
 			json = JSON.parse( body );
 
