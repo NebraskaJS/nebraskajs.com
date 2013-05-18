@@ -411,14 +411,9 @@ body {
 	font-size: .75em;
 	text-align: center;
 }
-/* 1 */
-.presenters .alassek a:first-child:after,
-.presenters .collinforrester a:first-child:after,
-.presenters .cfaddict a:first-child:after,
-.presenters .jgchristopher a:first-child:after {
-	display: block;
-	content: "1";
-}
+/* 1 (no number displayed in yellow circle for 1) */
+.presenters .alexpgates img,
+.presenters .jmhobbs img,
 .presenters .alassek img,
 .presenters .collinforrester img,
 .presenters .cfaddict img,
@@ -439,13 +434,11 @@ body {
 			0 0 0 5px rgba(0,0,0,.2);
 }
 /* 4 */
-.presenters .eliperelman a:first-child:after,
-.presenters .awirick a:first-child:after {
+.presenters .eliperelman a:first-child:after {
 	display: block;
 	content: "4";
 }
-.presenters .eliperelman img,
-.presenters .awirick img {
+.presenters .eliperelman img {
 		box-shadow:
 			0 0 0 2px rgba(0,0,0,.5),
 			0 0 0 3px #fff,
@@ -454,6 +447,23 @@ body {
 			0 0 0 8px rgba(0,0,0,.3),
 			0 0 0 9px #fff,
 			0 0 0 11px rgba(0,0,0,.2);
+}
+/* 5 */
+.presenters .awirick a:first-child:after {
+	display: block;
+	content: "5";
+}
+.presenters .awirick img {
+		box-shadow:
+			0 0 0 2px rgba(0,0,0,.6),
+			0 0 0 3px #fff,
+			0 0 0 5px rgba(0,0,0,.5),
+			0 0 0 6px #fff,
+			0 0 0 8px rgba(0,0,0,.4),
+			0 0 0 9px #fff,
+			0 0 0 11px rgba(0,0,0,.3),
+			0 0 0 12px #fff,
+			0 0 0 14px rgba(0,0,0,.2);
 }
 /* 6 */
 .presenters .jdsharp img {
