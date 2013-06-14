@@ -47,3 +47,4 @@ Changes to the Logo must be updated at these locations:
 * Add SocialCount to main page and posts
 * .htaccess with caching, gzip rules
 * Kuler Color Theme https://kuler.adobe.com/#themeID/2209535
+* Change presenters.json format to instead be like { presenters: [{"github": "zachleat", "twitter": "zachleat"}, {"github": "jdsharp", twitter: "jdsharp"}, …]}
