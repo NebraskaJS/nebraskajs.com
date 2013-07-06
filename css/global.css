@@ -68,7 +68,7 @@ body {
 	padding: 0;
 	margin: 0;
 	background-color: #eee;
-	background-image: url(../img/bg/grid.png);
+	background-image: url(/img/bg/grid.png);
 	font-size: 100%;
 	line-height: 140%;
 }
@@ -289,9 +289,9 @@ body {
 	opacity: .01;
 }
 .supports-mask .nejs-title-img {
-	-webkit-mask: url(../img/nebraska-outline-with-text-transparent.svg);
-	-moz-mask: url(../img/nebraska-outline-with-text-transparent.svg);
-	mask: url(../img/nebraska-outline-with-text-transparent.svg);
+	-webkit-mask: url(/img/nebraska-outline-with-text-transparent.svg);
+	-moz-mask: url(/img/nebraska-outline-with-text-transparent.svg);
+	mask: url(/img/nebraska-outline-with-text-transparent.svg);
 	-webkit-transition: opacity 1s;
 	-moz-transition: opacity 1s;
 	-ms-transition: opacity 1s;
