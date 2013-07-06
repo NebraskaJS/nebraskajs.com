@@ -24,7 +24,7 @@ module.exports = function(grunt) {
 			vars: {
 				safe: false,
 				markdown: 'rdiscount',
-				permalink: '/:year/:title/',
+				permalink: '<%= config.root %>/:year/:title/',
 				pygments: true,
 				exclude: 'node_modules, README.md, build.sh, _presenters',
 				distFolder: '/<%= config.distFolder %>'
