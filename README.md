@@ -19,10 +19,8 @@ Output is generated into the `_site` directory.  As is, the site's hierarchy (su
 
 Add the new Presenter’s twitter and github handles to `_presenters/presenters.json`
 
-    cd _presenters/
-    node fetch.js
-    cd ..
-    ./build.sh
+    grunt presenters
+    grunt
 
 
 ### Logo Image Guidelines
@@ -45,6 +43,4 @@ Changes to the Logo must be updated at these locations:
 
 ### TODOs
 * Add SocialCount to main page and posts
-* .htaccess with caching, gzip rules
 * Kuler Color Theme https://kuler.adobe.com/#themeID/2209535
-* Change presenters.json format to instead be like { presenters: [{"github": "zachleat", "twitter": "zachleat"}, {"github": "jdsharp", twitter: "jdsharp"}, …]}

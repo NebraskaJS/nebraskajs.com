@@ -6,16 +6,18 @@ var presenters = require('./presenters'),
 	ejs = require('ejs'),
 	fs = require('fs'),
 	data = {},
-	requests = presenters.github.length,
+	requests = presenters.users.length,
 	counter = 0;
 
-presenters.github.forEach(function( username, j ) {
+presenters.users.forEach(function( username, j ) {
 	data[ username ] = {};
 	fetchGitHubUser( username );
 });
 
 function fetchGitHubUser( username ) {
-	var url = 'https://api.github.com/users/' + username;
+	var githubUsername = presenters.githubExceptions[ username ] || username,
+		url = 'https://api.github.com/users/' + githubUsername;
+
 	console.log( 'fetching: ' + url);
 	request({
 		uri: url,
@@ -38,10 +40,12 @@ function fetchGitHubUser( username ) {
 
 			data[ username ] = {
 				name: json.name || '',
+				username: username,
 				avatar_url: json.avatar_url,
 				blog: json.blog,
-				github: json.login,
-				twitter: presenters.twitter[ json.login ]
+				github: githubUsername,
+				twitter: presenters.twitterExceptions[ username ] || username,
+				count: presenters.count[ username ] || 1 // default is 1
 			};
 		}
 		counter++;

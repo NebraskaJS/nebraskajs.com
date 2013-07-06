@@ -1,5 +1,5 @@
 {
-	"github": [
+	"users": [
 		"jdsharp",
 		"awirick",
 		"alassek",
@@ -10,19 +10,21 @@
 		"collinforrester",
 		"jgchristopher",
 		"alexpgates",
-		"jmhobbs"
+		"jmhobbs",
+		"nicholaspetersen",
+		"jerodsanto"
 	],
-	"twitter": {
-		"jdsharp": "jdsharp",
+	"githubExceptions": {},
+	"twitterExceptions": {
 		"awirick": "amwirick",
-		"alassek": "alassek",
-		"eliperelman": "eliperelman",
-		"zachleat": "zachleat",
-		"nicknisi": "nicknisi",
-		"cfaddict": "cfaddict",
 		"collinforrester": "cforrester07",
-		"jgchristopher": "jgchristopher",
-		"alexpgates": "alexpgates",
-		"jmhobbs": "jmhobbs"
+		"nicholaspetersen": "lessis"
+	},
+	"count": {
+		"jdsharp": "Infinity",
+		"awirick": 5,
+		"eliperelman": 4,
+		"zachleat": 2,
+		"nicknisi": 2
 	}
 }
