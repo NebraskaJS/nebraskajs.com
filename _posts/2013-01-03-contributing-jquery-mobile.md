@@ -7,7 +7,7 @@ title: Lightning Talk—Contributing to jQuery Mobile
 
 ## Presented by Collin Forrester
 
-* [@cforrester07](https://twitter.com/cforrester07) on Twitter
+{% include collinforrester.html %}
 
 <div class="fluid-width-video-wrapper">
 	<iframe width="560" height="315" src="http://www.youtube.com/embed/eiaVF0MectI" frameborder="0" allowfullscreen></iframe>

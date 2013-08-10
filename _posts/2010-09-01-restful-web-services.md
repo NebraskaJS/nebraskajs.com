@@ -7,8 +7,7 @@ title: RESTful Web Services with Sinatra and jQuery.rest
 
 ## Presented by Adam Lassek (September 2010)
 
-* [@alassek](https://twitter.com/alassek) on Twitter
-* [@alassek](https://github.com/alassek) on GitHub
+{% include alassek.html %}
 
 <div class="fluid-width-video-wrapper"><iframe src="http://player.vimeo.com/video/14659274" width="500" height="375" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
 

@@ -7,8 +7,7 @@ title: Building RESTful services with Node.js
 
 ## Presented by Nick Nisi
 
-* [@nicknisi](https://twitter.com/nicknisi) on Twitter
-* Blogs at [Nick Nisi](http://nicknisi.com/blog/)
+{% include nicknisi.html %}
 
 <div class="fluid-width-video-wrapper">
 	<iframe width="560" height="315" src="http://www.youtube.com/embed/APO3fFH7osw" frameborder="0" allowfullscreen></iframe>

@@ -7,8 +7,7 @@ title: Performance in Responsive Web Design
 
 ## Presented by Zach Leatherman
 
-* [@zachleat](https://twitter.com/zachleat) on Twitter
-* Blogs at [Web 367](http://zachleat.com)
+{% include zachleat.html %}
 
 <script async class="speakerdeck-embed" data-id="a4b592e00c530130c43112313940cc16" data-ratio="1.2994923857868" src="http://speakerdeck.com/assets/embed.js"></script>
 

@@ -12,13 +12,16 @@
 		"alexpgates",
 		"jmhobbs",
 		"nicholaspetersen",
-		"jerodsanto"
+		"jerodsanto",
+		"codyjames",
+		"mattdsteele"
 	],
 	"githubExceptions": {},
 	"twitterExceptions": {
 		"awirick": "amwirick",
 		"collinforrester": "cforrester07",
-		"nicholaspetersen": "lessis"
+		"nicholaspetersen": "lessis",
+		"codyjames": "codypeterson"
 	},
 	"count": {
 		"jdsharp": "Infinity",

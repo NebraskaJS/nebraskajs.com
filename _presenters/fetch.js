@@ -1,5 +1,6 @@
 var INPUT_TEMPLATE = './template.ejs',
-	OUTPUT_TEMPLATE = '../_includes/presenters.html';
+	OUTPUT_DIR = '../_includes/',
+	OUTPUT_TEMPLATE = OUTPUT_DIR + 'presenters.html';
 
 var presenters = require('./presenters'),
 	request = require('request'),
@@ -25,6 +26,8 @@ function fetchGitHubUser( username ) {
 			'User-Agent': 'Mozilla/1.0 (zachleat)'
 		}
 	}, function ( error, response, body ) {
+		var userData;
+
 		console.log( response.statusCode );
 		if( error ) {
 			console.log( 'Error: ', error );
@@ -38,7 +41,7 @@ function fetchGitHubUser( username ) {
 				json.blog = 'http://' + json.blog;
 			}
 
-			data[ username ] = {
+			userData = {
 				name: json.name || '',
 				username: username,
 				avatar_url: json.avatar_url,
@@ -47,15 +50,20 @@ function fetchGitHubUser( username ) {
 				twitter: presenters.twitterExceptions[ username ] || username,
 				count: presenters.count[ username ] || 1 // default is 1
 			};
+
+			var individualUserTemplate = {};
+			data[ username ] = individualUserTemplate[ username ] = userData;
+
+			writeTemplate( OUTPUT_DIR + username + '.html', individualUserTemplate );
 		}
 		counter++;
 		if( counter > 0 && counter === requests ) {
-			writeTemplate( data );
+			writeTemplate( OUTPUT_TEMPLATE, data );
 		}
 	});
 }
 
-function writeTemplate( presenters ) {
+function writeTemplate( filename, presenters ) {
 	var arr = [],
 		template = fs.readFileSync( INPUT_TEMPLATE, 'utf8' ),
 		str;
@@ -67,7 +75,7 @@ function writeTemplate( presenters ) {
 
 	str = ejs.render( template, { presenters: arr });
 
-	fs.writeFile( OUTPUT_TEMPLATE, str, function( error ) {
+	fs.writeFile( filename, str, function( error ) {
 		if( error ) {
 			console.log( 'Error: ', error );
 		} else {
