@@ -1,3 +1,6 @@
+/*! nebraskajs - v0.0.3 - 2013-08-28
+* http://github.com/nebraskajs/nebraskajs.com/
+* Copyright (c) 2013 [object Object];  License */
 ;( function( win, doc ) {
 	"use strict";
 
