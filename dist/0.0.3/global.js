@@ -1,6 +1,7 @@
-/*! nebraskajs - v0.0.3 - 2013-08-28
+/* nebraskajs - v0.0.3 - 2013-11-08
 * http://github.com/nebraskajs/nebraskajs.com/
-* Copyright (c) 2013 [object Object];  License */
+* Copyright (c) 2013 Zach Leatherman; MIT License */
+
 ;( function( win, doc ) {
 	"use strict";
 
