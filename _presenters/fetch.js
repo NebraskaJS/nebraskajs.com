@@ -31,9 +31,9 @@ function fetchGitHubUser( username ) {
 		console.log( response.statusCode );
 		if( error ) {
 			console.log( 'Error: ', error );
-		} else if( response.statusCode == 403 ) {
+		} else if( response.statusCode !== 200 ) { // 403
 			console.log( body );
-		} else if( response.statusCode == 200 ) {
+		} else if( response.statusCode === 200 ) {
 			json = JSON.parse( body );
 
 			json.blog = json.blog || '';

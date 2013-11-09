@@ -2,7 +2,7 @@
 <% presenters.forEach(function( presenter ){ %>
 	<li class="<%= presenter.username %> count-<%= presenter.count %>">
 		<a href="https://github.com/<%= presenter.github %>/">
-			<img src="<%= presenter.avatar_url %>" alt="<%= presenter.name %>">
+			<img src="<%- presenter.avatar_url %>" alt="<%= presenter.name %>">
 			<span class="name"><%= presenter.name %></span>
 		</a>
 		<a href="https://github.com/<%= presenter.github %>/"><i class="foundicon-github"></i></a>
