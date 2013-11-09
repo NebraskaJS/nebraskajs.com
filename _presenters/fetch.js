@@ -26,13 +26,22 @@ function fetchGitHubUser( username ) {
 			'User-Agent': 'Mozilla/1.0 (zachleat)'
 		}
 	}, function ( error, response, body ) {
-		var userData;
+		var userData,
+			skipAppend = false;
 
 		console.log( response.statusCode );
 		if( error ) {
 			console.log( 'Error: ', error );
-		} else if( response.statusCode !== 200 ) { // 403
-			console.log( body );
+			skipAppend = true;
+		} else if( response.statusCode === 404 ) { // Not on GitHub
+			userData = {
+				name: '',
+				username: username,
+				blog: '',
+				github: '',
+				twitter: presenters.twitterExceptions[ username ] || username,
+				count: presenters.count[ username ] || 1 // default is 1
+			};
 		} else if( response.statusCode === 200 ) {
 			json = JSON.parse( body );
 
@@ -50,12 +59,19 @@ function fetchGitHubUser( username ) {
 				twitter: presenters.twitterExceptions[ username ] || username,
 				count: presenters.count[ username ] || 1 // default is 1
 			};
+		} else { // maybe a 403
+			console.log( body );
+			skipAppend = true;
+		}
 
+		if( !skipAppend ) {
 			var individualUserTemplate = {};
 			data[ username ] = individualUserTemplate[ username ] = userData;
 
+			console.log( individualUserTemplate );
 			writeTemplate( OUTPUT_DIR + username + '.html', individualUserTemplate );
 		}
+
 		counter++;
 		if( counter > 0 && counter === requests ) {
 			writeTemplate( OUTPUT_TEMPLATE, data );
@@ -69,7 +85,6 @@ function writeTemplate( filename, presenters ) {
 		str;
 
 	for( var j in presenters ) {
-		console.log( presenters[ j ] );
 		arr.push( presenters[ j ] );
 	}
 
