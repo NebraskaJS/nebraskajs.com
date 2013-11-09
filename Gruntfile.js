@@ -115,6 +115,15 @@ module.exports = function(grunt) {
 						cwd: '_presenters'
 					}
 				}
+			},
+			upload: {
+				command: 'echo "Note: Requires an \'nejs\' host in .ssh/config"; rsync -avz ssh ./_site/ nejs:/home/public/',
+				options: {
+					stdout: true,
+					execOptions: {
+						cwd: '<%= config.root %>'
+					}
+				}
 			}
 		},
 		watch: {
@@ -174,4 +183,7 @@ module.exports = function(grunt) {
 
 	// Call manually to save API calls
 	grunt.registerTask('presenters', ['shell:presenters']);
+
+	// Upload to Production
+	grunt.registerTask('deploy', ['default', 'shell:upload']);
 };
