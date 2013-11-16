@@ -1,6 +1,7 @@
 ---
 layout: post
 title: RESTful Web Services with Sinatra and jQuery.rest
+videolength: 40min
 ---
 
 # RESTful Web Services with Sinatra and jQuery.rest

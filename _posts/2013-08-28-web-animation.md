@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Web Animation
+videolength: 9min
 ---
 
 # Web Animation

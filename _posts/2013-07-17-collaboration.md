@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Culture of Collaboration
+videolength: 5min
 ---
 
 # Culture of Collaboration

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: AngularJS
+videolength: 56min
 ---
 
 # AngularJS

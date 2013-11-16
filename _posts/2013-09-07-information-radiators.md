@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Information Radiators
+videolength: 48min
 ---
 
 # Information Radiators (Node.js, Raspberry PI, Socket.IO)

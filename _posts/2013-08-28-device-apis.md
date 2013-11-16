@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Device APIs
+videolength: 7min
 ---
 
 # Device APIs

@@ -1,9 +1,10 @@
 ---
 layout: post
-title: Lightning Talk—Contributing to jQuery Mobile
+title: Contributing to jQuery Mobile
+videolength: 6min
 ---
 
-# Lightning Talk—Contributing to jQuery Mobile
+# Contributing to jQuery Mobile
 
 ## Presented by Collin Forrester
 
