@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Performance in Responsive Web Design
+videolength: 61min
 ---
 
 # Performance in Responsive Web Design
@@ -8,6 +9,8 @@ title: Performance in Responsive Web Design
 ## Presented by Zach Leatherman
 
 {% include zachleat.html %}
+
+**Update: this presentation was updated and recorded at [The Omaha Mobile Group (video available)](http://www.zachleat.com/web/rwd-perf/).**
 
 <script async class="speakerdeck-embed" data-id="a4b592e00c530130c43112313940cc16" data-ratio="1.2994923857868" src="http://speakerdeck.com/assets/embed.js"></script>
 
