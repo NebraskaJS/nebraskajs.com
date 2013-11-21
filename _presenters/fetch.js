@@ -15,6 +15,10 @@ presenters.users.forEach(function( username, j ) {
 	fetchGitHubUser( username );
 });
 
+function normalizeTwitterUser( key ) {
+	return presenters.twitterExceptions[ key ] === null ? '' : ( presenters.twitterExceptions[ key ] || key );
+}
+
 function fetchGitHubUser( username ) {
 	var githubUsername = presenters.githubExceptions[ username ] || username,
 		url = 'https://api.github.com/users/' + githubUsername;
@@ -39,7 +43,7 @@ function fetchGitHubUser( username ) {
 				username: username,
 				blog: '',
 				github: '',
-				twitter: presenters.twitterExceptions[ username ] || username,
+				twitter: normalizeTwitterUser( username ),
 				count: presenters.count[ username ] || 1 // default is 1
 			};
 		} else if( response.statusCode === 200 ) {
@@ -56,7 +60,7 @@ function fetchGitHubUser( username ) {
 				avatar_url: json.avatar_url,
 				blog: json.blog,
 				github: githubUsername,
-				twitter: presenters.twitterExceptions[ username ] || username,
+				twitter: normalizeTwitterUser( username ),
 				count: presenters.count[ username ] || 1 // default is 1
 			};
 		} else { // maybe a 403
