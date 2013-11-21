@@ -10,7 +10,7 @@ videolength: 7min
 
 {% include BRock97.html %}
 
-Unfortunately, the video camera battery died at about the second to last slide Bryan’s presentation. Sorry! Be sure to check out the slides below.
+Unfortunately, the video camera battery died at about the second to last slide in Bryan’s presentation. Sorry! Be sure to check out the slides below.
 
 <div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/nl7dBAQzjOg" frameborder="0" allowfullscreen></iframe></div>
 

@@ -12,6 +12,8 @@ videolength: 10min
 
 <div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/oPfeuVtOGz4" frameborder="0" allowfullscreen></iframe></div>
 
+* [Bruce’s Source Code](https://github.com/brucecoddington/generator-nebraska)
+
 ## Related
 
 * Video recorded and edited by [NebraskaJS: Yeoman Generators—Bruce Coddington](http://www.youtube.com/watch?v=oPfeuVtOGz4)
