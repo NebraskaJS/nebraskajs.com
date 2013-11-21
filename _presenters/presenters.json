@@ -22,14 +22,16 @@
 		"BRock97",
 		"BruceCoddington",
 		"hoodja",
-		"teknohazard"
+		"serafino"
 	],
 	"githubExceptions": {},
 	"twitterExceptions": {
 		"awirick": "amwirick",
 		"collinforrester": "cforrester07",
 		"nicholaspetersen": "lessis",
-		"codyjames": "codypeterson"
+		"codyjames": "codypeterson",
+		"serafino": "teknohazard",
+		"alecbeta": null
 	},
 	"count": {
 		"jdsharp": "Infinity",
