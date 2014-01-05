@@ -2,6 +2,7 @@
 layout: post
 title: Web Animation
 videolength: 9min
+author: codyjames
 ---
 
 # Web Animation

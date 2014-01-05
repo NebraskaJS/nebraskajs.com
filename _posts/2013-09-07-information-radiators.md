@@ -2,6 +2,7 @@
 layout: post
 title: Information Radiators
 videolength: 48min
+author: robhruska
 ---
 
 # Information Radiators (Node.js, Raspberry PI, Socket.IO)

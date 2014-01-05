@@ -2,9 +2,10 @@
 layout: post
 title: RESTful Web Services with Sinatra and jQuery.rest
 videolength: 40min
+author: alassek
 ---
 
-# RESTful Web Services with Sinatra and jQuery.rest
+# {{ page.title }}
 
 ## Presented by Adam Lassek (September 2010)
 

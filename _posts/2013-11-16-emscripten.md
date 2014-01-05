@@ -2,6 +2,7 @@
 layout: post
 title: Emscripten
 videolength: 7min
+author: BRock97
 ---
 
 # {{ page.title }}

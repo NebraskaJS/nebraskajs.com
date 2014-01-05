@@ -2,6 +2,7 @@
 layout: post
 title: AngularJS Directives
 videolength: 13min
+author: paulgraff
 ---
 
 # AngularJS Directives

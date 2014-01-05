@@ -2,6 +2,7 @@
 layout: post
 title: Contributing to jQuery Mobile
 videolength: 6min
+author: collinforrester
 ---
 
 # Contributing to jQuery Mobile

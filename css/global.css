@@ -342,17 +342,30 @@ body {
 }
 .posts li,
 .events li {
-	padding: 0.5em 0;
+	padding: .6em 0;
 }
 .posts a,
 .events a {
 	font-size: 1.9em;
-	line-height: 110%;
+	line-height: 126%;
 }
 .posts .videolength {
 	padding-left: .5em;
 	margin-top: -.2em;
 	font-size: 1.2em;
+}
+.posts .avatar {
+	display: inline-block;
+	position: relative;
+	top: .3em;
+	margin-top: -.3em;
+}
+.posts .avatar img {
+	border-radius: 50%;
+	padding: 1px;
+	max-width: 1.4em;
+	max-height: 1.4em;
+	margin-right: .3em;
 }
 
 /* Presenters List */

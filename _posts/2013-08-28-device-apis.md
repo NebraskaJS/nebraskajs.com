@@ -2,6 +2,7 @@
 layout: post
 title: Device APIs
 videolength: 7min
+author: mattdsteele
 ---
 
 # Device APIs

@@ -2,6 +2,7 @@
 layout: post
 title: AngularJS
 videolength: 56min
+author: jerodsanto
 ---
 
 # AngularJS

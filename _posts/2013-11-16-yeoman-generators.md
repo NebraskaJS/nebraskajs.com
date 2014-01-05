@@ -2,6 +2,7 @@
 layout: post
 title: Yeoman Generators
 videolength: 10min
+author: BruceCoddington
 ---
 
 # {{ page.title }}

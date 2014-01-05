@@ -2,6 +2,7 @@
 layout: post
 title: Building RESTful services with Node.js
 videolength: 49min
+author: nicknisi
 ---
 
 # Building RESTful services with Node.js

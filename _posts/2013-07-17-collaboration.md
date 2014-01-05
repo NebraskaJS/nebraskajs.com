@@ -2,6 +2,7 @@
 layout: post
 title: Culture of Collaboration
 videolength: 5min
+author: nicholaspetersen
 ---
 
 # Culture of Collaboration

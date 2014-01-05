@@ -89,7 +89,7 @@ module.exports = function(grunt) {
 		},
 		shell: {
 			jekyll: {
-				command: 'jekyll --no-auto',
+				command: 'jekyll build --config _config.yml',
 				options: {
 					stdout: true,
 					execOptions: {

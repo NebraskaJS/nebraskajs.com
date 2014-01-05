@@ -1,6 +1,7 @@
 ---
 layout: post
 title: fightcodegame.com Tank Battle
+author: nicknisi zachleat
 ---
 
 # fightcodegame.com Tank Battle

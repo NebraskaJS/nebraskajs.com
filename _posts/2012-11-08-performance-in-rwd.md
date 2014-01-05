@@ -2,6 +2,7 @@
 layout: post
 title: Performance in Responsive Web Design
 videolength: 61min
+author: zachleat
 ---
 
 # Performance in Responsive Web Design

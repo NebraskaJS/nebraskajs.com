@@ -2,6 +2,7 @@
 layout: post
 title: JSBin Canvas Competition
 videolength: 5min
+author: loktar00
 ---
 
 # {{ page.title }}

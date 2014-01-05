@@ -1,6 +1,6 @@
-var INPUT_TEMPLATE = './template.ejs',
-	OUTPUT_DIR = '../_includes/',
-	OUTPUT_TEMPLATE = OUTPUT_DIR + 'presenters.html';
+var BIO_TEMPLATE = './templates/bio.ejs',
+	AVATAR_TEMPLATE = './templates/avatar.ejs',
+	OUTPUT_DIR = '../_includes/';
 
 var presenters = require('./presenters'),
 	request = require('request'),
@@ -73,32 +73,50 @@ function fetchGitHubUser( username ) {
 			data[ username ] = individualUserTemplate[ username ] = userData;
 
 			console.log( individualUserTemplate );
-			writeTemplate( OUTPUT_DIR + username + '.html', individualUserTemplate );
+			writeBioTemplate( OUTPUT_DIR + username + '.html', individualUserTemplate );
 		}
 
 		counter++;
 		if( counter > 0 && counter === requests ) {
-			writeTemplate( OUTPUT_TEMPLATE, data );
+			writeBioTemplate( OUTPUT_DIR + 'presenters.html', data );
+			writeAvatarsTemplate( OUTPUT_DIR + 'avatars.html', data );
 		}
 	});
 }
 
-function writeTemplate( filename, presenters ) {
+function writeBioTemplate( filename, presenters ) {
 	var arr = [],
-		template = fs.readFileSync( INPUT_TEMPLATE, 'utf8' ),
+		bioTemplate = fs.readFileSync( BIO_TEMPLATE, 'utf8' ),
 		str;
 
 	for( var j in presenters ) {
 		arr.push( presenters[ j ] );
 	}
 
-	str = ejs.render( template, { presenters: arr });
+	str = ejs.render( bioTemplate, { presenters: arr });
 
 	fs.writeFile( filename, str, function( error ) {
 		if( error ) {
-			console.log( 'Error: ', error );
+			console.log( 'Bio error: ', error );
 		} else {
-			console.log( "Success." );
+			console.log( "Bio success." );
 		}
-	}); 
+	});
+}
+
+function writeAvatarsTemplate( filename, presenters ) {
+	var avatarTemplate = fs.readFileSync( AVATAR_TEMPLATE, 'utf8' ),
+		str = [];
+
+	for( var j in presenters ) {
+		str.push( '{% if author contains "' + j + '" %}' + ejs.render( avatarTemplate, { presenter: presenters[ j ] }) + '{% endif %}' );
+	}
+
+	fs.writeFile( filename, str.join( '' ), function( error ) {
+		if( error ) {
+			console.log( 'Avatars error: ', error );
+		} else {
+			console.log( "Avatars success." );
+		}
+	});
 }
