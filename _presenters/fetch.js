@@ -1,5 +1,6 @@
 var BIO_TEMPLATE = './templates/bio.ejs',
 	AVATAR_TEMPLATE = './templates/avatar.ejs',
+	CACHE_DIR = './cache/',
 	OUTPUT_DIR = '../_includes/';
 
 var presenters = require('./presenters'),
@@ -8,20 +9,57 @@ var presenters = require('./presenters'),
 	fs = require('fs'),
 	data = {},
 	requests = presenters.users.length,
-	counter = 0;
+	counter = 0,
+	usernames = {
+		twitter: function( key ) {
+			return presenters.twitterExceptions[ key ] === null ? '' : ( presenters.twitterExceptions[ key ] || key );
+		},
+		github: function( username ) {
+			return presenters.githubExceptions[ username ] || username;
+		}
+	};
 
-presenters.users.forEach(function( username, j ) {
+function getCacheFileName( username ) {
+	return CACHE_DIR + username + '.json';
+}
+
+presenters.users.forEach(function( username ) {
+	var filename = getCacheFileName( username );
+
 	data[ username ] = {};
-	fetchGitHubUser( username );
+
+	fs.exists( filename, function( exists ) {
+		if (exists) {
+			var jsonBody = fs.readFileSync( filename, 'utf8' ),
+				userData = parseJson( username, jsonBody );
+				finish( false, username, userData );
+		} else {
+			fetchGitHubUser( username );
+		}
+	});
 });
 
-function normalizeTwitterUser( key ) {
-	return presenters.twitterExceptions[ key ] === null ? '' : ( presenters.twitterExceptions[ key ] || key );
+function parseJson( username, body ) {
+	var json = JSON.parse( body );
+
+	json.blog = json.blog || '';
+	if( json.blog.length && json.blog.indexOf( 'http://' ) !== 0 ) {
+		json.blog = 'http://' + json.blog;
+	}
+
+	return {
+		name: json.name || '',
+		username: username,
+		avatar_url: json.avatar_url,
+		blog: json.blog,
+		github: usernames.github( username ),
+		twitter: usernames.twitter( username ),
+		count: presenters.count[ username ] || 1 // default is 1
+	};
 }
 
 function fetchGitHubUser( username ) {
-	var githubUsername = presenters.githubExceptions[ username ] || username,
-		url = 'https://api.github.com/users/' + githubUsername;
+	var url = 'https://api.github.com/users/' + usernames.github( username );
 
 	console.log( 'fetching: ' + url);
 	request({
@@ -31,92 +69,97 @@ function fetchGitHubUser( username ) {
 		}
 	}, function ( error, response, body ) {
 		var userData,
-			skipAppend = false;
+			hasError = false;
 
 		console.log( response.statusCode );
 		if( error ) {
 			console.log( 'Error: ', error );
-			skipAppend = true;
+			hasError = true;
 		} else if( response.statusCode === 404 ) { // Not on GitHub
 			userData = {
 				name: '',
 				username: username,
 				blog: '',
 				github: '',
-				twitter: normalizeTwitterUser( username ),
+				twitter: usernames.twitter( username ),
 				count: presenters.count[ username ] || 1 // default is 1
 			};
 		} else if( response.statusCode === 200 ) {
-			json = JSON.parse( body );
+			fs.writeFile( getCacheFileName( username ), body, function( error ) {
+				if( error ) {
+					console.log( 'Cache error: ', error );
+				} else {
+					console.log( 'Cache success for ' + username +'.' );
+				}
+			});
 
-			json.blog = json.blog || '';
-			if( json.blog.length && json.blog.indexOf( 'http://' ) !== 0 ) {
-				json.blog = 'http://' + json.blog;
-			}
-
-			userData = {
-				name: json.name || '',
-				username: username,
-				avatar_url: json.avatar_url,
-				blog: json.blog,
-				github: githubUsername,
-				twitter: normalizeTwitterUser( username ),
-				count: presenters.count[ username ] || 1 // default is 1
-			};
+			userData = parseJson( username, body );
 		} else { // maybe a 403
 			console.log( body );
-			skipAppend = true;
+			hasError = true;
 		}
 
-		if( !skipAppend ) {
-			var individualUserTemplate = {};
-			data[ username ] = individualUserTemplate[ username ] = userData;
-
-			console.log( individualUserTemplate );
-			writeBioTemplate( OUTPUT_DIR + username + '.html', individualUserTemplate );
-		}
-
-		counter++;
-		if( counter > 0 && counter === requests ) {
-			writeBioTemplate( OUTPUT_DIR + 'presenters.html', data );
-			writeAvatarsTemplate( OUTPUT_DIR + 'avatars.html', data );
-		}
+		finish( hasError, username, userData );
 	});
 }
 
-function writeBioTemplate( filename, presenters ) {
-	var arr = [],
-		bioTemplate = fs.readFileSync( BIO_TEMPLATE, 'utf8' ),
-		str;
-
-	for( var j in presenters ) {
-		arr.push( presenters[ j ] );
+function finish( hasError, username, userData ) {
+	if( !hasError ) {
+		data[ username ] = userData;
+		write.userData( username, userData );
 	}
 
-	str = ejs.render( bioTemplate, { presenters: arr });
-
-	fs.writeFile( filename, str, function( error ) {
-		if( error ) {
-			console.log( 'Bio error: ', error );
-		} else {
-			console.log( "Bio success." );
-		}
-	});
+	counter++;
+	if( counter === requests ) {
+		write.allUserData( data );
+	}
 }
 
-function writeAvatarsTemplate( filename, presenters ) {
-	var avatarTemplate = fs.readFileSync( AVATAR_TEMPLATE, 'utf8' ),
-		str = [];
+var write = {
+	userData: function( username, userData ) {
+		var individualUserTemplate = {};
+		individualUserTemplate[ username ] = userData;
 
-	for( var j in presenters ) {
-		str.push( '{% if author contains "' + j + '" %}' + ejs.render( avatarTemplate, { presenter: presenters[ j ] }) + '{% endif %}' );
-	}
+		// console.log( individualUserTemplate );
+		write.bioTemplate( OUTPUT_DIR + username + '.html', individualUserTemplate );
+	},
+	allUserData: function( data ) {
+		write.bioTemplate( OUTPUT_DIR + 'presenters.html', data );
+		write.avatarsTemplate( OUTPUT_DIR + 'avatars.html', data );
+	},
+	bioTemplate: function( filename, presenters ) {
+		var arr = [],
+			bioTemplate = fs.readFileSync( BIO_TEMPLATE, 'utf8' ),
+			str;
 
-	fs.writeFile( filename, str.join( '' ), function( error ) {
-		if( error ) {
-			console.log( 'Avatars error: ', error );
-		} else {
-			console.log( "Avatars success." );
+		for( var j in presenters ) {
+			arr.push( presenters[ j ] );
 		}
-	});
+
+		str = ejs.render( bioTemplate, { presenters: arr });
+
+		fs.writeFile( filename, str, function( error ) {
+			if( error ) {
+				console.log( 'Bio error: ', error );
+			} else {
+				console.log( "Bio success." );
+			}
+		});
+	},
+	avatarsTemplate: function( filename, presenters ) {
+		var avatarTemplate = fs.readFileSync( AVATAR_TEMPLATE, 'utf8' ),
+			str = [];
+
+		for( var j in presenters ) {
+			str.push( '{% if author contains "' + j + '" %}' + ejs.render( avatarTemplate, { presenter: presenters[ j ] }) + '{% endif %}' );
+		}
+
+		fs.writeFile( filename, str.join( '' ), function( error ) {
+			if( error ) {
+				console.log( 'Avatars error: ', error );
+			} else {
+				console.log( "Avatars success." );
+			}
+		});
+	}
 }
