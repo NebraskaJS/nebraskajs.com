@@ -31,7 +31,7 @@ Matt is one of those people who is clearly not afraid of a live demo. In one of 
 
 Really an amazing presentation.
 
-<div class="fluid-width-video-wrapper"><iframe src="//player.vimeo.com/video/83907789" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+<div class="fluid-width-video-wrapper"><iframe src="//player.vimeo.com/video/83907789" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
 
 ## Related
 
