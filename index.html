@@ -2,19 +2,21 @@
 layout: default
 ---
 
-<!-- <article>
-	<div class="maxw">
-		<h2>Next Event: May 7, 2013 by <a href="https://twitter.com/jmhobbs">John Hobbs</a> and <a href="https://twitter.com/amwirick">Andrew Wirick</a></h2>
-		<ol class="posts">
-			<li><a href="http://www.meetup.com/nebraskajs/events/97824442/">Grunt, Yeoman, Yo, and Bower</a></li>
-		</ol>
-		<ol class="presenters">
-		</ol>
-	</div>
-</article> -->
+<div class="page-home">
 
-<article>
-	<div class="maxw">
+	<!-- <article>
+		<div class="maxw">
+			<h2>Next Event: May 7, 2013 by <a href="https://twitter.com/jmhobbs">John Hobbs</a> and <a href="https://twitter.com/amwirick">Andrew Wirick</a></h2>
+			<ol class="posts">
+				<li><a href="http://www.meetup.com/nebraskajs/events/97824442/">Grunt, Yeoman, Yo, and Bower</a></li>
+			</ol>
+			<ol class="presenters">
+			</ol>
+		</div>
+	</article> -->
+
+<div class="maxw">
+	<article>
 		<h2>Presentations</h2>
 		<ul class="posts">
 			{% for post in site.posts %}
@@ -22,5 +24,23 @@ layout: default
 				<li><a href="{{ post.url }}">{% if author %}<span class="avatar">{% include avatars.html %}</span>{% endif %}{{ post.title }}</a>{% if post.videolength %} <span class="videolength">{{ post.videolength }}</span>{% endif %}</li>
 			{% endfor %}
 		</ul>
+		</article>
 	</div>
-</article>
+
+	<div class="maxw meetup-groups">
+		<article>
+			<h2><a href="http://techomaha.com/list-omaha-user-groups/">Other Local Meetups</a></h2>
+			<ul class="groups">
+				<li><a href="http://www.beerandcode.org/">Beer &amp;&amp; Code Omaha</a></li>
+				<li><a href="http://www.necfug.com/">Nebraska Coldfusion</a></li>
+				<li><a href="http://www.meetup.com/ng-nebraska/">ng-nebraska</a> (JavaScript, AngularJS) </li>
+				<li><a href="http://www.meetup.com/omahajava/">Omaha Java Users Group</a></li>
+				<li><a href="http://www.meetup.com/Omaha-Mobile-Group/">Omaha Mobile Group</a> (ObjC, Java, Mobile Apps) </li>
+				<li><a href="http://omaha.pm.org/">Omaha Perl Mongers</a></li>
+				<li><a href="http://www.omahapython.org/blog/">Omaha Python Users Group</a></li>
+				<li><a href="http://code.omahamakergroup.org/">OMG!Code</a></li>
+			</ul>
+		</article>
+	</div>
+
+</div><!-- /.page-home -->

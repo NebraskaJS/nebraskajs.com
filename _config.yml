@@ -4,4 +4,4 @@ markdown: rdiscount
 permalink: /:year/:title/
 pygments: true
 exclude: node_modules, README.md, build.sh, _presenters
-distFolder: /dist/0.0.10/
+distFolder: /dist/0.0.11/
