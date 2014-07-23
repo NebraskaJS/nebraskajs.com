@@ -529,6 +529,25 @@ body {
 			0 0 0 12px #fff,
 			0 0 0 14px rgba(0,0,0,.2);
 }
+/* 6 */
+.presenters .count-6 a:first-child:after {
+	display: block;
+	content: "6";
+}
+.presenters .count-6 img {
+		box-shadow:
+			0 0 0 2px rgba(0,0,0,.7),
+			0 0 0 3px #fff,
+			0 0 0 5px rgba(0,0,0,.6),
+			0 0 0 6px #fff,
+			0 0 0 8px rgba(0,0,0,.5),
+			0 0 0 9px #fff,
+			0 0 0 11px rgba(0,0,0,.4),
+			0 0 0 12px #fff,
+			0 0 0 14px rgba(0,0,0,.3),
+			0 0 0 15px #fff,
+			0 0 0 17px rgba(0,0,0,.2);
+}
 /* Infinity */
 .presenters .count-Infinity img {
 		box-shadow: 0 0 0 10px rgba(244, 217, 58, .9);

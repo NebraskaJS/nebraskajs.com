@@ -23,7 +23,14 @@
 		"BruceCoddington",
 		"hoodja",
 		"serafino",
-		"jhannah"
+		"jhannah",
+		"CaraHeacock",
+		"javazquez",
+		"mmacaula",
+		"shellylynnxiong",
+		"bill-riley",
+		"TJacobDesign",
+		"dhoman"
 	],
 	"githubExceptions": {},
 	"twitterExceptions": {
@@ -33,14 +40,16 @@
 		"codyjames": "codypeterson",
 		"serafino": "teknohazard",
 		"alecbeta": null,
-		"jhannah": "deafferret"
+		"jhannah": "deafferret",
+		"bill-riley": "Bill_Riley",
+		"dhoman": "derekhoman"
 	},
 	"count": {
 		"jdsharp": "Infinity",
 		"awirick": 5,
 		"eliperelman": 5,
 		"zachleat": 3,
-		"nicknisi": 5,
+		"nicknisi": 6,
 		"jmhobbs": 2,
 		"mattdsteele": 2,
 		"jerodsanto": 2
