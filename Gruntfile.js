@@ -132,6 +132,14 @@ module.exports = function(grunt) {
 						dest: '<%= config.root %>_site/',
 						extDot: 'last',
 						ext: '.css.zgz'
+					},
+					{
+						expand: true,
+						cwd: '<%= config.root %>_site/',
+						src: ['**/*.svg'],
+						dest: '<%= config.root %>_site/',
+						extDot: 'last',
+						ext: '.svg.zgz'
 					}
 				]
 			}
