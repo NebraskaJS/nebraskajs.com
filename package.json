@@ -8,10 +8,11 @@
 	"private": true,
 	"dependencies": {
 		"ejs": "latest",
-		"request": "latest"
+		"request": "latest",
+		"grunt-cli": "~0.1.7"
 	},
 	"devDependencies": {
-		"grunt": "0.4.0",
+		"grunt": "~0.4.5",
 		"grunt-shell": "~0.2.2",
 		"grunt-contrib-cssmin": "~0.6.0",
 		"grunt-contrib-concat": "~0.2.0",
@@ -19,7 +20,9 @@
 		"grunt-contrib-watch": "~0.3.1",
 		"grunt-contrib-jshint": "~0.4.3",
 		"grunt-contrib-sass": "~0.3.0",
-		"matchdep": "~0.1.2"
+		"matchdep": "~0.1.2",
+		"grunt-contrib-htmlmin": "~0.3.0",
+		"grunt-contrib-compress": "~0.10.0"
 	},
 	"licenses": {
 		"MIT": true

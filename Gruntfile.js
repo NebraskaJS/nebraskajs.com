@@ -87,6 +87,55 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		htmlmin: {
+			main: {
+				options: {
+					removeComments: true,
+					collapseWhitespace: true
+				},
+				files: [
+					{
+						expand: true,
+						cwd: '<%= config.root %>_site/',
+						src: '**/*.html',
+						dest: '<%= config.root %>_site/'
+					}
+				]
+			}
+		},
+		compress: {
+			main: {
+				options: {
+					mode: 'gzip'
+				},
+				files: [
+					{
+						expand: true,
+						cwd: '<%= config.root %>_site/',
+						src: ['**/*.html'],
+						dest: '<%= config.root %>_site/',
+						extDot: 'last',
+						ext: '.html.zgz'
+					},
+					{
+						expand: true,
+						cwd: '<%= config.root %>_site/',
+						src: ['**/*.js'],
+						dest: '<%= config.root %>_site/',
+						extDot: 'last',
+						ext: '.js.zgz'
+					},
+					{
+						expand: true,
+						cwd: '<%= config.root %>_site/',
+						src: ['**/*.css'],
+						dest: '<%= config.root %>_site/',
+						extDot: 'last',
+						ext: '.css.zgz'
+					}
+				]
+			}
+		},
 		shell: {
 			jekyll: {
 				command: 'jekyll build --config _config.yml',
@@ -178,7 +227,7 @@ module.exports = function(grunt) {
 	// Default task.
 	grunt.registerTask('assets', ['jshint', 'concat:js', 'concat:css', 'uglify', 'cssmin']);
 	grunt.registerTask('config', ['yaml']);
-	grunt.registerTask('content', ['shell:jekyll', 'feedburner-size']);
+	grunt.registerTask('content', ['shell:jekyll', 'htmlmin', 'compress', 'feedburner-size']);
 	grunt.registerTask('default', ['config', 'assets', 'content']);
 
 	// Call manually to save API calls
