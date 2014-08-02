@@ -39,6 +39,14 @@ presenters.users.forEach(function( username ) {
 	});
 });
 
+function fixAvatarUrl( url ) {
+	if( url.indexOf( '?' ) > -1 ) {
+		return url + '&s=80';
+	} else {
+		return url + '?s=80';
+	}
+}
+
 function parseJson( username, body ) {
 	var json = JSON.parse( body );
 
@@ -50,7 +58,7 @@ function parseJson( username, body ) {
 	return {
 		name: json.name || '',
 		username: username,
-		avatar_url: json.avatar_url,
+		avatar_url: fixAvatarUrl( json.avatar_url ),
 		blog: json.blog,
 		github: usernames.github( username ),
 		twitter: usernames.twitter( username ),
