@@ -11,7 +11,14 @@ author: nicknisi
 
 {% include nicknisi.html %}
 
+Creating Chrome extensions is fun and easy. Nick introduces the Chrome extension API and how it can be used to create simple browser extensions, DevTools additions, and applications, but mainly, he just talks about John Goodman.
+
 <div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/HzJ9pUWb2rA" frameborder="0" allowfullscreen></iframe></div>
+
+## Links
+
+* [Slides on Speaker Deck](https://speakerdeck.com/nicknisi/chrome-extensions)
+* [chrome-goodman extension on Github](https://github.com/nicknisi/chrome-goodman)
 
 ## Related
 
