@@ -9,6 +9,8 @@ author: mmacaula
 
 ## Presented by Mike Macaulay
 
+{% include mmacaula.html %}
+
 Ampersand.js is a new take on Backbone.js.  Backbone is super simple, and super flexible, you can do just about anything with it, but its so simple that most people can't really build a full app out of just it.  They bring in helpers and a lot of plugins to do things like data binding, nested models, and view management.  
 
 Ampersand.js takes the base backbone models and views and brings them up a notch.  The creators basically decided that people always want some features and you might as well put them into the library.  So you get built-in data-binding to your views (yay!), you get computed properties, direct property access, child models and collections, validation and much more!  
