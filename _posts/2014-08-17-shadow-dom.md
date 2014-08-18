@@ -13,6 +13,8 @@ author: dhoman
 
 <div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/47MShEoKQO4" frameborder="0" allowfullscreen></iframe></div>
 
+* [Slides on nebraskajs.com](/decks/shadow-dom/)
+
 ## Related
 
 * Video recorded and edited by [NebraskaJS: The Mysterious Shadow DOM with Derek Homan](http://www.youtube.com/watch?v=47MShEoKQO4)

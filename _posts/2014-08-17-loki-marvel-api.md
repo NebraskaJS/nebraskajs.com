@@ -13,6 +13,9 @@ author: javazquez
 
 <div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/VG9pFAJ8nsg" frameborder="0" allowfullscreen></iframe></div>
 
+* [Hero Squad Game](http://guarded-earth-2818.herokuapp.com/#/)
+* [Slides on Speakerdeck](https://speakerdeck.com/nebraskajs/loki-at-the-marvel-api-with-juan-vazquez)
+
 ## Related
 
 * Video recorded and edited by [NebraskaJS: Juan Vazquez, Loki at the Marvel API](http://www.youtube.com/watch?v=VG9pFAJ8nsg)
