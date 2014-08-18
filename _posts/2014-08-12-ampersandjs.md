@@ -7,7 +7,7 @@ author: mmacaula
 
 # [Ampersand.js](http://ampersandjs.com/) Lightning talk
 
-## Presented by Mike Macaulay
+## Presented, Written by Mike Macaulay
 
 {% include mmacaula.html %}
 
@@ -19,12 +19,16 @@ At the same time, they also pushed simplicity even further by breaking up the di
 
 The coolest thing (IMO) about ampersand is it's upgrade path.  You can use ampersand-models in backbone collections!  You can use ampersand-views in marionette layouts since they are inspired and use a very close API.  This means if you have a backbone application, you can start using ampersand gradually and see if it's a fit for you!
 
-
 <div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/UzJCz1qAiHg" frameborder="0" allowfullscreen></iframe></div>
+
+## Slides
+
+<div class="fluid-width-video-wrapper"><iframe src="//slides.com/mikemacaulay/ampersand-js/embed" width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+
+* [See the full slide deck on slides.com](http://slides.com/mikemacaulay/ampersand-js#/)
 
 ## Related
 
-* [Slides](http://slides.com/mikemacaulay/ampersand-js#/)
 * [Ampersand.js site](http://ampersandjs.com/)
 * Video recorded and edited by [NebraskaJS: Mike Macaulay on Ampersand.js](http://www.youtube.com/watch?v=UzJCz1qAiHg)
 * [Event on Meetup](http://www.meetup.com/nebraskajs/events/181849992/)
