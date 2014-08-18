@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Shadow DOM</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<style>
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#slider {
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#overflow {
+  width: 100%;
+  overflow: hidden;
+}
+
+#slides .inner {
+  width: 400%;
+}
+
+#slides .inner {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+
+  -webkit-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  -moz-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  -o-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  -ms-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+
+  -webkit-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  -moz-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  -o-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  -ms-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+#slides article {
+  width: 25%;
+  float: left;
+}
+
+#slide1:checked ~ #slides .inner {
+  margin-left: 0;
+}
+
+#slide2:checked ~ #slides .inner {
+  margin-left: -100%;
+}
+
+#slide3:checked ~ #slides .inner {
+  margin-left: -200%;
+}
+
+#slide4:checked ~ #slides .inner {
+  margin-left: -300%;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  background: #CCC;
+  display: inline-block;
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+}
+
+#slide1:checked ~ label[for="slide1"],
+#slide2:checked ~ label[for="slide2"],
+#slide3:checked ~ label[for="slide3"],
+#slide4:checked ~ label[for="slide4"] {
+  background: #333;
+}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Shadow DOM</h1>
+					<h3>...the most mysterious web component</h3>
+					<p>
+						<small>Created by <a href="http://twitter.com/derekhoman">@derekhoman</a></small>
+					</p>
+				</section>
+				<section>
+						<h2>It's all about the Encapulations</h2>
+						<p><h3>baby</h3></p>
+					<img src="http://i1.ytimg.com/vi/qpMvS1Q1sos/hqdefault.jpg">
+					<!--
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+					-->
+				</section>
+				<section>
+						<h2>Quick Example - HTML</h2>
+						<pre>
+						<code>
+&lt;div id=&quot;slider&quot;&gt;
+  &lt;input checked=&quot;&quot; type=&quot;radio&quot; name=&quot;slider&quot; id=&quot;slide1&quot; selected=&quot;false&quot;&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;slider&quot; id=&quot;slide2&quot; selected=&quot;false&quot;&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;slider&quot; id=&quot;slide3&quot; selected=&quot;false&quot;&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;slider&quot; id=&quot;slide4&quot; selected=&quot;false&quot;&gt;
+  &lt;div id=&quot;slides&quot;&gt;
+    &lt;div id=&quot;overflow&quot;&gt;
+      &lt;div class=&quot;inner&quot;&gt;
+        &lt;article&gt;
+          &lt;img src=&quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/5689/rock.jpg&quot;&gt;
+        &lt;/article&gt;
+
+        &lt;article&gt;
+          &lt;img src=&quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/5689/grooves.jpg&quot;&gt;
+        &lt;/article&gt;
+
+        &lt;article&gt;
+          &lt;img src=&quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/5689/arch.jpg&quot;&gt;
+        &lt;/article&gt;
+
+        &lt;article&gt;
+          &lt;img src=&quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/5689/sunset.jpg&quot;&gt;
+        &lt;/article&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;label for=&quot;slide1&quot;&gt;&lt;/label&gt;
+  &lt;label for=&quot;slide2&quot;&gt;&lt;/label&gt;
+  &lt;label for=&quot;slide3&quot;&gt;&lt;/label&gt;
+  &lt;label for=&quot;slide4&quot;&gt;&lt;/label&gt;
+&lt;/div&gt;
+					</code>
+					</pre>
+				</section>
+				<section>
+
+						<h2>Quick Example - CSS</h2>
+						<pre>
+						<code>
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#slider {
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#overflow {
+  width: 100%;
+  overflow: hidden;
+}
+
+#slides .inner {
+  width: 400%;
+}
+
+#slides .inner {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+
+  -webkit-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  -moz-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  -o-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  -ms-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+
+  -webkit-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  -moz-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  -o-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  -ms-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+#slides article {
+  width: 25%;
+  float: left;
+}
+
+#slide1:checked ~ #slides .inner {
+  margin-left: 0;
+}
+
+#slide2:checked ~ #slides .inner {
+  margin-left: -100%;
+}
+
+#slide3:checked ~ #slides .inner {
+  margin-left: -200%;
+}
+
+#slide4:checked ~ #slides .inner {
+  margin-left: -300%;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  background: #CCC;
+  display: inline-block;
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+}
+
+#slide1:checked ~ label[for="slide1"],
+#slide2:checked ~ label[for="slide2"],
+#slide3:checked ~ label[for="slide3"],
+#slide4:checked ~ label[for="slide4"] {
+  background: #333;
+}
+						</code>
+						</pre>
+				</section>
+				<section>
+					<h2>Result</h2>
+					<div id="slider">
+  <input checked="" type="radio" name="slider" id="slide1" selected="false">
+  <input type="radio" name="slider" id="slide2" selected="false">
+  <input type="radio" name="slider" id="slide3" selected="false">
+  <input type="radio" name="slider" id="slide4" selected="false">
+  <div id="slides">
+    <div id="overflow">
+      <div class="inner">
+        <article>
+          <img src="./rock.jpg" alt="an interesting rock">
+        </article>
+        <article>
+          <img src="./grooves.jpg" alt="some neat grooves">
+        </article>
+        <article>
+          <img src="./arch.jpg" alt="a rock arch">
+        </article>
+        <article>
+          <img src="./sunset.jpg" alt="a dramatic sunset">
+        </article>
+      </div>
+    </div>
+  </div>
+  <label for="slide1"></label>
+  <label for="slide2"></label>
+  <label for="slide3"></label>
+  <label for="slide4"></label>
+</div>
+				</section>
+				<section>
+					<h2>That's Cool...</h2>
+					<p>... but </p>
+					<ul class="fragment">
+						<li>that's a lot of code</li>
+						<li>kind of messy</li>
+						<li>prone to failure</li>
+						<ul>
+							<li>ie css rule changes</li>
+						</ul>
+					</ul>
+					<img class="fragment" src="./mushroom-cloud.jpg" width="259" height="194"/>
+				</section>
+				<section>
+					<h3>Things like:</h3>
+					<ul>
+						<li>stylesheets</li>
+						<li>javascript</li>
+						<li>other IDs of other DOM objects</li>
+					</ul>
+					<h2 class="fragment">could all break yo stuff</h2>
+				</section>
+				<section>
+					<h2>Even if your code is indestructible</h2>
+					<div class="fragment">
+					<h3>you have to admit</h3>
+					<pre>
+						<code>
+&lt;img-slider&gt;
+  &lt;img src=&quot;./sunset.jpg&quot; alt=&quot;a dramatic sunset&quot;&gt;
+  &lt;img src=&quot;./arch.jpg&quot; alt=&quot;a rock arch&quot;&gt;
+  &lt;img src=&quot;./grooves.jpg&quot; alt=&quot;some neat grooves&quot;&gt;
+  &lt;img src=&quot;./rock.jpg&quot; alt=&quot;an interesting rock&quot;&gt;
+&lt;/img-slider&gt;
+						</code>
+					</pre></div>
+						<p class="fragment">looks a lot better</p>
+				</section>
+				<section>
+					<h2>Web Components</h2>
+					<h3 class="fragment">set of standards for building widgets</h3>
+					<ul>
+						<li class="fragment">... which can be reused</li>
+						<li class="fragment">... and won't break*</li>
+					</ul>
+					<aside class="notes">
+						…and which won’t break pages if the next version of the component changes internal implementation details.
+					</aside>
+				</section>
+				<section>
+					<h2>*Assuming you don't do anything stupid<h2>
+				</section>
+				<section>
+					<h2>The Web Components</h2>
+					<div  class="fragment">
+					<h3>Components</h3>
+					<ul>
+						<li><a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/templates/index.html">Templates</a></li>
+						<li><a href="http://www.w3.org/TR/shadow-dom/">Shadow DOM</a></li>
+						<li><a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/custom/index.html">Custom Elements</a></li>
+						<li><a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html#external-custom-elements-and-decorators">Packaging</a></li>
+					<ul>
+					</div>
+				</section>
+				<section>
+					<h2>Shadow DOM</h2>
+					<p>fixes a fundamental problem</p>
+					<p>DOM tree inside a widget isn't encapsulated</p>
+				</section>
+				<section>
+					<h2>Shadow DOM - basics</h2>
+
+					<ul>
+						<li>Shadow Root - the new kind of a node associated with the shadow host</li>
+						<li>Shadow Host - the html element with a shadow root associated with it</li>
+					</ul>
+					<aside class="notes">
+						With Shadow DOM, elements can get a new kind of node associated with them. This new kind of node is called a shadow root. An element that has a shadow root associated with it is called a shadow host. The content of a shadow host isn’t rendered; the content of the shadow root is rendered instead.
+					</aside>
+				</section>
+				<section>
+					<section>
+					<h2>For Example</h2>
+					<pre>
+						<code>
+&lt;button&gt;Hello, world!&lt;/button&gt;
+&lt;script&gt;
+var host = document.querySelector('button');
+var root = host.createShadowRoot();
+root.textContent = 'Puppies';
+&lt;/script&gt;
+						</code>
+					</pre>
+					</section>
+					<section>
+						<h2>Instead of </h2>
+						<button style="font-size: 30px;">Hello, World!</button>
+					</section>
+					<section>
+						<h2>We'd Get</h2>
+						<button style="font-size: 30px;">Puppies</button>
+					</section>
+					<aside class="notes">
+						Not only that, if JavaScript on the page asks what the button’s textContent is, it isn’t going to get “Puppies”, but “Hello, world!” because the DOM subtree under the shadow root is encapsulated.
+					</aside>
+				</section>
+				<section>
+					<a href="./example1.html">Example Image Slider</a>
+				</section>
+				<section>
+					<section><h2>Additional Cool Things</h2></section>
+					<section>
+						<h2>Content Tags</h2>
+						<pre>
+							<code>
+&lt;template&gt;
+  ...
+  &lt;div class=&quot;inner&quot;&gt;
+    &lt;article&gt;
+      &lt;content select=&quot;img:nth-of-type(1)&quot;&gt;&lt;/content&gt;
+    &lt;/article&gt;
+    &lt;article&gt;
+      &lt;content select=&quot;img:nth-of-type(2)&quot;&gt;&lt;/content&gt;
+    &lt;/article&gt;
+    &lt;article&gt;
+      &lt;content select=&quot;img:nth-of-type(3)&quot;&gt;&lt;/content&gt;
+    &lt;/article&gt;
+    &lt;article&gt;
+      &lt;content select=&quot;img:nth-of-type(4)&quot;&gt;&lt;/content&gt;
+    &lt;/article&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h2>Would let us simply the html to...</h2>
+						<pre>
+							<code>
+&lt;div class=&quot;img-slider&quot;&gt;
+  &lt;img src=&quot;./rock.jpg&quot; alt=&quot;an interesting rock&quot;&gt;
+  &lt;img src=&quot;./grooves.jpg&quot; alt=&quot;some neat grooves&quot;&gt;
+  &lt;img src=&quot;./arch.jpg&quot; alt=&quot;a rock arch&quot;&gt;
+  &lt;img src=&quot;./sunset.jpg&quot; alt=&quot;a dramatic sunset&quot;&gt;
+&lt;/div&gt;
+							</code>
+						</pre>
+					</section>
+
+				</section>
+				<section>
+					<section>
+						Things I probably don't have time to talk about....
+					</section>
+					<section>
+						<h2>CSS - Host Selector</h2>
+						<p>:host selector (could be combined with :hover, :focus, :active, etc)</p>
+						<p class="fragment">:host(:hover) {stuff: awesome;}</p>
+
+					</section>
+					<section>
+						<h2>Host Context Selector</h2>
+						<p>:host selector (could be combined with :hover, :focus, :active, etc)</p>
+						<p class="fragment">:host(:hover) {stuff: awesome;}</p>
+					</section>
+					<section>
+						<a href="http://www.html5rocks.com/tutorials/webcomponents/customelements/">Custom Element Tags</a>
+					</section>
+				</section>
+				<section>
+					<h2>For more Info</h2>
+					<ul>
+						<li>http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/</li>
+						<li>http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-201/</li>
+						<li>http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-301/</li>
+						<li>http://www.html5rocks.com/tutorials/webcomponents/customelements/</li>
+						<li>http://updates.html5rocks.com/2013/03/Visualizing-Shadow-DOM-Concepts</li>
+						<li>http://glazkov.com/2011/01/14/what-the-heck-is-shadow-dom/</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>THE END</h1>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
