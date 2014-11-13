@@ -25,7 +25,7 @@ module.exports = function(grunt) {
 				safe: false,
 				markdown: 'rdiscount',
 				permalink: '<%= config.root %>/:year/:title/',
-				pygments: true,
+				highlighter: 'pygments',
 				exclude: 'node_modules, README.md, build.sh, _presenters',
 				distFolder: '/<%= config.distFolder %>'
 			}
@@ -146,7 +146,7 @@ module.exports = function(grunt) {
 		},
 		shell: {
 			jekyll: {
-				command: 'jekyll build --config _config.yml',
+				command: 'jekyll build --config _config.yml --trace',
 				options: {
 					stdout: true,
 					execOptions: {
