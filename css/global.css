@@ -392,7 +392,7 @@ body {
 	font-size: 1.2em;
 }
 .posts .avatar {
-	display: inline-block;
+	float: left;
 	position: relative;
 	top: .3em;
 	margin-top: -.3em;
@@ -404,6 +404,15 @@ body {
 	max-height: 1.4em;
 	margin-left: -1.7em;
 	margin-right: .3em;
+}
+.posts .avatar.avatar-count-2 img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	clip: rect(0px 21px 43px 0px);
+}
+.posts .avatar.avatar-count-2 img + img {
+	clip: rect(0px 43px 43px 21px);
 }
 
 /* Presenters List */

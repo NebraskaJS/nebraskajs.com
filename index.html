@@ -21,7 +21,7 @@ layout: default
 		<ul class="posts">
 			{% for post in site.posts %}
 				{% assign author = post.author %}
-				<li><a href="{{ post.url }}">{% if author %}<span class="avatar">{% include avatars.html %}</span>{% endif %}{{ post.title }}</a>{% if post.videolength %} <span class="videolength">{{ post.videolength }}</span>{% endif %}</li>
+				<li><a href="{{ post.url }}">{% if author %}<span class="avatar{% if post.author-count %} avatar-count-{{ post.author-count }}{% endif %}">{% include avatars.html %}</span>{% endif %}{{ post.title }}</a>{% if post.videolength %} <span class="videolength">{{ post.videolength }}</span>{% endif %}</li>
 			{% endfor %}
 		</ul>
 		</article>

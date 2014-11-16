@@ -2,6 +2,7 @@
 layout: post
 title: fightcodegame Tank Battle 2014
 author: nicknisi zachleat
+author-count: 2
 ---
 
 # fightcodegame.com Tank Battle
