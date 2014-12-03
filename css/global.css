@@ -596,7 +596,9 @@ body {
 }
 .next-meetup > h2 {
 	padding: .714285714em;
-	background-color: #F4D93A;
+	font-weight: 400;
+	color: #ddd;
+	background-color: #b22734;
 }
 .next-meetup > a {
 	padding: 1em;
