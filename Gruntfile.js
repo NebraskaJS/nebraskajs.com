@@ -74,7 +74,7 @@ module.exports = function(grunt) {
 				src: 'Gruntfile.js'
 			},
 			js: {
-				src: ['js/**/*.js']
+				src: ['js/global.js']
 			}
 		},
 		cssmin: {

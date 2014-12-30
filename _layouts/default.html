@@ -50,6 +50,18 @@
 
 			{{ content }}
 		</div><!-- /.content -->
+		<script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js', {
+          scope: '/'
+        }).then(function(reg) {
+          console.log('Yey!', reg);
+        }).catch(function(err) {
+          console.log('Boo!', err);
+        });
+      }
+      "{{ site.distFolder }}"
+    </script>
 		<script src="{{ site.distFolder }}global.min.js"></script>
 	</body>
 </html>
