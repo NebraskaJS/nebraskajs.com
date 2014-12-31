@@ -12,5 +12,5 @@ author: blainekasten
 
 {% include blainekasten.html %}
 
-<div class="fluid-width-video-wrapper">todo....<iframe src="" frameborder="0" allowfullscreen></iframe></div>
+<div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/6Tys1wmlGI0" frameborder="0" allowfullscreen></iframe></div>
 

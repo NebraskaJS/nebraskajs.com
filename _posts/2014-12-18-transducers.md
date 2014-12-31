@@ -12,5 +12,5 @@ author: kevinbeaty
 
 {% include kevinbeaty.html %}
 
-<div class="fluid-width-video-wrapper">todo....<iframe src="" frameborder="0" allowfullscreen></iframe></div>
+<div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/IvECDyVmCI4" frameborder="0" allowfullscreen></iframe></div>
 
