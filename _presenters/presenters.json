@@ -1,14 +1,5 @@
 {
 	"users": [
-    "kevinbeaty",
-    "blainekasten",
-
-    "CalebCassel",
-    "robhruska",
-    "mattfenwick",
-    "jprichardson",
-		"BruceCoddington",
-
 		"jdsharp",
 		"awirick",
 		"alassek",
@@ -24,10 +15,12 @@
 		"jerodsanto",
 		"codyjames",
 		"mattdsteele",
+		"robhruska",
 		"loktar00",
 		"alecbeta",
 		"paulgraff",
 		"BRock97",
+		"BruceCoddington",
 		"hoodja",
 		"serafino",
 		"jhannah",
@@ -37,10 +30,15 @@
 		"shellylynnxiong",
 		"bill-riley",
 		"TJacobDesign",
-		"dhoman"
+		"dhoman",
+		"CalebCassel",
+		"mattfenwick",
+		"jprichardson",
+		"kevinbeaty",
+		"blainekasten"
 	],
 	"githubExceptions": {
-  },
+	},
 	"twitterExceptions": {
 		"awirick": "amwirick",
 		"collinforrester": "cforrester07",
@@ -51,8 +49,8 @@
 		"jhannah": "deafferret",
 		"bill-riley": "Bill_Riley",
 		"dhoman": "derekhoman",
-    "mattfenwick": "mfenwick100",
-    "kevinbeaty": "simplectic"
+		"mattfenwick": "mfenwick100",
+		"kevinbeaty": "simplectic"
 	},
 	"count": {
 		"jdsharp": "Infinity",
@@ -62,7 +60,8 @@
 		"nicknisi": "Infinity",
 		"jmhobbs": 2,
 		"mattdsteele": 2,
-		"jerodsanto": 2
-	},
-  "lincolnCount": {}
+		"jerodsanto": 2,
+		"BruceCoddington": 2,
+		"robhruska": 2
+	}
 }
