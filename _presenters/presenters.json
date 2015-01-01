@@ -35,7 +35,9 @@
 		"mattfenwick",
 		"jprichardson",
 		"kevinbeaty",
-		"blainekasten"
+		"blainekasten",
+		"snekse",
+		"nwertzberger"
 	],
 	"githubExceptions": {
 	},
@@ -50,13 +52,14 @@
 		"bill-riley": "Bill_Riley",
 		"dhoman": "derekhoman",
 		"mattfenwick": "mfenwick100",
-		"kevinbeaty": "simplectic"
+		"kevinbeaty": "simplectic",
+		"nwertzberger": "rannick"
 	},
 	"count": {
 		"jdsharp": "Infinity",
 		"awirick": 5,
 		"eliperelman": 5,
-		"zachleat": 4,
+		"zachleat": 5,
 		"nicknisi": "Infinity",
 		"jmhobbs": 2,
 		"mattdsteele": 2,
