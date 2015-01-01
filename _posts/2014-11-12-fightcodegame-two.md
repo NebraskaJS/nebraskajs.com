@@ -30,7 +30,7 @@ The winners received a very cool Arduino kit and a sweet tank trophy.
 
 ## Related
 
-*  [Tournament Brackets](http://challonge.com/nejs2/standings)
+* [Tournament Brackets](http://challonge.com/nejs2/standings)
 * [Watch the finals on YouTube](https://www.youtube.com/watch?v=4XNNgj3ksL0)
 * [See all the photos on Flickr](https://www.flickr.com/photos/zachleat/sets/72157648851537819/)
 * [Event on Meetup](http://www.meetup.com/nebraskajs/events/195183412/)

@@ -1,3 +1,18 @@
+
+kevinbeaty:
+  http://www.meetup.com/nebraskajs/events/218840331/
+blainekasten:
+  http://www.meetup.com/nebraskajs/events/218840331/
+CalebCassel:
+  http://www.meetup.com/nebraskajs/events/212329302/
+robhruska:
+  http://www.meetup.com/nebraskajs/events/212329302/
+mattfenwick
+  http://www.meetup.com/nebraskajs/events/212329302/
+jprichardson
+  http://www.meetup.com/nebraskajs/events/212329302/
+BruceCoddington
+  http://www.meetup.com/nebraskajs/events/212329302/
 nicknisi: 
 	http://www.meetup.com/nebraskajs/events/29973451/
 	http://www.meetup.com/nebraskajs/events/87624182/
