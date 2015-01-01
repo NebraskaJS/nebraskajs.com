@@ -13,6 +13,8 @@ author: nwertzberger
 
 <div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/9OS2Fehtx5w" frameborder="0" allowfullscreen></iframe></div>
 
+* [ngCordova](http://ngcordova.com/)
+
 ## Related
 
 * Video recorded and edited by [NebraskaJS: Ionic Plugins with Nick Wertzberger](http://www.youtube.com/watch?v=9OS2Fehtx5w)

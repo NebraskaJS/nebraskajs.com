@@ -13,6 +13,8 @@ author: nicknisi
 
 <div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/nLCedy68Qf4" frameborder="0" allowfullscreen></iframe></div>
 
+* [typescriptlang.org](http://www.typescriptlang.org/)
+
 ## Related
 
 * Video recorded and edited by [NebraskaJS: TypeScript with Nick Nisi](http://www.youtube.com/watch?v=nLCedy68Qf4)

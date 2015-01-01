@@ -14,6 +14,8 @@ author: zachleat
 <div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/LbCT38Idhyk" frameborder="0" allowfullscreen></iframe></div>
 
 * [Slides on SpeakerDeck](https://speakerdeck.com/zachleat/how-and-why-i-built-fontfamily-dot-io)
+* [fontfamily.io](http://fontfamily.io)
+* [A Font Family Reunion—zachleat.com](http://www.zachleat.com/web/font-family-reunion/)
 
 ## Related
 

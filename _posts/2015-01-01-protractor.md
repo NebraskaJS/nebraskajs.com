@@ -13,6 +13,8 @@ author: snekse
 
 <div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/2_sp6CHs1qY" frameborder="0" allowfullscreen></iframe></div>
 
+* [Protractor, End to End Testing for AngularJS](http://angular.github.io/protractor/)
+
 ## Related
 
 * Video recorded and edited by [NebraskaJS: Protractor with Derek Eskens](http://www.youtube.com/watch?v=2_sp6CHs1qY)
