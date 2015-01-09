@@ -1,7 +1,7 @@
 ---
 layout: post
 title: JSON Validation (miscue.js)
-videolength: 17min
+videolength: 11min
 author: mattfenwick
 ---
 

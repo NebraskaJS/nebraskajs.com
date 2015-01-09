@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Transducers Explained
-videolength: 24min
+videolength: 49min
 author: kevinbeaty
 ---
 

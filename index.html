@@ -4,26 +4,15 @@ layout: default
 
 <div class="page-home">
 
-	<!-- <article>
-		<div class="maxw">
-			<h2>Next Event: May 7, 2013 by <a href="https://twitter.com/jmhobbs">John Hobbs</a> and <a href="https://twitter.com/amwirick">Andrew Wirick</a></h2>
-			<ol class="posts">
-				<li><a href="http://www.meetup.com/nebraskajs/events/97824442/">Grunt, Yeoman, Yo, and Bower</a></li>
-			</ol>
-			<ol class="presenters">
-			</ol>
-		</div>
-	</article> -->
-
-<div class="maxw">
-	<article>
-		<h2>Presentations</h2>
-		<ul class="posts">
-			{% for post in site.posts %}
-				{% assign author = post.author %}
-				<li><a href="{{ post.url }}">{% if author %}<span class="avatar{% if post.author-count %} avatar-count-{{ post.author-count }}{% endif %}">{% include avatars.html %}</span>{% endif %}{{ post.title }}</a>{% if post.videolength %} <span class="videolength">{{ post.videolength }}</span>{% endif %}</li>
-			{% endfor %}
-		</ul>
+	<div class="maxw">
+		<article>
+			<h2>Presentations</h2>
+			<ul class="posts">
+				{% for post in site.posts %}
+					{% assign author = post.author %}
+					<li><a href="{{ post.url }}">{% if author %}<span class="avatar{% if post.author-count %} avatar-count-{{ post.author-count }}{% endif %}">{% include avatars.html %}</span>{% endif %}{{ post.title }}</a>{% if post.videolength %} <span class="videolength">{{ post.videolength }}</span>{% endif %}</li>
+				{% endfor %}
+			</ul>
 		</article>
 	</div>
 

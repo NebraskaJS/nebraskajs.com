@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Service Worker
-videolength: 24min
+videolength: 27min
 author: blainekasten
 ---
 
