@@ -15,6 +15,10 @@ var URLS_TO_CACHE = [
   '/js/global.js',
   '/img/offline-meme.jpg',
   '/favicon.ico',
+  '/about',
+  '/offline',
+  '/conduct',
+  '/presenters',
   '/'
 ];
 
@@ -54,8 +58,40 @@ self.addEventListener('fetch', function(event) {
 
     // event.request would be something like `/index.html`
     caches.match(event.request).then( function(response) {
-      return response || fetch(event.request);
-    })
+      // successful hit in the cache, return it
+      if (response) {
+        return response;
+      }
 
+      // else, lets get the item and cache it for future use
+
+      // IMPORTANT: Clone the request. A request is a stream and
+      // can only be consumed once. Since we are consuming this
+      // once by cache and once by the browser for fetch, we need
+      // to clone the response
+      var fetchRequest = event.request.clone();
+
+      return fetch(fetchRequest).then(
+
+        // when we get the response from the network
+        // cache it
+        function(response) {
+
+          // if not a valid response, kill process
+          if(!response || response.status !== 200 || response.type !== 'basic') {
+            return response;
+          }
+
+          caches.open(CACHE_NAME).then(function(cache){
+            // IMPORTANT: Clone the response and request. They are streams
+            // and because we want the browser to consume the response
+            // as well as the cache consuming the response, we need
+            // to clone it so we have 2 stream.
+            cache.put(event.request.clone(), response.clone());
+          });
+
+          return response;
+      });
+    })
   );
 });
