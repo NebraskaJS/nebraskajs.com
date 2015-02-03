@@ -1,6 +1,6 @@
-/* nebraskajs - v0.1.4 - 2014-12-31
+/* nebraskajs - v0.1.4 - 2015-02-02
 * http://github.com/nebraskajs/nebraskajs.com/
-* Copyright (c) 2014 Zach Leatherman; MIT License */
+* Copyright (c) 2015 Zach Leatherman; MIT License */
 
 ;( function( win, doc ) {
 	"use strict";
@@ -8,6 +8,12 @@
 	if( !doc.querySelector ) {
 		return;
 	}
+
+  // dont show iframes when offline
+  if( !navigator.onLine ) {
+    var iframe = document.querySelector('iframe');
+    iframe.src = '/offline/iframe.html';
+  }
 
 	// Mask feature test
 	function featureTest( prop, unprefixedProp ) {

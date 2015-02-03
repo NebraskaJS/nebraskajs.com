@@ -46,12 +46,24 @@
 				<h2>Upcoming:</h2>
 				<a class="title" href="http://www.meetup.com/nebraskajs/events/218690748/"><h2>Omaha <abbr title="February">Feb</abbr> 10</h2></a>
 				<a class="title"
-          href="http://www.meetup.com/nebraskajs/events/219437831/"><h2>Lincoln
-        <abbr title="January">Jan</abbr> 15</h2></a>
+          href="http://www.meetup.com/nebraskajs/events/219723415/"><h2>Lincoln
+        <abbr title="February">Feb</abbr> 19</h2></a>
 			</div>
 
 			{{ content }}
 		</div><!-- /.content -->
 		<script src="{{ site.distFolder }}global.min.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js',
+          {
+            scope: ''
+          }).then(function(reg) {
+            console.log('Yey!', reg);
+          }).catch(function(err) {
+            console.log('Boo!', err);
+        });
+      }
+    </script>
 	</body>
 </html>

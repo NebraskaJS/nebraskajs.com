@@ -40,6 +40,14 @@ module.exports = function(grunt) {
 				src: ['<%= config.jsSrc %>global.js'],
 				dest: '<%= config.distFolder %>global.js'
 			},
+      sw: {
+        src: ['<%= config.root %>sw.js'],
+        dest: '<%= config.root %>sw.js'
+      },
+      polyfill: {
+				src: ['<%= config.jsSrc %>cache-polyfill.js'],
+				dest: '<%= config.distFolder %>cache-polyfill.js'
+      },
 			css: {
 				src: ['<%= config.cssSrc %>global.css', '<%= config.cssSrc %>social.css'],
 				dest: '<%= config.distFolder %>all.css'
@@ -68,7 +76,14 @@ module.exports = function(grunt) {
 				boss: true,
 				eqnull: true,
 				browser: true,
-				globals: {}
+				globals: {
+          Cache: true,
+          CacheStorage: true,
+          Request: true,
+          URL: true,
+          Promise: true,
+          fetch: true
+        }
 			},
 			gruntfile: {
 				src: 'Gruntfile.js'
@@ -233,7 +248,7 @@ module.exports = function(grunt) {
 	});
 
 	// Default task.
-	grunt.registerTask('assets', ['jshint', 'concat:js', 'concat:css', 'uglify', 'cssmin']);
+	grunt.registerTask('assets', ['jshint', 'concat:js', 'concat:sw', 'concat:polyfill', 'concat:css', 'uglify', 'cssmin']);
 	grunt.registerTask('config', ['yaml']);
 	grunt.registerTask('content', ['shell:jekyll', 'htmlmin', 'compress', 'feedburner-size']);
 	grunt.registerTask('default', ['config', 'assets', 'content']);

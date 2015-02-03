@@ -5,6 +5,12 @@
 		return;
 	}
 
+  // dont show iframes when offline
+  if( !navigator.onLine ) {
+    var iframe = document.querySelector('iframe');
+    iframe.src = '/offline/iframe.html';
+  }
+
 	// Mask feature test
 	function featureTest( prop, unprefixedProp ) {
 		var style = doc.createElement('tester').style,
