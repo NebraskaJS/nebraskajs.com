@@ -40,14 +40,14 @@ module.exports = function(grunt) {
 				src: ['<%= config.jsSrc %>global.js'],
 				dest: '<%= config.distFolder %>global.js'
 			},
-      sw: {
-        src: ['<%= config.root %>sw.js'],
-        dest: '<%= config.root %>sw.js'
-      },
-      polyfill: {
+			sw: {
+				src: ['<%= config.root %>sw.js'],
+				dest: '<%= config.root %>sw.js'
+			},
+			polyfill: {
 				src: ['<%= config.jsSrc %>cache-polyfill.js'],
 				dest: '<%= config.distFolder %>cache-polyfill.js'
-      },
+			},
 			css: {
 				src: ['<%= config.cssSrc %>global.css', '<%= config.cssSrc %>social.css'],
 				dest: '<%= config.distFolder %>all.css'

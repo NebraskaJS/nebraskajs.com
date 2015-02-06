@@ -1,15 +1,23 @@
 ;( function( win, doc ) {
 	"use strict";
 
+	if ('serviceWorker' in navigator) {
+		navigator.serviceWorker.register('/sw.js').then(function(reg) {
+			if (window.console) { window.console.log('Yey!', reg); }
+		})['catch'](function(err) {
+			if (window.console) { window.console.log('Boo!', err); }
+		});
+	}
+
 	if( !doc.querySelector ) {
 		return;
 	}
 
-  // dont show iframes when offline
-  if( !navigator.onLine ) {
-    var iframe = document.querySelector('iframe');
-    iframe.src = '/offline/iframe.html';
-  }
+	// dont show iframes when offline
+	if( !navigator.onLine ) {
+		var iframe = document.querySelector('iframe');
+		iframe.src = '/offline/iframe.html';
+	}
 
 	// Mask feature test
 	function featureTest( prop, unprefixedProp ) {

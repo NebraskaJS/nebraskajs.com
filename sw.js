@@ -1,4 +1,4 @@
-/* nebraskajs - v0.1.4 - 2015-02-02
+/* nebraskajs - v0.1.4 - 2015-02-06
 * http://github.com/nebraskajs/nebraskajs.com/
 * Copyright (c) 2015 Zach Leatherman; MIT License */
 
@@ -10,9 +10,8 @@ var CACHE_VERSION = 1;
 var CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
 
 var URLS_TO_CACHE = [
-  '/css/global.css',
-  '/css/social.css',
-  '/js/global.js',
+  '/dist/0.1.4/all.min.css',
+  '/dist/0.1.4/global.min.js',
   '/img/offline-meme.jpg',
   '/favicon.ico',
   '/about',
