@@ -77,13 +77,13 @@ module.exports = function(grunt) {
 				eqnull: true,
 				browser: true,
 				globals: {
-          Cache: true,
-          CacheStorage: true,
-          Request: true,
-          URL: true,
-          Promise: true,
-          fetch: true
-        }
+					Cache: true,
+					CacheStorage: true,
+					Request: true,
+					URL: true,
+					Promise: true,
+					fetch: true
+				}
 			},
 			gruntfile: {
 				src: 'Gruntfile.js'
