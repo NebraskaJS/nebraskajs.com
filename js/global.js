@@ -36,13 +36,22 @@
 	}
 
 	// Add @font-face
-	var font = 'Raleway:600,400', // Questrial
-		link = document.createElement( 'link' ),
-		head = document.head || document.getElementsByTagName( 'head' )[ 0 ];
+	var counter = 0;
+	function success() {
+		counter++;
+		if( counter === 2 ) {
+			doc.documentElement.className += " raleway-loaded";
+		}
+	}
 
-	link.setAttribute( 'href', 'http://fonts.googleapis.com/css?family=' + font );
-	link.setAttribute( 'rel', 'stylesheet' );
-	head.appendChild( link );
+	new FontFaceOnload( 'Raleway', {
+		weight: 400,
+		success: success
+	});
+	new FontFaceOnload( 'Raleway', {
+		weight: 600,
+		success: success
+	});
 
 }( this, this.document ) );
 

@@ -1,6 +1,6 @@
 {
 	"name": "nebraskajs",
-	"version": "0.1.5",
+	"version": "0.1.6",
 	"homepage": "http://github.com/nebraskajs/nebraskajs.com/",
 	"author": {
 		"name": "Zach Leatherman"
@@ -8,8 +8,9 @@
 	"private": true,
 	"dependencies": {
 		"ejs": "latest",
-		"request": "latest",
-		"grunt-cli": "~0.1.7"
+		"fontfaceonload": "^0.1.6",
+		"grunt-cli": "~0.1.7",
+		"request": "latest"
 	},
 	"devDependencies": {
 		"grunt": "~0.4.5",

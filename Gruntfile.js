@@ -37,7 +37,10 @@ module.exports = function(grunt) {
 				stripBanners: true
 			},
 			js: {
-				src: ['<%= config.jsSrc %>global.js'],
+				src: [
+					'node_modules/fontfaceonload/dist/fontfaceonload.js',
+					'<%= config.jsSrc %>global.js'
+				],
 				dest: '<%= config.distFolder %>global.js'
 			},
 			sw: {
@@ -82,7 +85,8 @@ module.exports = function(grunt) {
 					Request: true,
 					URL: true,
 					Promise: true,
-					fetch: true
+					fetch: true,
+					FontFaceOnload: true
 				}
 			},
 			gruntfile: {
