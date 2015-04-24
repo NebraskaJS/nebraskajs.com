@@ -53,7 +53,6 @@ self.addEventListener('activate', function(event) {
 
 self.addEventListener('fetch', function(event) {
   console.log(event.request);
-  debugger;
   event.respondWith(
 
     // event.request would be something like `/index.html`
