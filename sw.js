@@ -1,4 +1,4 @@
-/* nebraskajs - v0.1.5 - 2015-02-10
+/* nebraskajs - v0.1.6 - 2015-04-23
 * http://github.com/nebraskajs/nebraskajs.com/
 * Copyright (c) 2015 Zach Leatherman; MIT License */
 
@@ -6,7 +6,7 @@
 importScripts('js/cache-polyfill.js');
 
 var CACHE_PREFIX = 'nejs_';
-var CACHE_VERSION = 1;
+var CACHE_VERSION = 2;
 var CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
 
 var URLS_TO_CACHE = [
@@ -53,6 +53,7 @@ self.addEventListener('activate', function(event) {
 
 self.addEventListener('fetch', function(event) {
   console.log(event.request);
+  debugger;
   event.respondWith(
 
     // event.request would be something like `/index.html`
