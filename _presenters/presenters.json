@@ -1,8 +1,5 @@
 {
 	"users": [
-		"1Copenut",
-		"yarthur",
-		"mrfmunger",
 		"jdsharp",
 		"awirick",
 		"alassek",
@@ -40,7 +37,10 @@
 		"kevinbeaty",
 		"blainekasten",
 		"snekse",
-		"nwertzberger"
+		"nwertzberger",
+		"1Copenut",
+		"yarthur",
+		"mrfmunger"
 	],
 	"githubExceptions": {
 	},
