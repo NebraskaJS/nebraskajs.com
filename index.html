@@ -10,7 +10,10 @@ layout: default
       <ul class="posts">
 				{% for post in site.posts %}
 					{% assign author = post.author %}
-          <li><a href="{{ post.url }}">{% if author %}<span class="avatar{% if post.author-count %} avatar-count-{{ post.author-count }}{% endif %}" data-author="{{ post.author }}">{% if site.data.presenters[post.author].avatar_url %}<img src="{{ site.data.presenters[post.author].avatar_url }}" alt="{{ site.data.presenters[post.author].name }}">{% endif %}</span>{% endif %}{{ post.title | widont }}</a>{% if post.videolength %} <span class="videolength">{{ post.videolength }}</span>{% endif %}</li>
+          {% if author %}
+          {% assign authors = post.author | split: ' ' %}
+          {% endif %}
+          <li><a href="{{ post.url }}">{% if author %}<span class="avatar{% if post.author-count %} avatar-count-{{ post.author-count }}{% endif %}" data-author="{{ post.author }}">{% for presenter in authors %}{% if site.data.presenters[presenter].avatar_url %}<img src="{{ site.data.presenters[presenter].avatar_url }}" alt="{{ site.data.presenters[presenter].name }}">{% endif %}{% endfor %}</span>{% endif %}{{ post.title | widont }}</a>{% if post.videolength %} <span class="videolength">{{ post.videolength }}</span>{% endif %}</li>
 				{% endfor %}
 			</ul>
 		</article>
