@@ -9,7 +9,7 @@ author: robhruska
 
 ## Presented by Rob Hruska
 
-{% include robhruska.html %}
+{% include bio.html presenter=site.data.presenters.robhruska %}
 
 <div class="fluid-width-video-wrapper"><iframe width="420" height="315" src="//www.youtube.com/embed/yhYuCBRSA0w" frameborder="0" allowfullscreen></iframe></div>
 

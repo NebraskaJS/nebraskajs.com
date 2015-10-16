@@ -1,11 +1,8 @@
-var BIO_TEMPLATE = './templates/bio.ejs',
-	AVATAR_TEMPLATE = './templates/avatar.ejs',
-	CACHE_DIR = './cache/',
-	OUTPUT_DIR = '../_includes/';
+var  CACHE_DIR = '../cache/',
+    OUTPUT_FILE = '../_data/presenters.json';
 
 var presenters = require('./presenters'),
 	request = require('request'),
-	ejs = require('ejs'),
 	fs = require('fs'),
 	data = {},
 	requests = presenters.users.length,
@@ -30,9 +27,10 @@ presenters.users.forEach(function( username ) {
 
 	fs.exists( filename, function( exists ) {
 		if (exists) {
+      console.log( "CACHED:", username );
 			var jsonBody = fs.readFileSync( filename, 'utf8' ),
-				userData = parseJson( username, jsonBody );
-				finish( false, username, userData );
+				  userData = parseJson( username, jsonBody );
+		  finish( false, username, userData );
 		} else {
 			fetchGitHubUser( username );
 		}
@@ -114,60 +112,20 @@ function fetchGitHubUser( username ) {
 function finish( hasError, username, userData ) {
 	if( !hasError ) {
 		data[ username ] = userData;
-		write.userData( username, userData );
 	}
 
 	counter++;
 	if( counter === requests ) {
-		write.allUserData( data );
+    write_data();
 	}
 }
 
-var write = {
-	userData: function( username, userData ) {
-		var individualUserTemplate = {};
-		individualUserTemplate[ username ] = userData;
-
-		// console.log( individualUserTemplate );
-		write.bioTemplate( OUTPUT_DIR + username + '.html', individualUserTemplate );
-	},
-	allUserData: function( data ) {
-		write.bioTemplate( OUTPUT_DIR + 'presenters.html', data );
-		write.avatarsTemplate( OUTPUT_DIR + 'avatars.html', data );
-	},
-	bioTemplate: function( filename, presenters ) {
-		var arr = [],
-			bioTemplate = fs.readFileSync( BIO_TEMPLATE, 'utf8' ),
-			str;
-
-		for( var j in presenters ) {
-			arr.push( presenters[ j ] );
-		}
-
-		str = ejs.render( bioTemplate, { presenters: arr });
-
-		fs.writeFile( filename, str, function( error ) {
+function write_data () {
+		fs.writeFile( OUTPUT_FILE, JSON.stringify(data), function( error ) {
 			if( error ) {
-				console.log( 'Bio error: ', error );
+				console.log( 'Error writing dat: ', error );
 			} else {
-				console.log( "Bio success." );
+				console.log( "Success!" );
 			}
 		});
-	},
-	avatarsTemplate: function( filename, presenters ) {
-		var avatarTemplate = fs.readFileSync( AVATAR_TEMPLATE, 'utf8' ),
-			str = [];
-
-		for( var j in presenters ) {
-			str.push( '{% if author contains "' + j + '" %}' + ejs.render( avatarTemplate, { presenter: presenters[ j ] }) + '{% endif %}' );
-		}
-
-		fs.writeFile( filename, str.join( '' ), function( error ) {
-			if( error ) {
-				console.log( 'Avatars error: ', error );
-			} else {
-				console.log( "Avatars success." );
-			}
-		});
-	}
 }

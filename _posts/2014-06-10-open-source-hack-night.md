@@ -9,7 +9,7 @@ author: nicknisi
 
 ## Presented by Nick Nisi
 
-{% include nicknisi.html %}
+{% include bio.html presenter=site.data.presenters.nicknisi %}
 
 * [Open Source Beginner Bugs](https://gist.github.com/nicknisi/9216e06d5ae972a3ee07)
 

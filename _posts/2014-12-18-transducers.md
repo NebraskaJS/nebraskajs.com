@@ -10,7 +10,7 @@ author: kevinbeaty
 ## Presented by Kevin Beaty
 
 
-{% include kevinbeaty.html %}
+{% include bio.html presenter=site.data.presenters.kevinbeaty %}
 
 <div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/IvECDyVmCI4" frameborder="0" allowfullscreen></iframe></div>
 

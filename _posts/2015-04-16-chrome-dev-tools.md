@@ -9,7 +9,7 @@ author: mrfmunger
 
 ## Presented by Matt Munger
 
-{% include mrfmunger.html %}
+{% include bio.html presenter=site.data.presenters.mrfmunger %}
 
 <div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/Som7VZSBu-U" frameborder="0" allowfullscreen></iframe></div>
 

@@ -9,7 +9,7 @@ author: jmhobbs
 
 ## Presented by John Hobbs
 
-{% include jmhobbs.html %}
+{% include bio.html presenter=site.data.presenters.jmhobbs %}
 
 <div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/SLIuNn64Krk" frameborder="0" allowfullscreen></iframe></div>
 

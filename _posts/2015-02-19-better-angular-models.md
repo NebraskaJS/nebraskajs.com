@@ -9,7 +9,7 @@ author: yarthur
 
 ## Presented by John Arthur
 
-{% include yarthur.html %}
+{% include bio.html presenter=site.data.presenters.yarthur %}
 
 <div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/9kduvjwwsls" frameborder="0" allowfullscreen></iframe></div>
 

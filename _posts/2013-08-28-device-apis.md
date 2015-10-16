@@ -9,7 +9,7 @@ author: mattdsteele
 
 ## Presented by Matt Steele
 
-{% include mattdsteele.html %}
+{% include bio.html presenter=site.data.presenters.mattdsteele %}
 
 <a href="http://www.flickr.com/photos/zachleat/9612909839/" title="NebraskaJS FightCodeGame Tank Battle August 2013 by zachleat, on Flickr"><img src="http://farm8.staticflickr.com/7402/9612909839_ab5a513f52_z.jpg" alt="NebraskaJS FightCodeGame Tank Battle August 2013"></a>
 

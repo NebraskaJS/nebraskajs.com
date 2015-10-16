@@ -10,7 +10,7 @@ author: BruceCoddington
 ## Presented by Bruce Coddington
 
 
-{% include BruceCoddington.html %}
+{% include bio.html presenter=site.data.presenters.BruceCoddington %}
 
 <div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/VbebgG2ZFcQ" frameborder="0" allowfullscreen></iframe></div>
 

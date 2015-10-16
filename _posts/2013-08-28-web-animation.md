@@ -9,7 +9,7 @@ author: codyjames
 
 ## Presented by Cody Peterson
 
-{% include codyjames.html %}
+{% include bio.html presenter=site.data.presenters.codyjames %}
 
 <a href="http://www.flickr.com/photos/zachleat/9612921647/" title="NebraskaJS FightCodeGame Tank Battle August 2013 by zachleat, on Flickr"><img src="http://farm3.staticflickr.com/2815/9612921647_1a8cb2e754_z.jpg" alt="NebraskaJS FightCodeGame Tank Battle August 2013"></a>
 

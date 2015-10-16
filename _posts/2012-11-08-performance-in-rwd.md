@@ -9,7 +9,7 @@ author: zachleat
 
 ## Presented by Zach Leatherman
 
-{% include zachleat.html %}
+{% include bio.html presenter=site.data.presenters.zachleat %}
 
 **Update: this presentation was updated and recorded at [The Omaha Mobile Group (video available)](http://www.zachleat.com/web/rwd-perf/).**
 

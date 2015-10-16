@@ -9,8 +9,8 @@ author-count: 2
 
 ## Administrated by Nick Nisi and Zach Leatherman
 
-{% include nicknisi.html %}
-{% include zachleat.html %}
+{% include bio.html presenter=site.data.presenters.nicknisi %}
+{% include bio.html presenter=site.data.presenters.zachleat %}
 
 History is written by the winner. To the victor go the spoils—and at NebraskaJS, both of these were true as our fellow developers, our story's heroes, climbed into the web interface of their mechanized virtual killing machines to wage war in the great equalizer of combat.
 

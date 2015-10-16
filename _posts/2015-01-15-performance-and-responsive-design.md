@@ -9,7 +9,7 @@ author: zachleat
 
 ## Presented by Zach Leatherman
 
-{% include zachleat.html %}
+{% include bio.html presenter=site.data.presenters.zachleat %}
 
 <div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/r72A_pjpBpY" frameborder="0" allowfullscreen></iframe></div>
 

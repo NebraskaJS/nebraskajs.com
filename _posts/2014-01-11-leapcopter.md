@@ -9,7 +9,7 @@ author: nicknisi
 
 ## Presented by Nick Nisi
 
-{% include nicknisi.html %}
+{% include bio.html presenter=site.data.presenters.nicknisi %}
 
 Nick combined aspects of the other two presentations at NebraskaJS January 2014 ([Leap Motion](/2014/leapmotion/) and a [nodecopter](/2014/hardware-geocities/)) to demo flying a [Parrot AR.Drone](http://ardrone2.parrot.com) using the [Leap Motion interactive controller](https://www.leapmotion.com/).
 

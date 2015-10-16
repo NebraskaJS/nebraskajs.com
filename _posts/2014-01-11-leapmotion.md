@@ -9,7 +9,7 @@ author: jhannah
 
 ## Presented by Jay Hannah
 
-{% include jhannah.html %}
+{% include bio.html presenter=site.data.presenters.jhannah %}
 
 Jay gave a bunch of really interesting demos of a project he’s working on using WebGL and the [Leap Motion interactive controller](https://www.leapmotion.com/), a device that will map your fingers in 3-dimensional space.
 
