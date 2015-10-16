@@ -10,7 +10,8 @@
 		"ejs": "latest",
 		"fontfaceonload": "^0.1.6",
 		"grunt-cli": "~0.1.7",
-		"request": "latest"
+		"request": "latest",
+    "js-yaml": "latest"
 	},
 	"devDependencies": {
 		"grunt": "~0.4.5",
