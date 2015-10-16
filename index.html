@@ -9,11 +9,14 @@ layout: default
 			<h2>Presentations</h2>
       <ul class="posts">
 				{% for post in site.posts %}
-					{% assign author = post.author %}
-          {% if author %}
-          {% assign authors = post.author | split: ' ' %}
+          {% if post.author %}
+            {% assign authors = post.author | split: ' ' %}
+            {% assign author_count = authors|size %}
+          {% else %}
+            {% assign authors = '' %}
+            {% assign author_count = 0 %}
           {% endif %}
-          <li><a href="{{ post.url }}">{% if author %}<span class="avatar{% if post.author-count %} avatar-count-{{ post.author-count }}{% endif %}" data-author="{{ post.author }}">{% for presenter in authors %}{% if site.data.presenters[presenter].avatar_url %}<img src="{{ site.data.presenters[presenter].avatar_url }}" alt="{{ site.data.presenters[presenter].name }}">{% endif %}{% endfor %}</span>{% endif %}{{ post.title | widont }}</a>{% if post.videolength %} <span class="videolength">{{ post.videolength }}</span>{% endif %}</li>
+          <li><a href="{{ post.url }}">{% if authors %}<span class="avatar{% if author_count > 1 %} avatar-count-{{ author_count }}{% endif %}">{% for author in authors %}{% if site.data.presenters[author].avatar_url %}<img src="{{ site.data.presenters[author].avatar_url }}" alt="{{ site.data.presenters[author].name }}">{% endif %}{% endfor %}</span>{% endif %}{{ post.title | widont }}</a>{% if post.videolength %} <span class="videolength">{{ post.videolength }}</span>{% endif %}</li>
 				{% endfor %}
 			</ul>
 		</article>

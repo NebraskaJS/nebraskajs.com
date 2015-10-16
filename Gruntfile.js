@@ -184,7 +184,7 @@ module.exports = function(grunt) {
 				}
 			},
 			presenters: {
-				command: 'node fetch.js',
+				command: 'node update.js',
 				options: {
 					stdout: true,
 					execOptions: {
