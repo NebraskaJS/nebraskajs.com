@@ -1,31 +1,32 @@
 {
-	"name": "nebraskajs",
-	"version": "0.1.6",
-	"homepage": "http://github.com/nebraskajs/nebraskajs.com/",
-	"author": {
-		"name": "Zach Leatherman"
-	},
-	"private": true,
-	"dependencies": {
-		"ejs": "latest",
-		"fontfaceonload": "^0.1.6",
-		"grunt-cli": "~0.1.7",
-		"request": "latest"
-	},
-	"devDependencies": {
-		"grunt": "~0.4.5",
-		"grunt-shell": "~0.2.2",
-		"grunt-contrib-cssmin": "~0.6.0",
-		"grunt-contrib-concat": "~0.2.0",
-		"grunt-contrib-uglify": "~0.2.0",
-		"grunt-contrib-watch": "~0.3.1",
-		"grunt-contrib-jshint": "~0.4.3",
-		"grunt-contrib-sass": "~0.3.0",
-		"matchdep": "~0.1.2",
-		"grunt-contrib-htmlmin": "~0.3.0",
-		"grunt-contrib-compress": "~0.10.0"
-	},
-	"licenses": {
-		"MIT": true
-	}
+  "name": "nebraskajs",
+  "version": "0.1.6",
+  "homepage": "http://github.com/nebraskajs/nebraskajs.com/",
+  "author": {
+    "name": "Zach Leatherman"
+  },
+  "private": true,
+  "dependencies": {
+    "ejs": "latest",
+    "fontfaceonload": "^0.1.6",
+    "grunt-cli": "~0.1.7",
+    "gulp": "^3.9.0",
+    "request": "latest"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-shell": "~0.2.2",
+    "grunt-contrib-cssmin": "~0.6.0",
+    "grunt-contrib-concat": "~0.2.0",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-watch": "~0.3.1",
+    "grunt-contrib-jshint": "~0.4.3",
+    "grunt-contrib-sass": "~0.3.0",
+    "matchdep": "~0.1.2",
+    "grunt-contrib-htmlmin": "~0.3.0",
+    "grunt-contrib-compress": "~0.10.0"
+  },
+  "licenses": {
+    "MIT": true
+  }
 }

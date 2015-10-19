@@ -1,7 +1,7 @@
 ---
 layout: post
-title: ClojureScript: for JavaScript Developers
-videolength: 31min
+title: ClojureScript for JavaScript Developers
+videolength: 65min
 author: solussd
 ---
 
@@ -11,4 +11,4 @@ author: solussd
 
 {% include solussd.html %}
 
-<div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/DnLfboeUKT4" frameborder="0" allowfullscreen></iframe></div>
+<div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/2rGNfASS4N0" frameborder="0" allowfullscreen></iframe></div>

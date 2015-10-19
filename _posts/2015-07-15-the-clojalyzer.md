@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Clojalyzer
-videolength: 31min
+videolength: 20min
 author: mattfenwick
 ---
 
@@ -11,4 +11,4 @@ author: mattfenwick
 
 {% include mattfenwick.html %}
 
-<div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/DnLfboeUKT4" frameborder="0" allowfullscreen></iframe></div>
+<div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/MpVBCI1AKM8" frameborder="0" allowfullscreen></iframe></div>

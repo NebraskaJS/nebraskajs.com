@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Writing ES6 Now
-videolength: 31min
+title: Future Javascript, Now
+videolength: 56min
 author: blainekasten
 ---
 
@@ -11,4 +11,4 @@ author: blainekasten
 
 {% include blainekasten.html %}
 
-<div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/DnLfboeUKT4" frameborder="0" allowfullscreen></iframe></div>
+<div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/9c4sQn0tA0o" frameborder="0" allowfullscreen></iframe></div>

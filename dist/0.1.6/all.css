@@ -1,4 +1,4 @@
-/* nebraskajs - v0.1.6 - 2015-08-31
+/* nebraskajs - v0.1.6 - 2015-10-19
 * http://github.com/nebraskajs/nebraskajs.com/
 * Copyright (c) 2015 Zach Leatherman; MIT License */
 
@@ -621,7 +621,7 @@ body {
 	.next-meetup > h2,
 	.next-meetup > a {
 		float: left;
-		width: 33.3333%;
+		width: 50%;
 	}
 	.next-meetup > h2 {
 		text-align: right;

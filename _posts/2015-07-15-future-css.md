@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Future CSS
-videolength: 31min
+videolength: 21min
 author: vosscco
 ---
 
@@ -11,4 +11,4 @@ author: vosscco
 
 {% include vosscco.html %}
 
-<div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/DnLfboeUKT4" frameborder="0" allowfullscreen></iframe></div>
+<div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/pphi9P4dyYk" frameborder="0" allowfullscreen></iframe></div>

@@ -617,7 +617,7 @@ body {
 	.next-meetup > h2,
 	.next-meetup > a {
 		float: left;
-		width: 33.3333%;
+		width: 50%;
 	}
 	.next-meetup > h2 {
 		text-align: right;
