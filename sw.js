@@ -1,6 +1,6 @@
-/* nebraskajs - v0.1.6 - 2015-12-05
+/* nebraskajs - v0.1.6 - 2016-03-13
 * http://github.com/nebraskajs/nebraskajs.com/
-* Copyright (c) 2015 Zach Leatherman; MIT License */
+* Copyright (c) 2016 Zach Leatherman; MIT License */
 
 "use strict";
 importScripts('js/cache-polyfill.js');
