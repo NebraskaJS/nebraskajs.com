@@ -29,7 +29,7 @@ Changes to the Logo must be updated at these locations:
 
 * [Twitter](https://twitter.com/nebraskajs): Must be 128x128 or Twitter will resize poorly.
 * [Gravatar](http://en.gravatar.com/) (used at GitHub)
-* [Meetup](http://www.meetup.com/nebraskajs/)
+* [Meetup](http://www.meetup.com/ReactJS-Denver/)
 * [Facebook](https://www.facebook.com/nebraskajs)
 * [Google Plus](https://plus.google.com/115220697074331366039/posts)
 * [LinkedIn](http://www.linkedin.com/groups/NebraskaJS-4790018)
