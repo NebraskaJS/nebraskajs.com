@@ -11,7 +11,7 @@ author: mattdsteele
 
 {% include mattdsteele.html %}
 
-<a href="http://www.flickr.com/photos/zachleat/9612909839/" title="NebraskaJS FightCodeGame Tank Battle August 2013 by zachleat, on Flickr"><img src="http://farm8.staticflickr.com/7402/9612909839_ab5a513f52_z.jpg" alt="NebraskaJS FightCodeGame Tank Battle August 2013"></a>
+<img src="/img/talks/mattsteele.jpg" alt="NebraskaJS FightCodeGame Tank Battle August 2013">
 
 <div class="fluid-width-video-wrapper"><iframe width="420" height="315" src="//www.youtube.com/embed/5fgaXNCrtj0" frameborder="0" allowfullscreen></iframe></div>
 

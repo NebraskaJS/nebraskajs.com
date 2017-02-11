@@ -11,7 +11,7 @@ author: nicholaspetersen
 
 {% include nicholaspetersen.html %}
 
-<a href="http://www.flickr.com/photos/zachleat/9366554471/"><img src="http://farm3.staticflickr.com/2883/9366554471_5c0c3510e9_z.jpg" alt="Nicholas Petersen speaking at NebraskaJS July 2013"></a>
+<img src="/img/talks/lessis.jpg" alt="Nicholas Petersen speaking at NebraskaJS July 2013">
 
 <div class="fluid-width-video-wrapper"><iframe width="560" height="315" src="//www.youtube.com/embed/FCbK-Chz5J4" frameborder="0" allowfullscreen></iframe></div>
 

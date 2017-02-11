@@ -14,7 +14,7 @@ author-count: 2
 
 ## Coding the tanks
 
-<a href="http://www.flickr.com/photos/zachleat/9612913623/" title="NebraskaJS FightCodeGame Tank Battle August 2013 by zachleat, on Flickr"><img src="http://farm4.staticflickr.com/3833/9612913623_0d48243a08_z.jpg" alt="NebraskaJS FightCodeGame Tank Battle August 2013"></a>
+<img src="/img/talks/fightcodegame.jpg" alt="NebraskaJS FightCodeGame Tank Battle August 2013">
 
 
 ## View the [Tournament Brackets](http://challonge.com/nebraskajs)
@@ -24,7 +24,7 @@ author-count: 2
 
 The winner received a copy of [Secrets of the JavaScript Ninja](http://jsninja.com/) by John Resig and a sweet tank trophy:
 
-<a href="http://www.flickr.com/photos/zachleat/9616130416/" title="NebraskaJS FightCodeGame Tank Battle August 2013 by zachleat, on Flickr"><img src="http://farm8.staticflickr.com/7315/9616130416_898f8ce474_z.jpg" alt="NebraskaJS FightCodeGame Tank Battle August 2013"></a>
+<img src="/img/talks/tanks.jpg" alt="NebraskaJS FightCodeGame Tank Battle August 2013">
 
 
 ## The Final Match
@@ -34,7 +34,7 @@ The winner received a copy of [Secrets of the JavaScript Ninja](http://jsninja.c
 
 ## The Winner: [Preston Badeer](https://twitter.com/prrstn)
 
-<a href="http://www.flickr.com/photos/zachleat/9616154580/" title="NebraskaJS FightCodeGame Tank Battle August 2013 by zachleat, on Flickr"><img src="http://farm8.staticflickr.com/7302/9616154580_29b4f24b36_z.jpg" alt="NebraskaJS FightCodeGame Tank Battle August 2013"></a>
+<img src="/img/talks/tanks-winner.jpg" alt="NebraskaJS FightCodeGame Tank Battle August 2013">
 
 ## Related
 

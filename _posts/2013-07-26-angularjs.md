@@ -11,7 +11,7 @@ author: jerodsanto
 
 {% include jerodsanto.html %}
 
-<a href="http://www.flickr.com/photos/zachleat/9366585451/" title="Jerod Santo talking about AngularJS by zachleat, on Flickr"><img src="http://farm6.staticflickr.com/5463/9366585451_5226516355_z.jpg" alt="Jerod Santo talking about AngularJS"></a>
+<img src="/img/talks/jerodsanto.jpg" alt="Jerod Santo talking about AngularJS">
 
 <div class="fluid-width-video-wrapper"><iframe width="560" height="315" src="//www.youtube.com/embed/1JS07_sFMcs" frameborder="0" allowfullscreen></iframe></div>
 
