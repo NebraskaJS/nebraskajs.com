@@ -3,5 +3,9 @@ safe: false
 markdown: rdiscount
 permalink: /:year/:title/
 highlighter: pygments
-exclude: node_modules, README.md, build.sh, _presenters
+exclude: 
+ - node_modules
+ - README.md
+ - build.sh
+ - _presenters
 distFolder: /dist/0.1.6/

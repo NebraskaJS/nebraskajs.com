@@ -9,7 +9,11 @@ Use [NPM](http://npmjs.org) to install the dependencies.
 
     npm install
 
-[Jekyll](https://github.com/mojombo/jekyll) is not available in npm, so you'll need to install it separately. Then, run the build script:
+[Jekyll](https://github.com/mojombo/jekyll) is not available in npm, so you'll need to install it separately:
+
+    gem install jekyll bundler rdiscount
+
+Then, run the build script:
 
     grunt
 
