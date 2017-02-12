@@ -11,7 +11,7 @@ author: mattdsteele
 
 {% include mattdsteele.html %}
 
-<img src="/img/talks/mattsteele.jpg" alt="NebraskaJS FightCodeGame Tank Battle August 2013">
+<img src="/img/talks/mattsteele.jpg" alt="NebraskaJS Device APIs (August 2013)">
 
 <div class="fluid-width-video-wrapper"><iframe width="420" height="315" src="//www.youtube.com/embed/5fgaXNCrtj0" frameborder="0" allowfullscreen></iframe></div>
 
