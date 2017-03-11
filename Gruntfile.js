@@ -1,4 +1,4 @@
-/*global module:false,require:false,console:false */
+/*jshint node:true*/
 module.exports = function(grunt) {
 
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);

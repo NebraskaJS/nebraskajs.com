@@ -1,6 +1,6 @@
-/* nebraskajs - v0.1.6 - 2016-06-12
+/* nebraskajs - v0.1.6 - 2017-03-11
 * http://github.com/nebraskajs/nebraskajs.com/
-* Copyright (c) 2016 Zach Leatherman; MIT License */
+* Copyright (c) 2017 Zach Leatherman; MIT License */
 
 /*! fontfaceonload - v0.1.6 - 2015-03-13
  * https://github.com/zachleat/fontfaceonload
