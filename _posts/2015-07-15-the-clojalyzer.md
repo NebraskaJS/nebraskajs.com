@@ -9,6 +9,6 @@ author: mattfenwick
 
 ## Presented by Matt Fenwick
 
-{% include mattfenwick.html %}
+{% include bio.html presenter=site.data.presenters.mattfenwick %}
 
 <div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/MpVBCI1AKM8" frameborder="0" allowfullscreen></iframe></div>

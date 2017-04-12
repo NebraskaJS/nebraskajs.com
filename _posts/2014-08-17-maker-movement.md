@@ -9,7 +9,7 @@ author: shellylynnxiong
 
 ## Presented by Shelly Lynn Xiong
 
-{% include shellylynnxiong.html %}
+{% include bio.html presenter=site.data.presenters.shellylynnxiong %}
 
 <div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/VSB-pZ_bw3s" frameborder="0" allowfullscreen></iframe></div>
 

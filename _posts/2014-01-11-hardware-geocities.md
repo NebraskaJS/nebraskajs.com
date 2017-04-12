@@ -9,7 +9,7 @@ author: mattdsteele
 
 ## Presented by Matt Steele
 
-{% include mattdsteele.html %}
+{% include bio.html presenter=site.data.presenters.mattdsteele %}
 
 Matt is one of those people who is clearly not afraid of a live demo. In one of NebraskaJS’s most demo-rich presentations he showcases:
 

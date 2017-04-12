@@ -9,6 +9,6 @@ author: solussd
 
 ## Presented by Joe Smith
 
-{% include solussd.html %}
+{% include bio.html presenter=site.data.presenters.solussd %}
 
 <div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/2rGNfASS4N0" frameborder="0" allowfullscreen></iframe></div>

@@ -9,7 +9,7 @@ author: eliperelman
 
 ## Presented by Eli Perelman
 
-{% include eliperelman.html %}
+{% include bio.html presenter=site.data.presenters.eliperelman %}
 
 <br/>
 

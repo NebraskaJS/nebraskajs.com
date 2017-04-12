@@ -9,7 +9,7 @@ author: nicknisi
 
 ## Presented by Nick Nisi
 
-{% include nicknisi.html %}
+{% include bio.html presenter=site.data.presenters.nicknisi %}
 
 <div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/nLCedy68Qf4" frameborder="0" allowfullscreen></iframe></div>
 

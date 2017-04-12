@@ -9,7 +9,7 @@ author: mattdsteele
 
 ## Presented by Matt Steele
 
-{% include mattdsteele.html %}
+{% include bio.html presenter=site.data.presenters.mattdsteele %}
 
 <img src="/img/talks/mattsteele.jpg" alt="NebraskaJS Device APIs (August 2013)">
 

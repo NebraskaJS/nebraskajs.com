@@ -9,7 +9,7 @@ author: nicholaspetersen
 
 ## Presented by Nicholas Petersen
 
-{% include nicholaspetersen.html %}
+{% include bio.html presenter=site.data.presenters.nicholaspetersen %}
 
 <img src="/img/talks/lessis.jpg" alt="Nicholas Petersen speaking at NebraskaJS July 2013">
 

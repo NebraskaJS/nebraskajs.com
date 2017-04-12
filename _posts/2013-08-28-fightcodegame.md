@@ -9,8 +9,8 @@ author-count: 2
 
 ## Administrated by Nick Nisi and Zach Leatherman
 
-{% include nicknisi.html %}
-{% include zachleat.html %}
+{% include bio.html presenter=site.data.presenters.nicknisi %}
+{% include bio.html presenter=site.data.presenters.zachleat %}
 
 ## Coding the tanks
 

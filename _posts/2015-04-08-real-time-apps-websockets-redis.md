@@ -9,6 +9,6 @@ author: newz2000
 
 ## Presented by Matthew Nuzum
 
-{% include newz2000.html %}
+{% include bio.html presenter=site.data.presenters.newz2000 %}
 
 <div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/7ZhZbheRjaU" frameborder="0" allowfullscreen></iframe></div>

@@ -9,7 +9,7 @@ author: alassek
 
 ## Presented by Adam Lassek (September 2010)
 
-{% include alassek.html %}
+{% include bio.html presenter=site.data.presenters.alassek %}
 
 <div class="fluid-width-video-wrapper"><iframe src="http://player.vimeo.com/video/14659274" width="500" height="375" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
 

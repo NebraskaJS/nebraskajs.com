@@ -9,7 +9,7 @@ author: jerodsanto
 
 ## Presented by Jerod Santo
 
-{% include jerodsanto.html %}
+{% include bio.html presenter=site.data.presenters.jerodsanto %}
 
 <img src="/img/talks/jerodsanto.jpg" alt="Jerod Santo talking about AngularJS">
 

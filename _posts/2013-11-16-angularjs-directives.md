@@ -9,7 +9,7 @@ author: paulgraff
 
 ## Presented by Paul Graff
 
-{% include paulgraff.html %}
+{% include bio.html presenter=site.data.presenters.paulgraff %}
 
 <div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/kgFlJwts2j4" frameborder="0" allowfullscreen></iframe></div>
 

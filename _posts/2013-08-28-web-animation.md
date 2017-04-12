@@ -9,7 +9,7 @@ author: codyjames
 
 ## Presented by Cody Peterson
 
-{% include codyjames.html %}
+{% include bio.html presenter=site.data.presenters.codyjames %}
 
 <img src="/img/talks/cody.jpg" alt="NebraskaJS FightCodeGame Tank Battle August 2013">
 

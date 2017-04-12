@@ -9,7 +9,7 @@ author: dhoman
 
 ## Presented by Derek Homan
 
-{% include dhoman.html %}
+{% include bio.html presenter=site.data.presenters.dhoman %}
 
 <div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/47MShEoKQO4" frameborder="0" allowfullscreen></iframe></div>
 

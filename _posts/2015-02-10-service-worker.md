@@ -9,7 +9,7 @@ author: blainekasten
 
 ## Presented by Blaine Kasten
 
-{% include blainekasten.html %}
+{% include bio.html presenter=site.data.presenters.blainekasten %}
 
 <div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/7cL_HnneJ_o" frameborder="0" allowfullscreen></iframe></div>
 

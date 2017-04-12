@@ -9,7 +9,7 @@ author: BRock97
 
 ## Presented by Bryan Rockwood
 
-{% include BRock97.html %}
+{% include bio.html presenter=site.data.presenters.BRock97 %}
 
 Unfortunately, the video camera battery died at about the second to last slide in Bryan’s presentation. Sorry! Be sure to check out the slides below.
 

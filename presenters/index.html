@@ -6,7 +6,12 @@ layout: default
 	<div class="maxw">
 		<h2>Presenters Emeritus</h2>
 	</div>
-	{% include presenters.html %}
+  <ol class="presenters">
+  {% for presenter_array in site.data.presenters %}
+    {% assign presenter = presenter_array[1] %}
+    {% include bio.html presenter=presenter nowrap=true %}
+  {% endfor %}
+  </ol>
 	<div class="maxw">
 		<p><em>Ordered by presentation date. Also available as a <a href="https://twitter.com/nebraskajs/presenters">Twitter List</a>.</em></p>
 	</div>

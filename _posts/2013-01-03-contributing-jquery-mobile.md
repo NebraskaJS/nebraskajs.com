@@ -9,7 +9,7 @@ author: collinforrester
 
 ## Presented by Collin Forrester
 
-{% include collinforrester.html %}
+{% include bio.html presenter=site.data.presenters.collinforrester %}
 
 <div class="fluid-width-video-wrapper">
 	<iframe width="560" height="315" src="http://www.youtube.com/embed/eiaVF0MectI" frameborder="0" allowfullscreen></iframe>

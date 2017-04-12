@@ -9,6 +9,6 @@ author: mattdsteele
 
 ## Presented by Matt Steele
 
-{% include mattdsteele.html %}
+{% include bio.html presenter=site.data.presenters.mattdsteele %}
 
 <div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/Jv52vFLnn54" frameborder="0" allowfullscreen></iframe></div>

@@ -1,0 +1,25 @@
+{% if include.nowrap != true %}
+<ol class="presenters">
+{% endif %}
+  <li class="{{ include.presenter.username }} count-{{ include.presenter.count }}">
+    {% if include.presenter.github %}
+    <a href="https://github.com/{{ include.presenter.github }}/">
+    {% else %}
+		<a>
+    {% endif %}
+      <img src="{{ include.presenter.avatar_url }}" alt="{{ include.presenter.name }}">
+      <span class="name">{{ include.presenter.name }}</span>
+		</a>
+    {% if include.presenter.github %}
+    <a href="https://github.com/{{ include.presenter.github }}/"><i class="foundicon-github"></i></a>
+    {% endif %}
+    {% if include.presenter.twitter %}
+    <a href="https://twitter.com/{{ include.presenter.twitter }}/"><i class="foundicon-twitter"></i></a>
+    {% endif %}
+    {% if include.presenter.blog %}
+    <a href="{{ include.presenter.blog }}">Blog</a>
+    {% endif %}
+	</li>
+{% if include.nowrap != true %}
+</ol>
+{% endif %}

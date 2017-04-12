@@ -9,7 +9,7 @@ author: TJacobDesign
 
 ## Presented by Timothy Miller
 
-{% include tjacobdesign.html %}
+{% include bio.html presenter=site.data.presenters.tjacobdesign %}
 
 <div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/Zfz2I6YwYVY" frameborder="0" allowfullscreen></iframe></div>
 

@@ -9,6 +9,6 @@ author: blainekasten
 
 ## Presented by Blaine Kasten
 
-{% include blainekasten.html %}
+{% include bio.html presenter=site.data.presenters.blainekasten %}
 
 <div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/9c4sQn0tA0o" frameborder="0" allowfullscreen></iframe></div>

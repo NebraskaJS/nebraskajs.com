@@ -9,7 +9,7 @@ author: snekse
 
 ## Presented by Derek Eskens
 
-{% include snekse.html %}
+{% include bio.html presenter=site.data.presenters.snekse %}
 
 <div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/2_sp6CHs1qY" frameborder="0" allowfullscreen></iframe></div>
 

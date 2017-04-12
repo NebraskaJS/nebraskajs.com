@@ -21,7 +21,7 @@ Output is generated into the `_site` directory.  As is, the site's hierarchy (su
 
 #### Fetching Presenters
 
-Add the new Presenter’s twitter and github handles to `_presenters/presenters.json`
+Add the new Presenter’s Github (primary key) username (and optionally Twitter) to `_data/presenters.yml`. Then run:
 
     grunt presenters
     grunt

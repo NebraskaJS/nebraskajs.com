@@ -10,7 +10,7 @@ author: jprichardson
 ## Presented by JP Richardson
 
 
-{% include jprichardson.html %}
+{% include bio.html presenter=site.data.presenters.jprichardson %}
 
 <div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/eLe3T6Izynw" frameborder="0" allowfullscreen></iframe></div>
 

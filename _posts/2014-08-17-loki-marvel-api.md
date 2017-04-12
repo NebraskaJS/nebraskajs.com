@@ -9,7 +9,7 @@ author: javazquez
 
 ## Presented by Juan Vazquez
 
-{% include javazquez.html %}
+{% include bio.html presenter=site.data.presenters.javazquez %}
 
 <div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/VG9pFAJ8nsg" frameborder="0" allowfullscreen></iframe></div>
 

@@ -9,7 +9,7 @@ author: jerodsanto
 
 ## Presented by Jerod Santo
 
-{% include jerodsanto.html %}
+{% include bio.html presenter=site.data.presenters.jerodsanto %}
 
 <blockquote class="twitter-tweet" lang="en"><p>If you’re coming to <a href="https://twitter.com/nebraskajs">@nebraskajs</a> tomorrow (you should), bring your favorite Dev Tools tips/tricks to share. There will be cash &amp; prizes!</p>&mdash; Jerod Santo (@jerodsanto) <a href="https://twitter.com/jerodsanto/statuses/440555605854392322">March 3, 2014</a></blockquote>
 

@@ -9,6 +9,6 @@ author: thelarkinn
 
 ## Presented by Sean Larkin
 
-{% include thelarkinn.html %}
+{% include bio.html presenter=site.data.presenters.thelarkinn %}
 
 <div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/HJA5pJcQteA" frameborder="0" allowfullscreen></iframe></div>

@@ -9,7 +9,7 @@ author: nwertzberger
 
 ## Presented by Nick Wertzberger
 
-{% include nwertzberger.html %}
+{% include bio.html presenter=site.data.presenters.nwertzberger %}
 
 <div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/9OS2Fehtx5w" frameborder="0" allowfullscreen></iframe></div>
 

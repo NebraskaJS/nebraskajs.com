@@ -9,7 +9,7 @@ author: loktar00
 
 ## Presented by Jason Brown
 
-{% include loktar00.html %}
+{% include bio.html presenter=site.data.presenters.loktar00 %}
 
 For its fifth birthday, JSBin had a [competition to replicate mathematical visualizations using canvas](http://remysharp.com/2013/08/14/jsbin-5th-birthday/). Nebraskan Jason Brown stepped up to the plate and offered [solutions to 5 different problems](http://remysharp.com/2013/08/14/jsbin-5th-birthday/#solvedSoFar-heading).
 

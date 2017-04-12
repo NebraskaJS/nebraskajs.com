@@ -9,6 +9,6 @@ author: toranb
 
 ## Presented by Toran Billups (December 2015)
 
-{% include toranb.html %}
+{% include bio.html presenter=site.data.presenters.toranb %}
 
 <div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/9T_mRAoJEL8" frameborder="0" allowfullscreen></iframe></div>
