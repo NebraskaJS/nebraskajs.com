@@ -4,6 +4,12 @@ AddEncoding gzip .zgz
 RewriteEngine On
 RewriteBase /
 
+# Redirect to HTTPS
+RewriteCond %{http:X-FORWARDED-PROTO} !https
+RewriteCond %{HTTP_HOST} ^nebraskajs\.com$ [NC]
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R,L]
+# End
+
 RewriteCond %{HTTP:Accept-Encoding} gzip
 RewriteCond %{REQUEST_FILENAME}.zgz -f 
 RewriteRule ^(.*)$ $1.zgz [L]
