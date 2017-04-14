@@ -1,14 +1,8 @@
 ---
-layout: post
+layout: post-video
 title: Web Bluetooth
 videolength: 67min
 author: mattdsteele
+presented: March 2017
+youtubeurl: https://www.youtube.com/embed/LPAKy9Rc4rA
 ---
-
-# {{ page.title }}
-
-## Presented by Matt Steele (March 2017)
-
-{% include bio.html presenter=site.data.presenters.mattdsteele %}
-
-<div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/LPAKy9Rc4rA" frameborder="0" allowfullscreen></iframe></div>

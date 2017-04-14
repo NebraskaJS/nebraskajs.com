@@ -3,6 +3,7 @@ layout: post
 title: JavaScript Metaprogramming
 videolength: 43min
 author: nicknisi
+bigtitle: true
 ---
 
 # {{ page.title }}

@@ -25,7 +25,7 @@ eliperelman:
   github: eliperelman
   twitter: eliperelman
 zachleat: 
-  count: 5
+  count: 6
   name: Zach Leatherman
   avatar_url: "https://avatars.githubusercontent.com/u/39355?v=3&s=80"
   blog: "http://www.zachleat.com/web/"
@@ -86,7 +86,7 @@ codyjames:
   blog: "http://humanshapes.co"
   github: codyjames
 mattdsteele: 
-  count: 2
+  count: 5
   name: Matt Steele
   avatar_url: "https://avatars.githubusercontent.com/u/389077?v=3&s=80"
   blog: "http://steele.blue"
@@ -266,6 +266,12 @@ ckoster22:
   twitter: ckoster22
   name: Charlie K
   avatar_url: "https://avatars2.githubusercontent.com/u/8353821?v=3&s=80"
+payne: 
+  name: Matt Payne
+  github: payne
+  twitter: payne
+  avatar_url: "https://avatars2.githubusercontent.com/u/114721?v=3&s=80"
+  blog: "http://MattPayne.org"
 bangarang: 
   twitter: lxrck
   github: bangarang

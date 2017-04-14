@@ -72,16 +72,6 @@ html {
 		clear:both;
 	}
 	/* End clearfix */
-
-	.page-home .maxw {
-		float: left;
-		width: 65%;
-		max-width: 100%;
-	}
-	.page-home .maxw.meetup-groups {
-		margin-left: 4%;
-		width: 31%;
-	}
 }
 
 /* App specific */
@@ -131,7 +121,7 @@ code {
 /* Navigation */
 body {
 	position: relative;
-	padding-bottom: 22em;
+	padding-bottom: 40em;
 }
 .navigation {
 	position: absolute;
@@ -142,8 +132,7 @@ body {
 }
 @media (min-width: 30em) {
 	body {
-		position: relative;
-		padding-bottom: 27em;
+		padding-bottom: 44em;
 	}
 }
 @media (min-width: 47em) {
@@ -172,12 +161,11 @@ body {
 }
 .social a {
 	text-decoration: none;
-	display: inline-block;
+	display: block;
 	padding: .4em 1em;
 	margin-bottom: .2em;
-	width: 49%;
 	opacity: .9;
-	font-size: .875em;
+	font-size: 1em;
 	line-height: 220%;
 	font-weight: 600;
 }
@@ -185,7 +173,7 @@ body {
 	width: 100%;
 }
 .social i {
-	font-size: 1.4em;
+	font-size: 1.6em;
 	vertical-align: middle;
 	margin-right: .2em;
 }
@@ -208,7 +196,7 @@ body {
 }
 .social a:link,
 .social a:visited {
-	color: #999;
+	color: #333;
 }
 .github:link:hover,
 .github:link:focus,
@@ -266,14 +254,6 @@ body {
 	font-weight: 400;
 }
 
-@media (min-width: 24em) {
-	.social a {
-		font-size: 1em;
-	}
-	.social i {
-		font-size: 1.6em;
-	}
-}
 @media (min-width: 30em) {
 	.social a {
 		font-size: 1.25em;
@@ -287,9 +267,6 @@ body {
 		max-width: 14em;
 		margin: 0;
 		padding-top: 0;
-	}
-	.social a {
-		width: 100%;
 	}
 }
 
@@ -389,7 +366,11 @@ body {
 	.groups a {
 		font-size: 1.375em;
 	}
-
+@media ( max-width: 24.9375em ) {
+	.posts .posts-bigtitle {
+		font-size: 1.65em;
+	}
+}
 .posts .videolength {
 	margin-top: -.2em;
 	font-size: 1.2em;
@@ -422,7 +403,7 @@ body {
 .presenters {
 	list-style: none;
 	padding: 0;
-	margin: 0;
+	margin: 0 0 2em;
 	text-align: center;
 }
 .presenters li {

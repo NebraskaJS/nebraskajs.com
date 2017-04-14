@@ -16,27 +16,8 @@ layout: default
             {% assign authors = '' %}
             {% assign author_count = 0 %}
           {% endif %}
-          <li><a href="{{ post.url }}">{% if authors %}<span class="avatar{% if author_count > 1 %} avatar-count-{{ author_count }}{% endif %}">{% for author in authors %}{% if site.data.presenters[author].avatar_url %}<img src="{{ site.data.presenters[author].avatar_url }}" alt="{{ site.data.presenters[author].name }}">{% endif %}{% endfor %}</span>{% endif %}{{ post.title | widont }}</a>{% if post.videolength %} <span class="videolength">{{ post.videolength }}</span>{% endif %}</li>
+          <li><a href="{{ post.url }}"{% if post.bigtitle %} class="posts-bigtitle"{% endif %}>{% if authors %}<span class="avatar{% if author_count > 1 %} avatar-count-{{ author_count }}{% endif %}">{% for author in authors %}{% if site.data.presenters[author].avatar_url %}<img src="{{ site.data.presenters[author].avatar_url }}" alt="{{ site.data.presenters[author].name }}">{% endif %}{% endfor %}</span>{% endif %}{{ post.title }}</a>{% if post.videolength %} <span class="videolength">{{ post.videolength }}</span>{% endif %}</li>
 				{% endfor %}
-			</ul>
-		</article>
-	</div>
-
-
-	<div class="maxw meetup-groups">
-		<article>
-			<h2><a href="http://techomaha.com/list-omaha-user-groups/">Other Local Code Meetups</a></h2>
-			<ul class="groups">
-				<li><a href="http://www.beerandcode.org/">Beer &amp;&amp; Code Omaha</a></li>
-				<li><a href="http://www.meetup.com/Meteor-Omaha/">Meteor Omaha</a> (JavaScript)</li>
-				<li><a href="http://www.necfug.com/">Nebraska Coldfusion</a></li>
-				<li><a href="http://www.meetup.com/ng-nebraska/">ng-nebraska</a> (JavaScript, AngularJS) </li>
-				<li><a href="http://www.meetup.com/omahajava/">Omaha Java Users Group</a></li>
-				<li><a href="http://www.meetup.com/Omaha-Mobile-Group/">Omaha Mobile Group</a> (ObjC, Java, Mobile Apps) </li>
-				<li><a href="http://omaha.pm.org/">Omaha Perl Mongers</a></li>
-				<li><a href="http://www.omahapython.org/blog/">Omaha Python Users Group</a></li>
-				<li><a href="http://www.meetup.com/Omaha-Ruby-Meetup/">Omaha Ruby</a></li>
-				<li><a href="http://code.omahamakergroup.org/">OMG!Code</a></li>
 			</ul>
 		</article>
 	</div>
