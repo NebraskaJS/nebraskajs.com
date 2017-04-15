@@ -3,6 +3,15 @@ NebraskaJS
 
 Web site for Nebraska programmers dedicated to the JavaScript programming language.
 
+### Post-meetup Website Update Procedure
+
+1. Upload the video to the NebraskaJS YouTube Channel.
+1. If a new presenter, add their GitHub username to `presenters.yml` as a key. The usernames in this file are organized by first presentation date.
+1. If a returning presenter, increment their `count` value in `presenters.yml`. This will add another ring to their avatar.
+1. Run `grunt presenters` to fill in the rest of the `presenters.yml` data automatically from GitHub APIs.
+1. Add a new `_post/*.md` entry, probably using `layout: post-video`. Look at some of the new posts for examples.
+1. `grunt deploy` to upload a new version of the site (assumes you have a `nejs` host in your `.ssh/config` with the proper credentials)
+
 ### Building the Site
 
 Use [NPM](http://npmjs.org) to install the dependencies.
@@ -36,15 +45,12 @@ Changes to the Logo must be updated at these locations:
 * [Meetup](http://www.meetup.com/nebraskajs/)
 * [Facebook](https://www.facebook.com/nebraskajs)
 * [Google Plus](https://plus.google.com/115220697074331366039/posts)
-* [LinkedIn](http://www.linkedin.com/groups/NebraskaJS-4790018)
 * [Speakerdeck](speakerdeck.com/nebraskajs/)
 * [Lanyrd](http://lanyrd.com/series/nebraskajs/)
+* YouTube
+* Vimeo
 * favicon.ico, 32x32 (for HiDPI)
 
 ### Credits
 * [Zurb Foundation Icon Font 2, Social Set](http://www.zurb.com/playground/foundation-icons)
 * [Nebraska Image](http://en.wikipedia.org/wiki/File:Map_of_Nebraska.svg)
-
-### TODOs
-* Add SocialCount to main page and posts
-* Kuler Color Theme https://kuler.adobe.com/#themeID/2209535

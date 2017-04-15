@@ -25,7 +25,7 @@ eliperelman:
   github: eliperelman
   twitter: eliperelman
 zachleat: 
-  count: 6
+  count: Infinity
   name: Zach Leatherman
   avatar_url: "https://avatars.githubusercontent.com/u/39355?v=3&s=80"
   blog: "http://www.zachleat.com/web/"
@@ -171,7 +171,7 @@ shellylynnxiong:
   avatar_url: "https://avatars.githubusercontent.com/u/1245238?v=3&s=80"
   blog: "http://williamriley.me/"
   github: "bill-riley"
-TJacobDesign: 
+tjacobdesign: 
   count: 2
   name: Timothy Miller
   avatar_url: "https://avatars.githubusercontent.com/u/963985?v=3&s=80"
@@ -269,7 +269,7 @@ ckoster22:
 payne: 
   name: Matt Payne
   github: payne
-  twitter: payne
+  twitter: mattpayneorg
   avatar_url: "https://avatars2.githubusercontent.com/u/114721?v=3&s=80"
   blog: "http://MattPayne.org"
 bangarang: 

@@ -9,6 +9,6 @@ author: colevoss
 
 ## Presented by Cole Voss
 
-{% include bio.html presenter=site.data.presenters.vosscco %}
+{% include bio.html presenter=site.data.presenters.colevoss %}
 
 <div class="fluid-width-video-wrapper"><iframe src="//www.youtube.com/embed/pphi9P4dyYk" frameborder="0" allowfullscreen></iframe></div>
