@@ -23,6 +23,7 @@ module.exports = function(grunt) {
 			file: '<%= config.root %>_config.yml',
 			vars: {
 				safe: false,
+				future: true,
 				markdown: 'rdiscount',
 				permalink: '<%= config.root %>/:year/:title/',
 				highlighter: 'pygments',
