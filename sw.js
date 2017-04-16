@@ -1,4 +1,4 @@
-/* nebraskajs - v0.1.7 - 2017-04-14
+/* nebraskajs - v0.1.8 - 2017-04-15
 * http://github.com/nebraskajs/nebraskajs.com/
 * Copyright (c) 2017 Zach Leatherman; MIT License */
 

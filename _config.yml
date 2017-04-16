@@ -9,4 +9,4 @@ exclude:
  - README.md
  - build.sh
  - _presenters
-distFolder: /dist/0.1.7/
+distFolder: /dist/0.1.8/
