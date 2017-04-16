@@ -571,6 +571,7 @@ body {
 /* Next Meetup Widget */
 .next-meetup {
 	margin: -1em -1em 2em -1em;
+	font-family: Consolas, monospace;
 }
 .next-meetup > h2,
 .next-meetup > a {
@@ -591,17 +592,7 @@ body {
 }
 @media (min-width: 47em) {
 	.next-meetup {
-		margin: -2em -2em 5em -2em;
-	}
-}
-@media (min-width: 56em) {
-	.next-meetup > h2,
-	.next-meetup > a {
-		float: left;
-		width: 50%;
-	}
-	.next-meetup > h2 {
-		text-align: right;
+		margin: -2em -2em 3em -2em;
 	}
 }
 .next-meetup a:hover,
