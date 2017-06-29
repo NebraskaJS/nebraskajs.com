@@ -18,7 +18,7 @@ alassek:
   github: alassek
   twitter: alassek
 eliperelman: 
-  count: 5
+  count: 6
   name: Eli Perelman
   avatar_url: "https://avatars.githubusercontent.com/u/285899?v=3&s=80"
   blog: "http://eliperelman.com"
@@ -224,6 +224,7 @@ nwertzberger:
   blog: "http://www.ideaheap.com"
   github: nwertzberger
 1Copenut: 
+  count: 2
   name: Trevor Pierce
   avatar_url: "https://avatars.githubusercontent.com/u/934879?v=3&s=80"
   github: 1Copenut
