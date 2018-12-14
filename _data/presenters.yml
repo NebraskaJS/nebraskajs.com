@@ -1,313 +1,324 @@
-jdsharp:
+jdsharp: 
   count: Infinity
   name: Jonathan Sharp
-  avatar_url: 'https://avatars.githubusercontent.com/u/141104?v=3&s=80'
-  blog: 'http://cultivatenow.com'
+  avatar_url: "https://avatars.githubusercontent.com/u/141104?v=3&s=80"
+  blog: "http://cultivatenow.com"
   github: jdsharp
   twitter: jdsharp
-awirick:
+awirick: 
   count: 5
   twitter: amwirick
   name: Andrew Wirick
-  avatar_url: 'https://avatars.githubusercontent.com/u/219911?v=3&s=80'
+  avatar_url: "https://avatars.githubusercontent.com/u/219911?v=3&s=80"
   github: awirick
-alassek:
+alassek: 
   name: Adam Lassek
-  avatar_url: 'https://avatars.githubusercontent.com/u/57652?v=3&s=80'
-  blog: 'http://lyconic.com/blog'
+  avatar_url: "https://avatars.githubusercontent.com/u/57652?v=3&s=80"
+  blog: "http://lyconic.com/blog"
   github: alassek
   twitter: alassek
-eliperelman:
+eliperelman: 
   count: 6
   name: Eli Perelman
-  avatar_url: 'https://avatars.githubusercontent.com/u/285899?v=3&s=80'
-  blog: 'http://eliperelman.com'
+  avatar_url: "https://avatars.githubusercontent.com/u/285899?v=3&s=80"
+  blog: "http://eliperelman.com"
   github: eliperelman
   twitter: eliperelman
-zachleat:
+zachleat: 
   count: Infinity
   name: Zach Leatherman
-  avatar_url: 'https://avatars.githubusercontent.com/u/39355?v=3&s=80'
-  blog: 'http://www.zachleat.com/web/'
+  avatar_url: "https://avatars.githubusercontent.com/u/39355?v=3&s=80"
+  blog: "http://www.zachleat.com/web/"
   github: zachleat
   twitter: zachleat
-nicknisi:
+nicknisi: 
   count: Infinity
   name: Nick Nisi
-  avatar_url: 'https://avatars.githubusercontent.com/u/293805?v=3&s=80'
-  blog: 'http://nicknisi.com'
+  avatar_url: "https://avatars.githubusercontent.com/u/293805?v=3&s=80"
+  blog: "http://nicknisi.com"
   github: nicknisi
   twitter: nicknisi
-cfaddict:
+cfaddict: 
   name: Dan Vega
-  avatar_url: 'https://avatars.githubusercontent.com/u/349507?v=3&s=80'
-  blog: 'http://www.danvega.org/blog '
+  avatar_url: "https://avatars.githubusercontent.com/u/349507?v=3&s=80"
+  blog: "http://www.danvega.org/blog "
   github: cfaddict
   twitter: cfaddict
-collinforrester:
+collinforrester: 
   twitter: cforrester07
   name: Collin Forrester
-  avatar_url: 'https://avatars.githubusercontent.com/u/1233914?v=3&s=80'
+  avatar_url: "https://avatars.githubusercontent.com/u/1233914?v=3&s=80"
   github: collinforrester
-  blog: 'http://collinforrester.com'
-jgchristopher:
+  blog: "http://collinforrester.com"
+jgchristopher: 
   name: John Christopher
-  avatar_url: 'https://avatars.githubusercontent.com/u/35281?v=3&s=80'
+  avatar_url: "https://avatars.githubusercontent.com/u/35281?v=3&s=80"
   github: jgchristopher
   twitter: jgchristopher
-alexpgates:
+alexpgates: 
   name: Alex P. Gates
-  avatar_url: 'https://avatars.githubusercontent.com/u/242736?v=3&s=80'
-  blog: 'http://alexpgates.com'
+  avatar_url: "https://avatars.githubusercontent.com/u/242736?v=3&s=80"
+  blog: "http://alexpgates.com"
   github: alexpgates
   twitter: alexpgates
-jmhobbs:
-  count: 2
-  avatar_url: 'https://avatars.githubusercontent.com/u/115059?v=3&s=80'
+jmhobbs: 
+  count: 3
+  avatar_url: "https://avatars.githubusercontent.com/u/115059?v=3&s=80"
   name: John Hobbs
-  blog: 'http://www.velvetcache.org/'
+  blog: "http://www.velvetcache.org/"
   github: jmhobbs
   twitter: jmhobbs
-nicholaspetersen:
+nicholaspetersen: 
   twitter: lessis
   name: Nicholas Petersen
-  avatar_url: 'https://avatars.githubusercontent.com/u/1709172?v=3&s=80'
+  avatar_url: "https://avatars.githubusercontent.com/u/1709172?v=3&s=80"
   github: nicholaspetersen
-  blog: 'http://less.is'
-jerodsanto:
+  blog: "http://less.is"
+jerodsanto: 
   count: 2
   name: Jerod Santo
-  avatar_url: 'https://avatars.githubusercontent.com/u/8212?v=3&s=80'
-  blog: 'http://jerodsanto.net'
+  avatar_url: "https://avatars.githubusercontent.com/u/8212?v=3&s=80"
+  blog: "http://jerodsanto.net"
   github: jerodsanto
   twitter: jerodsanto
-codyjames:
+codyjames: 
   twitter: codypeterson
   name: Cody Peterson
-  avatar_url: 'https://avatars.githubusercontent.com/u/378665?v=3&s=80'
-  blog: 'http://humanshapes.co'
+  avatar_url: "https://avatars.githubusercontent.com/u/378665?v=3&s=80"
+  blog: "http://humanshapes.co"
   github: codyjames
-mattdsteele:
+mattdsteele: 
   count: 5
   name: Matt Steele
-  avatar_url: 'https://avatars.githubusercontent.com/u/389077?v=3&s=80'
-  blog: 'http://steele.blue'
+  avatar_url: "https://avatars.githubusercontent.com/u/389077?v=3&s=80"
+  blog: "http://steele.blue"
   github: mattdsteele
   twitter: mattdsteele
-robhruska:
+robhruska: 
   count: 2
   name: Rob Hruska
-  avatar_url: 'https://avatars.githubusercontent.com/u/1224017?v=3&s=80'
-  blog: 'http://www.robhruska.com'
+  avatar_url: "https://avatars.githubusercontent.com/u/1224017?v=3&s=80"
+  blog: "http://www.robhruska.com"
   github: robhruska
   twitter: robhruska
-loktar00:
+loktar00: 
   name: Jason
-  avatar_url: 'https://avatars.githubusercontent.com/u/174857?v=3&s=80'
-  blog: 'http://www.somethinghitme.com'
+  avatar_url: "https://avatars.githubusercontent.com/u/174857?v=3&s=80"
+  blog: "http://www.somethinghitme.com"
   github: loktar00
   twitter: loktar00
-alecbeta:
+alecbeta: 
   twitter: null
   name: Alec Larsen
-  avatar_url: 'https://avatars.githubusercontent.com/u/314034?v=3&s=80'
+  avatar_url: "https://avatars.githubusercontent.com/u/314034?v=3&s=80"
   github: AlecBeta
-paulgraff:
+paulgraff: 
   name: Paul Graff
-  avatar_url: 'https://avatars.githubusercontent.com/u/1301199?v=3&s=80'
-  blog: 'http://wootbro.com'
+  avatar_url: "https://avatars.githubusercontent.com/u/1301199?v=3&s=80"
+  blog: "http://wootbro.com"
   github: paulgraff
   twitter: paulgraff
-BRock97:
+BRock97: 
   name: Bryan Rockwood
-  avatar_url: 'https://avatars.githubusercontent.com/u/1372038?v=3&s=80'
+  avatar_url: "https://avatars.githubusercontent.com/u/1372038?v=3&s=80"
   github: BRock97
   twitter: BRock97
-BruceCoddington:
+BruceCoddington: 
   name: Bruce Coddington
-  avatar_url: 'https://avatars.githubusercontent.com/u/1820225?v=3&s=80'
+  avatar_url: "https://avatars.githubusercontent.com/u/1820225?v=3&s=80"
   github: brucecoddington
   twitter: BruceCoddington
-hoodja:
+hoodja: 
   name: James Hood
-  avatar_url: 'https://avatars.githubusercontent.com/u/348398?v=3&s=80'
+  avatar_url: "https://avatars.githubusercontent.com/u/348398?v=3&s=80"
   github: hoodja
   twitter: hoodja
-serafino:
+serafino: 
   twitter: teknohazard
   name: Abraham Serafino
-  avatar_url: 'https://avatars.githubusercontent.com/u/5920799?v=3&s=80'
+  avatar_url: "https://avatars.githubusercontent.com/u/5920799?v=3&s=80"
   github: serafino
-jhannah:
+jhannah: 
   twitter: deafferret
   name: Jay Hannah
-  avatar_url: 'https://avatars.githubusercontent.com/u/62206?v=3&s=80'
-  blog: 'http://jays.net'
+  avatar_url: "https://avatars.githubusercontent.com/u/62206?v=3&s=80"
+  blog: "http://jays.net"
   github: jhannah
-CaraHeacock:
+CaraHeacock: 
   name: Cara
-  avatar_url: 'https://avatars.githubusercontent.com/u/6446911?v=3&s=80'
-  blog: 'http://caraheacock.github.io/'
+  avatar_url: "https://avatars.githubusercontent.com/u/6446911?v=3&s=80"
+  blog: "http://caraheacock.github.io/"
   github: Caraheacock
   twitter: CaraHeacock
-javazquez:
+javazquez: 
   name: Juan Vazquez
-  avatar_url: 'https://avatars.githubusercontent.com/u/141025?v=3&s=80'
-  blog: 'http://javazquez.com/juan/'
+  avatar_url: "https://avatars.githubusercontent.com/u/141025?v=3&s=80"
+  blog: "http://javazquez.com/juan/"
   github: javazquez
   twitter: javazquez
-mmacaula:
+mmacaula: 
   count: 2
   name: Mike Macaulay
-  avatar_url: 'https://avatars.githubusercontent.com/u/3186250?v=3&s=80'
+  avatar_url: "https://avatars.githubusercontent.com/u/3186250?v=3&s=80"
   github: mmacaula
   twitter: mmacaula
-shellylynnxiong:
+shellylynnxiong: 
   name: Shelly Lynn Xiong
-  avatar_url: 'https://avatars.githubusercontent.com/u/7191215?v=3&s=80'
+  avatar_url: "https://avatars.githubusercontent.com/u/7191215?v=3&s=80"
   github: shellylynnxiong
   twitter: null
-bill-riley:
+"bill-riley": 
   twitter: Bill_Riley
   name: William Riley
-  avatar_url: 'https://avatars.githubusercontent.com/u/1245238?v=3&s=80'
-  blog: 'http://williamriley.me/'
-  github: bill-riley
-tjacobdesign:
+  avatar_url: "https://avatars.githubusercontent.com/u/1245238?v=3&s=80"
+  blog: "http://williamriley.me/"
+  github: "bill-riley"
+tjacobdesign: 
   count: 2
   name: Timothy Miller
-  avatar_url: 'https://avatars.githubusercontent.com/u/963985?v=3&s=80'
-  blog: 'http://timothymiller.guru'
+  avatar_url: "https://avatars.githubusercontent.com/u/963985?v=3&s=80"
+  blog: "http://timothymiller.guru"
   github: tjacobdesign
   twitter: TJacobDesign
-dhoman:
+dhoman: 
   twitter: derekhoman
   name: Derek Homan
-  avatar_url: 'https://avatars.githubusercontent.com/u/205598?v=3&s=80'
-  blog: 'http://www.dhoman.com'
+  avatar_url: "https://avatars.githubusercontent.com/u/205598?v=3&s=80"
+  blog: "http://www.dhoman.com"
   github: dhoman
-CalebCassel:
+CalebCassel: 
   name: Caleb Cassel
-  avatar_url: 'https://avatars.githubusercontent.com/u/4381058?v=3&s=80'
+  avatar_url: "https://avatars.githubusercontent.com/u/4381058?v=3&s=80"
   github: calebcassel
   twitter: CalebCassel
-mattfenwick:
+mattfenwick: 
   twitter: mfenwick100
   name: Matt Fenwick
-  avatar_url: 'https://avatars.githubusercontent.com/u/952655?v=3&s=80'
+  avatar_url: "https://avatars.githubusercontent.com/u/952655?v=3&s=80"
   github: mattfenwick
-jprichardson:
+jprichardson: 
   name: JP Richardson
-  avatar_url: 'https://avatars.githubusercontent.com/u/150063?v=3&s=80'
-  blog: 'http://procbits.com/pages/about'
+  avatar_url: "https://avatars.githubusercontent.com/u/150063?v=3&s=80"
+  blog: "http://procbits.com/pages/about"
   github: jprichardson
   twitter: jprichardson
-kevinbeaty:
+kevinbeaty: 
   twitter: simplectic
   name: Kevin Beaty
-  avatar_url: 'https://avatars.githubusercontent.com/u/522231?v=3&s=80'
-  blog: 'http://simplectic.com'
+  avatar_url: "https://avatars.githubusercontent.com/u/522231?v=3&s=80"
+  blog: "http://simplectic.com"
   github: kevinbeaty
-blainekasten:
+blainekasten: 
   count: 2
   name: Blaine Kasten
-  avatar_url: 'https://avatars.githubusercontent.com/u/2916023?v=3&s=80'
+  avatar_url: "https://avatars.githubusercontent.com/u/2916023?v=3&s=80"
   github: blainekasten
   twitter: blainekasten
-snekse:
+snekse: 
   name: Derek Eskens
-  avatar_url: 'https://avatars.githubusercontent.com/u/1981071?v=3&s=80'
+  avatar_url: "https://avatars.githubusercontent.com/u/1981071?v=3&s=80"
   github: snekse
   twitter: snekse
-nwertzberger:
+nwertzberger: 
   twitter: rannick
   name: Nick Wertzberger
-  avatar_url: 'https://avatars.githubusercontent.com/u/360347?v=3&s=80'
-  blog: 'http://www.ideaheap.com'
+  avatar_url: "https://avatars.githubusercontent.com/u/360347?v=3&s=80"
+  blog: "http://www.ideaheap.com"
   github: nwertzberger
-1Copenut:
+1Copenut: 
   count: 2
   name: Trevor Pierce
-  avatar_url: 'https://avatars.githubusercontent.com/u/934879?v=3&s=80'
+  avatar_url: "https://avatars.githubusercontent.com/u/934879?v=3&s=80"
   github: 1Copenut
   twitter: 1Copenut
-yarthur:
+yarthur: 
   name: John Arthur
-  avatar_url: 'https://avatars.githubusercontent.com/u/4520857?v=3&s=80'
-  blog: 'http://jtarthur.net'
+  avatar_url: "https://avatars.githubusercontent.com/u/4520857?v=3&s=80"
+  blog: "http://jtarthur.net"
   github: yarthur
   twitter: yarthur
-mrfmunger:
+mrfmunger: 
   name: Matt Munger
-  avatar_url: 'https://avatars.githubusercontent.com/u/407398?v=3&s=80'
-  blog: 'http://www.mattmunger.com'
+  avatar_url: "https://avatars.githubusercontent.com/u/407398?v=3&s=80"
+  blog: "http://www.mattmunger.com"
   github: mrfmunger
   twitter: mrfmunger
-solussd:
+solussd: 
   github: solussd
   twitter: solussd
   name: Joe R. Smith
-  avatar_url: 'https://avatars1.githubusercontent.com/u/142788?v=3&s=80'
-thelarkinn:
+  avatar_url: "https://avatars1.githubusercontent.com/u/142788?v=3&s=80"
+thelarkinn: 
   github: TheLarkInn
   twitter: thelarkinn
   name: Sean Larkin
-  avatar_url: 'https://avatars2.githubusercontent.com/u/3408176?v=3&s=80'
-  blog: 'http://https://careers.stackoverflow.com/seanlarkin'
-stavarotti:
+  avatar_url: "https://avatars2.githubusercontent.com/u/3408176?v=3&s=80"
+  blog: "http://https://careers.stackoverflow.com/seanlarkin"
+stavarotti: 
   github: stavarotti
   twitter: stavarotti
   name: Steve Chikwaya
-  avatar_url: 'https://avatars0.githubusercontent.com/u/1406942?v=3&s=80'
-colevoss:
+  avatar_url: "https://avatars0.githubusercontent.com/u/1406942?v=3&s=80"
+colevoss: 
   twitter: vosscco
   github: colevoss
   name: Cole Voss
-  avatar_url: 'https://avatars0.githubusercontent.com/u/2539760?v=3&s=80'
-ckoster22:
+  avatar_url: "https://avatars0.githubusercontent.com/u/2539760?v=3&s=80"
+ckoster22: 
   github: ckoster22
   twitter: ckoster22
   name: Charlie K
-  avatar_url: 'https://avatars2.githubusercontent.com/u/8353821?v=3&s=80'
-payne:
+  avatar_url: "https://avatars2.githubusercontent.com/u/8353821?v=3&s=80"
+payne: 
   name: Matt Payne
   github: payne
   twitter: mattpayneorg
-  avatar_url: 'https://avatars2.githubusercontent.com/u/114721?v=3&s=80'
-  blog: 'http://MattPayne.org'
-bangarang:
+  avatar_url: "https://avatars2.githubusercontent.com/u/114721?v=3&s=80"
+  blog: "http://MattPayne.org"
+bangarang: 
   twitter: lxrck
   github: bangarang
   name: Alex Rock
-  avatar_url: 'https://avatars2.githubusercontent.com/u/1786728?v=3&s=80'
-newz2000:
+  avatar_url: "https://avatars2.githubusercontent.com/u/1786728?v=3&s=80"
+newz2000: 
   github: newz2000
   twitter: newz2000
   name: Matthew Nuzum
-  avatar_url: 'https://avatars0.githubusercontent.com/u/260027?v=3&s=80'
-  blog: 'http://www.bearfruit.org'
-trevanhetzel:
+  avatar_url: "https://avatars0.githubusercontent.com/u/260027?v=3&s=80"
+  blog: "http://www.bearfruit.org"
+trevanhetzel: 
   github: trevanhetzel
   twitter: trevanhetzel
   name: Trevan Hetzel
-  avatar_url: 'https://avatars1.githubusercontent.com/u/1023018?v=3&s=80'
-  blog: 'http://trevan.co'
-JuanOnGit:
+  avatar_url: "https://avatars1.githubusercontent.com/u/1023018?v=3&s=80"
+  blog: "http://trevan.co"
+JuanOnGit: 
   github: JuanOnGit
   twitter: juan_davila_jr
   name: Juan
-  avatar_url: 'https://avatars2.githubusercontent.com/u/3577682?v=3&s=80'
-  blog: 'http://www.holodreams.wordpress.com'
-toranb:
+  avatar_url: "https://avatars2.githubusercontent.com/u/3577682?v=3&s=80"
+  blog: "http://www.holodreams.wordpress.com"
+toranb: 
   github: toranb
   twitter: toranb
   name: Toran Billups
-  avatar_url: 'https://avatars1.githubusercontent.com/u/147411?v=3&s=80'
-  blog: 'http://toranbillups.com'
-dschau:
+  avatar_url: "https://avatars1.githubusercontent.com/u/147411?v=3&s=80"
+  blog: "http://toranbillups.com"
+dschau: 
   count: 2
   github: DSchau
   twitter: schaudustin
   name: Dustin Schau
-  avatar_url: 'https://avatars2.githubusercontent.com/u/3924690?v=4&s=80'
-  blog: 'http://https://dustinschau.com'
+  avatar_url: "https://avatars2.githubusercontent.com/u/3924690?v=4&s=80"
+  blog: "http://https://dustinschau.com"
+themmer: 
+  github: themmer
+  twitter: stixeldev
+  name: Tim Hemmer
+  avatar_url: "https://avatars0.githubusercontent.com/u/8809307?v=4&s=80"
+stephenh: 
+  github: stephenh
+  twitter: shaberman
+  name: Stephen Haberman
+  avatar_url: "https://avatars1.githubusercontent.com/u/6401?v=4&s=80"
+  blog: "http://draconianoverlord.com"
