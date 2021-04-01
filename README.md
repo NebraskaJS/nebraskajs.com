@@ -10,7 +10,7 @@ Web site for Nebraska programmers dedicated to the JavaScript programming langua
 1. If a returning presenter, increment their `count` value in `presenters.yml`. This will add another ring to their avatar.
 1. Run `grunt presenters` to fill in the rest of the `presenters.yml` data automatically from GitHub APIs.
 1. Add a new `_post/*.md` entry, probably using `layout: post-video`. Look at some of the new posts for examples.
-1. `grunt deploy` to upload a new version of the site (assumes you have a `nejs` host in your `.ssh/config` with the proper credentials)
+1. Deployment happens automatically via Netlify after you commit to GitHub.
 
 ### Building the Site
 

@@ -257,7 +257,4 @@ module.exports = function(grunt) {
 
 	// Call manually to save API calls
 	grunt.registerTask('presenters', ['shell:presenters']);
-
-	// Upload to Production
-	grunt.registerTask('deploy', ['default', 'shell:upload']);
 };
