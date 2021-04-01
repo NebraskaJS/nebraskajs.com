@@ -1,3 +1,5 @@
 _site/
 node_modules/
 _presenters/cache/
+.jekyll-cache
+Gemfile.lock
