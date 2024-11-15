@@ -1,0 +1,80 @@
+---
+import '../css/global.css';
+import '../css/social.css';
+
+interface Props {
+	title?: string;
+}
+
+const { title } = Astro.props;
+---
+
+<script>
+	document.documentElement.className += ' supports-mask';
+
+	// Add the image for masking
+	//<img src="/img/cornfield-640.jpg" class="nejs-title-img">
+	var title = document.querySelector('.nejs-title');
+	if (title) {
+		var cornfield = new Image();
+		cornfield.src = '/img/cornfield-640.jpg';
+		cornfield.className = 'nejs-title-img';
+		title.appendChild(cornfield);
+	}
+</script>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{title ? `${title}-NebraskaJS` : 'NebraskaJS'}</title>
+		<!--<link href="/atom.xml" rel="alternate" title="NebraskaJS" type="application/atom+xml" />-->
+
+		<!--<link href="{{ site.distFolder }}all.min.css" rel="stylesheet" />-->
+		<link href="https://fonts.googleapis.com/css?family=Raleway:600,400" rel="stylesheet" />
+		<!--<meta name="dist" content="{{ site.distFolder }}" />-->
+	</head>
+	<body>
+		<div class="rail">
+			<header>
+				<a href="/" class="nejs-title">
+					<object data="/img/nebraska-outline-with-text-transparent.svg" type="image/svg+xml">
+						<img src="/img/nebraska-outline.png" alt="NebraskaJS Logo" />
+					</object>
+					<img src="/img/cornfield-640.jpg" class="nejs-title-img" />
+					<h1>NebraskaJS</h1>
+				</a>
+			</header>
+			<aside>
+				<nav role="navigation">
+					<div class="navigation">
+						<div id="social" class="social">
+							<a href="http://www.meetup.com/nebraskajs/" class="meetup">Join our Meetup!</a>
+							<a href="https://nejsconf.com/">NEJS CONF</a>
+							<a href="/about/">About Us</a>
+							<a href="/conduct/">Code of Conduct</a>
+							<a href="/presenters/">Presenters</a>
+							<a href="//twitter.com/nebraskajs" class="twitter"><i class="foundicon-twitter"></i> Twitter</a>
+							<a href="//github.com/nebraskajs/" class="github"><i class="foundicon-github"></i> GitHub</a>
+							<!-- <a href="//www.facebook.com/nebraskajs" class="facebook"><i class="foundicon-facebook"></i> Facebook</a> -->
+							<!-- <a href="//plus.google.com/115220697074331366039/posts" class="googleplus"><i class="foundicon-google-plus"></i> Google Plus</a> -->
+						</div>
+						<div class="social other">
+							<a href="https://www.youtube.com/channel/UCsMSRfQ22gGRLu5kRBMYpjg/videos">Videos on YouTube</a>
+							<a href="http://techomaha.com/tag/nebraskajs/">Videos on Tech Omaha</a>
+							<a href="https://vimeo.com/nebraskajs">Videos on Vimeo</a>
+							<!--<a href="http://lanyrd.com/series/nebraskajs/">Events on Lanyrd</a>-->
+						</div>
+						<div class="social other">
+							<a href="http://techomaha.com/">Find other local user groups on Tech Omaha</a>
+						</div>
+					</div>
+				</nav>
+			</aside>
+		</div>
+		<div class="content" data-role="main">
+			<slot />
+		</div><!-- /.content -->
+		<!-- <script src="{{ site.distFolder }}global.min.js"></script> -->
+	</body>
+</html>
