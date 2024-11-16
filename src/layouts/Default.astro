@@ -1,6 +1,7 @@
 ---
-import '../css/global.css';
-import '../css/social.css';
+import '@/css/global.css';
+import '@/css/social.css';
+import metadata from '@/data/metadata.json';
 
 interface Props {
 	title?: string;
@@ -75,6 +76,6 @@ const { title } = Astro.props;
 		<div class="content" data-role="main">
 			<slot />
 		</div><!-- /.content -->
-		<!-- <script src="{{ site.distFolder }}global.min.js"></script> -->
+		<script src="https://cdn.usefathom.com/script.js" data-site={metadata.fathom} defer></script>
 	</body>
 </html>
