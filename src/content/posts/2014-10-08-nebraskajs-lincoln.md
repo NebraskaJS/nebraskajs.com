@@ -1,6 +1,7 @@
 ---
 layout: post
 title: NebraskaJS is coming to Lincoln
+author: zachleat
 ---
 
 # {{ page.title }}

@@ -1,6 +1,19 @@
 import { z, defineCollection } from 'astro:content';
 import { file } from 'astro/loaders';
 
+const posts = defineCollection({
+	type: 'content',
+	schema: z.object({
+		title: z.string(),
+		videolength: z.string().optional(),
+		author: z.string(),
+		presented: z.string().optional(),
+		youtubeurl: z.string().optional(),
+		meetuplink: z.string().optional(),
+		bigtitle: z.boolean().optional(),
+	}),
+});
+
 const presenters = defineCollection({
 	loader: file('src/data/presenters.json'),
 	schema: z.object({
@@ -15,5 +28,6 @@ const presenters = defineCollection({
 });
 
 export const collections = {
+	posts,
 	presenters,
 };

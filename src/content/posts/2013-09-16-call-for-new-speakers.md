@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Call for New Speakers
+author: zachleat
 ---
 
 # Call for New Speakers
