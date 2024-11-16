@@ -1,0 +1,35 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+	presenter: CollectionEntry<'presenters'>['data'];
+}
+
+const {
+	presenter: { github, name, avatar_url, twitter, blog, count, id },
+} = Astro.props;
+
+const className = `${id} ${count ? `count-${count}` : ''}`;
+---
+
+<li class={className}>
+	<a href={github ? `https://github.com/${github}/` : undefined}>
+		<img src={avatar_url} alt="{{ include.presenter.name }}" />
+		<span class="name">{name}</span>
+	</a>
+	{
+		github && (
+			<a href="https://github.com/{{ include.presenter.github }}/">
+				<i class="foundicon-github" />
+			</a>
+		)
+	}
+	{
+		twitter && (
+			<a href="https://twitter.com/{{ include.presenter.twitter }}/">
+				<i class="foundicon-twitter" />
+			</a>
+		)
+	}
+	{blog && <a href="{{ include.presenter.blog }}">Blog</a>}
+</li>
