@@ -1,14 +1,12 @@
 ---
-import type { CollectionEntry } from 'astro:content';
+import { getEntry } from 'astro:content';
 
 interface Props {
-	presenter: CollectionEntry<'presenters'>['data'];
+	presenter: string;
 }
 
-const {
-	presenter: { github, name, avatar_url, twitter, blog, count, id },
-} = Astro.props;
-
+const presenter = (await getEntry('presenters', Astro.props.presenter)).data;
+const { github, name, avatar_url, twitter, blog, count, id } = presenter;
 const className = `${id} ${count ? `count-${count}` : ''}`;
 ---
 

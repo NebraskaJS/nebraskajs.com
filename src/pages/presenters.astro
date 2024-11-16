@@ -1,7 +1,7 @@
 ---
 import Default from '../layouts/Default.astro';
 import { getCollection } from 'astro:content';
-const presenters = (await getCollection('presenters')).map(({ data }) => data);
+const presenters = (await getCollection('presenters')).map(({ data }) => data.id);
 import Bio from '../components/Bio.astro';
 ---
 
