@@ -76,6 +76,6 @@ const { title } = Astro.props;
 		<div class="content" data-role="main">
 			<slot />
 		</div><!-- /.content -->
-		<script src="https://cdn.usefathom.com/script.js" data-site={metadata.fathom} defer></script>
+		<script is:inline src="https://cdn.usefathom.com/script.js" data-site={metadata.fathom} defer></script>
 	</body>
 </html>
