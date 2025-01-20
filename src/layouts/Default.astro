@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
 import '@/css/global.css';
 import '@/css/social.css';
 import metadata from '@/data/metadata.json';
@@ -8,6 +9,48 @@ interface Props {
 }
 
 const { title } = Astro.props;
+const {
+	url: { pathname },
+} = Astro;
+
+// Define navigation links structure
+const mainLinks = [
+	{ href: 'https://www.meetup.com/nebraskajs/', label: 'Join our Meetup!', class: 'meetup', isExternal: true },
+	{ href: 'https://nejsconf.com/', label: 'NEJS CONF', isExternal: true },
+	{ href: '/about/', label: 'About Us' },
+	{ href: '/conduct/', label: 'Code of Conduct' },
+	{ href: '/presenters/', label: 'Presenters' },
+	{ href: '//x.com/nebraskajs', label: 'Twitter', class: 'twitter', icon: 'foundicon-twitter', isExternal: true },
+	{
+		href: '//bsky.app/profile/nebraskajs.dev',
+		label: 'Bluesky',
+		class: 'bsky',
+		icon: 'foundicon-bsky',
+		isExternal: true,
+	},
+	{ href: '//github.com/nebraskajs/', label: 'GitHub', class: 'github', icon: 'foundicon-github', isExternal: true },
+	{
+		href: 'https://discord.gg/VqDSs3rvyG',
+		label: 'Discord',
+		class: 'discord',
+		icon: 'foundicon-discord',
+		isExternal: true,
+	},
+];
+
+const videoLinks = [
+	{
+		href: 'https://www.youtube.com/channel/UCsMSRfQ22gGRLu5kRBMYpjg/videos',
+		label: 'Videos on YouTube',
+		isExternal: true,
+	},
+	{ href: 'http://techomaha.com/tag/nebraskajs/', label: 'Videos on Tech Omaha', isExternal: true },
+	{ href: 'https://vimeo.com/nebraskajs', label: 'Videos on Vimeo', isExternal: true },
+];
+
+const otherLinks = [
+	{ href: 'http://techomaha.com/', label: 'Find other local user groups on Tech Omaha', isExternal: true },
+];
 ---
 
 <script>
@@ -34,6 +77,7 @@ const { title } = Astro.props;
 		<!--<link href="{{ site.distFolder }}all.min.css" rel="stylesheet" />-->
 		<link href="https://fonts.googleapis.com/css?family=Raleway:600,400" rel="stylesheet" />
 		<!--<meta name="dist" content="{{ site.distFolder }}" />-->
+		<ViewTransitions />
 	</head>
 	<body>
 		<div class="rail">
@@ -43,31 +87,47 @@ const { title } = Astro.props;
 						<img src="/img/nebraska-outline.png" alt="NebraskaJS Logo" />
 					</object>
 					<img src="/img/cornfield-640.jpg" class="nejs-title-img" />
-					<h1>NebraskaJS</h1>
+					<h1 class="mt-6">NebraskaJS</h1>
 				</a>
 			</header>
 			<aside>
 				<nav role="navigation">
 					<div class="navigation">
 						<div id="social" class="social">
-							<a href="http://www.meetup.com/nebraskajs/" class="meetup">Join our Meetup!</a>
-							<a href="https://nejsconf.com/">NEJS CONF</a>
-							<a href="/about/">About Us</a>
-							<a href="/conduct/">Code of Conduct</a>
-							<a href="/presenters/">Presenters</a>
-							<a href="//twitter.com/nebraskajs" class="twitter"><i class="foundicon-twitter"></i> Twitter</a>
-							<a href="//github.com/nebraskajs/" class="github"><i class="foundicon-github"></i> GitHub</a>
-							<!-- <a href="//www.facebook.com/nebraskajs" class="facebook"><i class="foundicon-facebook"></i> Facebook</a> -->
-							<!-- <a href="//plus.google.com/115220697074331366039/posts" class="googleplus"><i class="foundicon-google-plus"></i> Google Plus</a> -->
+							{
+								mainLinks.map(link => (
+									<a
+										href={link.href}
+										class={link.class}
+										style={pathname === link.href ? 'color: #e51937;' : ''}
+										{...(link.isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+									>
+										{link.icon && <i class={link.icon} />} {link.label}
+									</a>
+								))
+							}
 						</div>
 						<div class="social other">
-							<a href="https://www.youtube.com/channel/UCsMSRfQ22gGRLu5kRBMYpjg/videos">Videos on YouTube</a>
-							<a href="http://techomaha.com/tag/nebraskajs/">Videos on Tech Omaha</a>
-							<a href="https://vimeo.com/nebraskajs">Videos on Vimeo</a>
-							<!--<a href="http://lanyrd.com/series/nebraskajs/">Events on Lanyrd</a>-->
+							{
+								videoLinks.map(link => (
+									<a
+										href={link.href}
+										style={pathname === link.href ? 'color: #e51937;' : ''}
+										{...(link.isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+									>
+										{link.label}
+									</a>
+								))
+							}
 						</div>
 						<div class="social other">
-							<a href="http://techomaha.com/">Find other local user groups on Tech Omaha</a>
+							{
+								otherLinks.map(link => (
+									<a href={link.href} {...(link.isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>
+										{link.label}
+									</a>
+								))
+							}
 						</div>
 					</div>
 				</nav>
