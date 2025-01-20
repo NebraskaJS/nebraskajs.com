@@ -8,16 +8,17 @@ interface Props {
 const presenter = (await getEntry('presenters', Astro.props.presenter)).data;
 const { github, name, avatar_url, twitter, blog, count, id } = presenter;
 const className = `${id} ${count ? `count-${count}` : ''}`;
+const githubUrl = github ? `https://github.com/${github}/` : undefined;
 ---
 
 <li class={className}>
-	<a href={github ? `https://github.com/${github}/` : undefined}>
+	<a href={githubUrl}>
 		<img src={avatar_url} alt={name} />
 		<span class="name">{name}</span>
 	</a>
 	{
 		github && (
-			<a href={`https://github.com/${github}/`}>
+			<a href={githubUrl}>
 				<i class="foundicon-github" />
 			</a>
 		)
