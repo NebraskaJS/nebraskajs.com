@@ -12,22 +12,22 @@ const className = `${id} ${count ? `count-${count}` : ''}`;
 
 <li class={className}>
 	<a href={github ? `https://github.com/${github}/` : undefined}>
-		<img src={avatar_url} alt="{{ include.presenter.name }}" />
+		<img src={avatar_url} alt={name} />
 		<span class="name">{name}</span>
 	</a>
 	{
 		github && (
-			<a href="https://github.com/{{ include.presenter.github }}/">
+			<a href={`https://github.com/${github}/`}>
 				<i class="foundicon-github" />
 			</a>
 		)
 	}
 	{
 		twitter && (
-			<a href="https://twitter.com/{{ include.presenter.twitter }}/">
+			<a href={`https://twitter.com/${twitter}/`}>
 				<i class="foundicon-twitter" />
 			</a>
 		)
 	}
-	{blog && <a href="{{ include.presenter.blog }}">Blog</a>}
+	{blog && <a href={blog}>Blog</a>}
 </li>
