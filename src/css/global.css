@@ -177,12 +177,6 @@ body {
 	vertical-align: middle;
 	margin-right: .2em;
 }
-.social a.meetup {
-	background-color: #eee;
-	background-color: rgba(0,0,0,.1);
-	border-radius: .3em;
-	border: 3px solid transparent;
-}
 .social a:hover,
 .social a:focus {
 	opacity: 1;
@@ -221,17 +215,6 @@ body {
 .googleplus:visited:hover,
 .googleplus:visited:focus {
 	color: #ec3a1f;
-}
-.social .meetup:link,
-.social .meetup:visited {
-	color: #e51937;
-}
-.meetup:link:hover,
-.meetup:link:focus,
-.meetup:visited:hover,
-.meetup:visited:focus {
-	color: #fff;
-	background-color: #e51937;
 }
 .linkedin:link:hover,
 .linkedin:link:focus,
@@ -566,48 +549,4 @@ body {
 	left: 0;
 	width: 100%;
 	height: 100%;
-}
-
-/* Next Meetup Widget */
-.next-meetup {
-	margin: -1em -1em 2em -1em;
-	font-family: Consolas, monospace;
-}
-.next-meetup > h2,
-.next-meetup > a {
-	display: block;
-	width: 100%;
-	margin: 0;
-}
-.next-meetup > h2 {
-	padding: .714285714em;
-	font-weight: 400;
-	color: #ddd;
-	background-color: #b22734;
-}
-.next-meetup > a {
-	padding: 1em;
-	background-color: #E51937;
-	text-decoration: none;
-}
-@media (min-width: 47em) {
-	.next-meetup {
-		margin: -2em -2em 3em -2em;
-	}
-}
-.next-meetup a:hover,
-.next-meetup a:focus {
-	background-color: #b22734;
-}
-.next-meetup .title h2 {
-	font-weight: normal;
-	margin: 0;
-}
-.next-meetup .title.highlight h2 {
-	font-weight: bold;
-	text-transform: uppercase;
-}
-.next-meetup :link,
-.next-meetup :visited {
-	color: #fff;
 }

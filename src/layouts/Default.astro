@@ -15,12 +15,10 @@ const {
 
 // Define navigation links structure
 const mainLinks = [
-	{ href: 'https://www.meetup.com/nebraskajs/', label: 'Join our Meetup!', class: 'meetup', isExternal: true },
 	{ href: 'https://nejsconf.com/', label: 'NEJS CONF', isExternal: true },
 	{ href: '/about/', label: 'About Us' },
 	{ href: '/conduct/', label: 'Code of Conduct' },
 	{ href: '/presenters/', label: 'Presenters' },
-	{ href: '//x.com/nebraskajs', label: 'Twitter', class: 'twitter', icon: 'foundicon-twitter', isExternal: true },
 	{
 		href: '//bsky.app/profile/nebraskajs.dev',
 		label: 'Bluesky',
@@ -99,7 +97,6 @@ const otherLinks = [
 									<a
 										href={link.href}
 										class={link.class}
-										style={pathname === link.href ? 'color: #e51937;' : ''}
 										{...(link.isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
 									>
 										{link.icon && <i class={link.icon} />} {link.label}
