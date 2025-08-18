@@ -1,5 +1,7 @@
 ---
 import NEJSLogo from './NEJSLogo.astro';
+
+const discordLink = `https://discord.gg/${import.meta.env.PUBLIC_DISCORD_INVITE_CODE}`;
 ---
 
 <header class="bg-js-dark sticky top-0 z-50 text-white shadow-lg">
@@ -22,7 +24,7 @@ import NEJSLogo from './NEJSLogo.astro';
 				Code of Conduct
 			</a>
 			<a
-				href="https://discord.gg/YOUR-DISCORD-INVITE"
+				href={discordLink}
 				target="_blank"
 				class="hover:border-js-yellow border-b-2 border-transparent py-2 text-white no-underline transition-colors"
 			>

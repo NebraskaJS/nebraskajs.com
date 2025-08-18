@@ -3,7 +3,7 @@ import MainEvent from '@/components/MainEvent.astro';
 import Hero from '@/components/Hero.astro';
 import Default from '../layouts/Default.astro';
 import Card from '@/components/NewCard.astro';
-const discordLink = `https://discord.gg/${import.meta.env.DISCORD_INVITE_CODE || process.env.DISCORD_INVITE_CODE}`;
+const discordLink = `https://discord.gg/${import.meta.env.PUBLIC_DISCORD_INVITE_CODE || process.env.PUBLIC_DISCORD_INVITE_CODE}`;
 ---
 
 <Default title="Home">
