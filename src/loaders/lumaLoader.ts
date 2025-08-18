@@ -101,6 +101,12 @@ export function lumaEventLoader(config: { apiKey: string; calendarId: string }):
 		calendarId: config.calendarId
 	});
 	
+	// Debug environment variables at runtime
+	console.log('🌍 Runtime env check:');
+	console.log('  - import.meta.env.LUMA_API_KEY:', !!import.meta.env.LUMA_API_KEY);
+	console.log('  - process.env.LUMA_API_KEY:', !!process.env.LUMA_API_KEY);
+	console.log('  - All LUMA env vars:', Object.keys(process.env).filter(key => key.includes('LUMA')));
+	
 	const client = new LumaApiClient(config.apiKey);
 
 	return {
