@@ -1,11 +1,16 @@
 ---
+import MainEvent from '@/components/MainEvent.astro';
+import Hero from '@/components/Hero.astro';
 import Minimal from '../layouts/Minimal.astro';
 import Card from '@/components/NewCard.astro';
+const discordLink = `https://discord.gg/${import.meta.env.DISCORD_INVITE_CODE}`;
 ---
 
 <Minimal title="Home">
-	<div class="grid gap-8 md:grid-cols-3">
-		<Card title="Discord Community" cta="Join Discord" ctaLink="https: discord.gg YOUR-DISCORD-INVITE" icon="💬">
+	<Hero />
+	<MainEvent />
+	<div class="grid gap-8 px-6 py-8 md:grid-cols-3">
+		<Card title="Discord Community" cta="Join Discord" ctaLink={discordLink} icon="💬">
 			Chat with local developers, share projects, and get help with your code.
 		</Card>
 

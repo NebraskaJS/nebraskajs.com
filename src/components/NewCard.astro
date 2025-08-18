@@ -9,7 +9,7 @@ interface Props {
 const { title, icon, cta, ctaLink } = Astro.props;
 ---
 
-<div class="rounded-xl bg-white p-8 shadow-md transition-all hover:-translate-y-1 hover:shadow-xl">
+<div class="border border-gray-200 rounded-xl bg-white p-8 shadow-md transition-all hover:-translate-y-1 hover:shadow-xl">
 	<div class="bg-js-yellow mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full text-2xl">{icon}</div>
 	<h3 class="mb-4 text-2xl font-semibold">{title}</h3>
 	<p class="mb-6 text-gray-600"><slot /></p>

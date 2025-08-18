@@ -1,9 +1,15 @@
 ---
-import Default from './Default.astro';
+import Default from './Minimal.astro';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
 ---
 
-<Default>
-	<article class="prose m-auto lg:prose-xl">
+<Default title={title}>
+	<article class="prose lg:prose-xl m-auto mt-8">
 		<slot />
 	</article>
 </Default>

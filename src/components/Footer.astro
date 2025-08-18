@@ -1,0 +1,17 @@
+---
+const discordLink = `https://discord.gg/${import.meta.env.DISCORD_INVITE_CODE}`;
+---
+
+<footer class="bg-js-dark px-6 py-8 text-center text-white">
+	<div class="mx-auto max-w-6xl">
+		<div class="mb-4 flex justify-center gap-6">
+			<a href="#about" class="hover:text-js-yellow text-white transition-colors">About</a>
+			<a href="#conduct" class="hover:text-js-yellow text-white transition-colors">Code of Conduct</a>
+			<a href={discordLink} target="_blank" class="hover:text-js-yellow text-white transition-colors">Discord</a>
+			<a href="https://lu.ma/nebraskajs" target="_blank" class="hover:text-js-yellow text-white transition-colors"
+				>Events</a
+			>
+		</div>
+		<p class="text-gray-400">© 2025 NebraskaJS. Building the Omaha JavaScript community since 2009.</p>
+	</div>
+</footer>

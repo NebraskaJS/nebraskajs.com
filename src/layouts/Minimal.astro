@@ -1,7 +1,6 @@
 ---
-import MainEvent from '@/components/MainEvent.astro';
 import Header from '@/components/Header.astro';
-import Hero from '@/components/Hero.astro';
+import Footer from '@/components/Footer.astro';
 import '@/css/global.css';
 import '@/css/social.css';
 
@@ -27,16 +26,7 @@ const { title } = Astro.props;
 	<body class="text-js-dark bg-white font-sans leading-relaxed">
 		<Header />
 		<!-- Hero Section -->
-		<Hero />
-		<MainEvent />
 		<slot />
+		<Footer />
 	</body>
 </html>
-
-<style is:global>
-	@theme {
-		--color-js-yellow: #f0db4f;
-		--color-js-dark: #323330;
-		--color-js-darker: #1a1a1a;
-	}
-</style>

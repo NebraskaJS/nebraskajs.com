@@ -33,6 +33,6 @@ Meetup staff will be happy to help participants contact hotel/venue security or 
 
 We expect participants to follow these rules at meetup and workshop venues and meetup-related social events.
 
-*Original source and credit: [http://2012.jsconf.us/#/about](http://2012.jsconf.us/#/about) & [The Ada Initiative](http://geekfeminism.wikia.com/wiki/conference_anti-harassment/Policy)*
-*Please help by translating or improving: [http://github.com/leftlogic/confcodeofconduct.com](https://github.com/leftlogic/confcodeofconduct.com).*
-*This work is licensed under a [Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/deed.en_US).*
+_Original source and credit: [http://2012.jsconf.us/#/about](http://2012.jsconf.us/#/about) & [The Ada Initiative](http://geekfeminism.wikia.com/wiki/conference_anti-harassment/Policy)_
+_Please help by translating or improving: [http://github.com/leftlogic/confcodeofconduct.com](https://github.com/leftlogic/confcodeofconduct.com)._
+_This work is licensed under a [Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/deed.en_US)._
