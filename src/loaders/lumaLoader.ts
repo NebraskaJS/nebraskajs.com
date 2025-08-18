@@ -91,13 +91,20 @@ class LumaApiClient {
 }
 
 export function lumaEventLoader(config: { apiKey: string; calendarId: string }): LiveLoader<LumaEvent> {
+	console.log('🔧 Luma loader initialized with config:', {
+		apiKey: config.apiKey ? `${config.apiKey.slice(0, 8)}...` : 'undefined',
+		calendarId: config.calendarId
+	});
+	
 	const client = new LumaApiClient(config.apiKey);
 
 	return {
 		name: 'luma-event-loader',
 		loadCollection: async () => {
+			console.log('📅 Loading Luma events collection...');
 			try {
 				const response = await client.getCalendarEvents(config.calendarId);
+				console.log(`✅ Successfully loaded ${response.entries.length} events`);
 
 				return {
 					entries: response.entries.map(event => ({
@@ -106,6 +113,7 @@ export function lumaEventLoader(config: { apiKey: string; calendarId: string }):
 					})),
 				};
 			} catch (error) {
+				console.error('❌ Failed to load Luma events:', error);
 				return {
 					error: new Error(`Failed to load events: ${error instanceof Error ? error.message : String(error)}`),
 				};
