@@ -73,11 +73,16 @@ class LumaApiClient {
 		const response = await this.request<LumaApiRawResponse>(`/calendar/list-events?calendar_api_id=${calendarId}`);
 
 		// Transform the response to extract the nested event data
-		return {
+		const result: LumaApiResponse = {
 			entries: response.entries.map(entry => entry.event),
 			has_more: response.has_more,
-			next_cursor: response.next_cursor,
 		};
+
+		if (response.next_cursor !== undefined) {
+			result.next_cursor = response.next_cursor;
+		}
+
+		return result;
 	}
 
 	async getEvent(eventId: string): Promise<LumaEvent> {
