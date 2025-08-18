@@ -55,12 +55,17 @@ class LumaApiClient {
 	}
 
 	private async request<T>(endpoint: string): Promise<T> {
+		console.log('🌐 Making Luma API request to:', `${this.baseUrl}${endpoint}`);
+		console.log('🔐 API key present:', !!this.apiKey, 'length:', this.apiKey?.length || 0);
+		
 		const response = await fetch(`${this.baseUrl}${endpoint}`, {
 			headers: {
 				'x-luma-api-key': this.apiKey,
 				'Content-Type': 'application/json',
 			},
 		});
+
+		console.log('📡 Luma API response status:', response.status, response.statusText);
 
 		if (!response.ok) {
 			throw new Error(`Luma API error: ${response.status} ${response.statusText}`);
