@@ -113,6 +113,14 @@ export function lumaEventLoader(config: { apiKey: string; calendarId: string }):
 		name: 'luma-event-loader',
 		loadCollection: async () => {
 			console.log('📅 Loading Luma events collection...');
+			
+			// Debug environment at load time
+			console.log('🔍 Live collection environment debug:');
+			console.log('  - config.apiKey length:', config.apiKey?.length || 0);
+			console.log('  - import.meta.env.LUMA_API_KEY:', !!import.meta.env.LUMA_API_KEY);
+			console.log('  - process.env.LUMA_API_KEY:', !!process.env.LUMA_API_KEY);
+			console.log('  - All env keys with LUMA:', Object.keys(process.env).filter(k => k.includes('LUMA')));
+			
 			try {
 				const response = await client.getCalendarEvents(config.calendarId);
 				console.log(`✅ Successfully loaded ${response.entries.length} events`);
