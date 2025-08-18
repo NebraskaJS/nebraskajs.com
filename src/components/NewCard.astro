@@ -1,0 +1,23 @@
+---
+interface Props {
+	title: string;
+	icon: string;
+	cta: string;
+	ctaLink: string;
+}
+
+const { title, icon, cta, ctaLink } = Astro.props;
+---
+
+<div class="rounded-xl bg-white p-8 shadow-md transition-all hover:-translate-y-1 hover:shadow-xl">
+	<div class="bg-js-yellow mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full text-2xl">{icon}</div>
+	<h3 class="mb-4 text-2xl font-semibold">{title}</h3>
+	<p class="mb-6 text-gray-600"><slot /></p>
+	<a
+		href={ctaLink}
+		target="_blank"
+		class="bg-js-dark inline-block rounded-lg px-6 py-3 font-semibold text-white transition-all hover:-translate-y-0.5 hover:shadow-lg"
+	>
+		{cta}
+	</a>
+</div>

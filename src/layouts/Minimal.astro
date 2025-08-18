@@ -1,0 +1,42 @@
+---
+import MainEvent from '@/components/MainEvent.astro';
+import Header from '@/components/Header.astro';
+import Hero from '@/components/Hero.astro';
+import '@/css/global.css';
+import '@/css/social.css';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{title ? `${title}-NebraskaJS` : 'NebraskaJS'}</title>
+		<!--<link href="/atom.xml" rel="alternate" title="NebraskaJS" type="application/atom+xml" />-->
+
+		<!--<link href="{{ site.distFolder }}all.min.css" rel="stylesheet" />-->
+		<link href="https://fonts.googleapis.com/css?family=Raleway:600,400" rel="stylesheet" />
+		<!--<meta name="dist" content="{{ site.distFolder }}" />-->
+	</head>
+	<body class="text-js-dark bg-white font-sans leading-relaxed">
+		<Header />
+		<!-- Hero Section -->
+		<Hero />
+		<MainEvent />
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	@theme {
+		--color-js-yellow: #f0db4f;
+		--color-js-dark: #323330;
+		--color-js-darker: #1a1a1a;
+	}
+</style>

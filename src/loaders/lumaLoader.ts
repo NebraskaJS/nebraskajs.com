@@ -1,0 +1,131 @@
+import type { LiveLoader } from 'astro/loaders';
+
+export interface LumaEvent {
+	api_id: string;
+	created_at: string; // ISO 8601 Datetime
+	cover_url: string;
+	calendar_api_id: string;
+	description: string;
+	description_md: string;
+	duration_interval: string;
+	end_at: string; // ISO 8601 Datetime
+	geo_address_json: {
+		geo_latitude: string | null;
+		geo_longitude: string | null;
+		meeting_url: string | null;
+	} | null;
+	name: string;
+	start_at: string; // ISO 8601 Datetime
+	timezone: string; // IANA Timezone, e.g. America/New_York
+	url: string;
+	user_api_id: string;
+	visibility: 'public' | 'members-only' | 'private';
+	zoom_meeting_url: string | null;
+	tags: Array<{
+		api_id: string;
+		name: string;
+	}>;
+}
+
+export interface LumaApiResponse {
+	entries: LumaEvent[];
+	has_more: boolean;
+	next_cursor?: string;
+}
+
+interface LumaApiRawResponse {
+	entries: Array<{
+		api_id: string;
+		event: LumaEvent;
+		tags: Array<{
+			api_id: string;
+			name: string;
+		}>;
+	}>;
+	has_more: boolean;
+	next_cursor?: string;
+}
+
+class LumaApiClient {
+	private baseUrl = 'https://public-api.luma.com/v1';
+	private apiKey: string;
+
+	constructor(apiKey: string) {
+		this.apiKey = apiKey;
+	}
+
+	private async request<T>(endpoint: string): Promise<T> {
+		const response = await fetch(`${this.baseUrl}${endpoint}`, {
+			headers: {
+				'x-luma-api-key': this.apiKey,
+				'Content-Type': 'application/json',
+			},
+		});
+
+		if (!response.ok) {
+			throw new Error(`Luma API error: ${response.status} ${response.statusText}`);
+		}
+
+		return response.json();
+	}
+
+	async getCalendarEvents(calendarId: string): Promise<LumaApiResponse> {
+		const response = await this.request<LumaApiRawResponse>(`/calendar/list-events?calendar_api_id=${calendarId}`);
+		
+		// Transform the response to extract the nested event data
+		return {
+			entries: response.entries.map(entry => entry.event),
+			has_more: response.has_more,
+			next_cursor: response.next_cursor,
+		};
+	}
+
+	async getEvent(eventId: string): Promise<LumaEvent> {
+		return this.request<LumaEvent>(`/event/get?api_id=${eventId}`);
+	}
+}
+
+export function lumaEventLoader(config: { apiKey: string; calendarId: string }): LiveLoader<LumaEvent> {
+	const client = new LumaApiClient(config.apiKey);
+
+	return {
+		name: 'luma-event-loader',
+		loadCollection: async () => {
+			try {
+				const response = await client.getCalendarEvents(config.calendarId);
+
+				return {
+					entries: response.entries.map(event => ({
+						id: event.api_id,
+						data: event,
+					})),
+				};
+			} catch (error) {
+				return {
+					error: new Error(`Failed to load events: ${error instanceof Error ? error.message : String(error)}`),
+				};
+			}
+		},
+		loadEntry: async ({ filter }: { filter: { id: string } }) => {
+			try {
+				if (!filter.id) {
+					return {
+						error: new Error('Event ID is required'),
+					};
+				}
+
+				const event = await client.getEvent(filter.id);
+
+				return {
+					id: event.api_id,
+					data: event,
+				};
+			} catch (error) {
+				return {
+					error: new Error(`Failed to load event: ${error instanceof Error ? error.message : String(error)}`),
+				};
+			}
+		},
+	};
+}
+

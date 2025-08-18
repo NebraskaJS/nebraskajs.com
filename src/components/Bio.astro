@@ -5,7 +5,13 @@ interface Props {
 	presenter: string;
 }
 
-const presenter = (await getEntry('presenters', Astro.props.presenter)).data;
+const presenterEntry = await getEntry('presenters', Astro.props.presenter);
+const presenter = presenterEntry?.data;
+
+if (!presenter) {
+	throw new Error(`Presenter ${Astro.props.presenter} not found`);
+}
+
 const { github, name, avatar_url, twitter, blog, count, id } = presenter;
 const className = `${id} ${count ? `count-${count}` : ''}`;
 const githubUrl = github ? `https://github.com/${github}/` : undefined;

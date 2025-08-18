@@ -1,15 +1,20 @@
 ---
-import Default from '../layouts/Default.astro';
-import Posts from '../components/Posts.astro';
+import Minimal from '../layouts/Minimal.astro';
+import Card from '@/components/NewCard.astro';
 ---
 
-<Default>
-	<div class="page-home">
-		<div class="maxw">
-			<article>
-				<h2 class="a11y-only">Presented at NebraskaJS:</h2>
-			</article>
-			<Posts />
-		</div>
-	</div><!-- /.page-home -->
-</Default>
+<Minimal title="Home">
+	<div class="grid gap-8 md:grid-cols-3">
+		<Card title="Discord Community" cta="Join Discord" ctaLink="https: discord.gg YOUR-DISCORD-INVITE" icon="💬">
+			Chat with local developers, share projects, and get help with your code.
+		</Card>
+
+		<Card title="Monthly Meetups" cta="See Events" ctaLink="https://lu.ma/nebraskajs" icon="🎯">
+			Join us for talks, workshops, and networking with the local tech community.
+		</Card>
+
+		<Card title="Code of Conduct" cta="Read More" ctaLink="/conduct" icon="🤝">
+			We're committed to providing a welcoming and inclusive environment for all.
+		</Card>
+	</div>
+</Minimal>

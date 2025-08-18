@@ -1,0 +1,106 @@
+---
+import { getLatestEvent } from '@/utils/eventHelpers';
+
+const latestEvent = await getLatestEvent();
+
+// Format date and time if event exists
+let formattedDate = '';
+let formattedTime = '';
+let locationText = 'Online';
+
+if (latestEvent) {
+	const startDate = new Date(latestEvent.start_at);
+	const endDate = new Date(latestEvent.end_at);
+	
+	// Format date
+	formattedDate = startDate.toLocaleDateString('en-US', {
+		weekday: 'long',
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric',
+	});
+	
+	// Format time
+	const startTime = startDate.toLocaleTimeString('en-US', {
+		hour: 'numeric',
+		minute: '2-digit',
+		hour12: true,
+	});
+	const endTime = endDate.toLocaleTimeString('en-US', {
+		hour: 'numeric',
+		minute: '2-digit',
+		hour12: true,
+	});
+	formattedTime = `${startTime} - ${endTime}`;
+	
+	// Get location
+	if (latestEvent.geo_address_json?.meeting_url) {
+		locationText = 'Online Event';
+	} else if (latestEvent.geo_address_json) {
+		locationText = 'Omaha, NE'; // You might want to parse this from the actual address
+	}
+}
+---
+
+{latestEvent ? (
+	<div class="flex">
+		<div class="bg-js-yellow text-js-dark relative z-10 mx-auto my-12 -mt-8 max-w-4xl rounded-xl px-6 py-12 shadow-2xl">
+			<div class="mb-4 text-sm font-semibold tracking-wider uppercase">Next Meetup</div>
+			<h2 class="mb-4 text-3xl font-bold">{latestEvent.name}</h2>
+
+			<div class="mb-6 flex flex-wrap gap-6">
+				<div class="flex items-center gap-2">
+					<span>📅</span>
+					<span>{formattedDate}</span>
+				</div>
+				<div class="flex items-center gap-2">
+					<span>🕒</span>
+					<span>{formattedTime}</span>
+				</div>
+				<div class="flex items-center gap-2">
+					<span>📍</span>
+					<span>{locationText}</span>
+				</div>
+			</div>
+
+			{latestEvent.description && (
+				<p class="mb-6 text-gray-700">{latestEvent.description}</p>
+			)}
+
+			<div class="flex flex-wrap gap-4">
+				<a
+					href={latestEvent.url}
+					target="_blank"
+					class="bg-js-dark inline-block rounded-lg px-8 py-3 font-semibold text-white transition-all hover:-translate-y-0.5 hover:shadow-lg"
+				>
+					Register on Luma
+				</a>
+				<a
+					href="https://lu.ma/nebraskajs"
+					target="_blank"
+					class="text-js-dark inline-block rounded-lg bg-white px-8 py-3 font-semibold transition-all hover:-translate-y-0.5 hover:shadow-lg"
+				>
+					View All Events
+				</a>
+			</div>
+		</div>
+	</div>
+) : (
+	<div class="flex">
+		<div class="bg-js-yellow text-js-dark relative z-10 mx-auto my-12 -mt-8 max-w-4xl rounded-xl px-6 py-12 shadow-2xl">
+			<div class="mb-4 text-sm font-semibold tracking-wider uppercase">Meetups</div>
+			<h2 class="mb-4 text-3xl font-bold">No Upcoming Events</h2>
+			<p class="mb-6 text-gray-700">Check back soon for our next JavaScript meetup!</p>
+			
+			<div class="flex flex-wrap gap-4">
+				<a
+					href="https://lu.ma/nebraskajs"
+					target="_blank"
+					class="bg-js-dark inline-block rounded-lg px-8 py-3 font-semibold text-white transition-all hover:-translate-y-0.5 hover:shadow-lg"
+				>
+					View Past Events
+				</a>
+			</div>
+		</div>
+	</div>
+)}
