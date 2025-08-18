@@ -1,70 +1,17 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
 import '@/css/global.css';
 import '@/css/social.css';
-import metadata from '@/data/metadata.json';
 
 interface Props {
-	title?: string;
+	title: string;
 }
 
 const { title } = Astro.props;
-const {
-	url: { pathname },
-} = Astro;
-
-// Define navigation links structure
-const mainLinks = [
-	{ href: 'https://nejsconf.com/', label: 'NEJS CONF', isExternal: true },
-	{ href: '/about/', label: 'About Us' },
-	{ href: '/conduct/', label: 'Code of Conduct' },
-	{ href: '/presenters/', label: 'Presenters' },
-	{
-		href: '//bsky.app/profile/nebraskajs.dev',
-		label: 'Bluesky',
-		class: 'bsky',
-		icon: 'foundicon-bsky',
-		isExternal: true,
-	},
-	{ href: '//github.com/nebraskajs/', label: 'GitHub', class: 'github', icon: 'foundicon-github', isExternal: true },
-	{
-		href: 'https://discord.gg/VqDSs3rvyG',
-		label: 'Discord',
-		class: 'discord',
-		icon: 'foundicon-discord',
-		isExternal: true,
-	},
-];
-
-const videoLinks = [
-	{
-		href: 'https://www.youtube.com/channel/UCsMSRfQ22gGRLu5kRBMYpjg/videos',
-		label: 'Videos on YouTube',
-		isExternal: true,
-	},
-	{ href: 'http://techomaha.com/tag/nebraskajs/', label: 'Videos on Tech Omaha', isExternal: true },
-	{ href: 'https://vimeo.com/nebraskajs', label: 'Videos on Vimeo', isExternal: true },
-];
-
-const otherLinks = [
-	{ href: 'http://techomaha.com/', label: 'Find other local user groups on Tech Omaha', isExternal: true },
-];
 ---
 
-<script>
-	document.documentElement.className += ' supports-mask';
-
-	// Add the image for masking
-	//<img src="/img/cornfield-640.jpg" class="nejs-title-img">
-	var title = document.querySelector('.nejs-title');
-	if (title) {
-		var cornfield = new Image();
-		cornfield.src = '/img/cornfield-640.jpg';
-		cornfield.className = 'nejs-title-img';
-		title.appendChild(cornfield);
-	}
-</script>
-
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -75,64 +22,11 @@ const otherLinks = [
 		<!--<link href="{{ site.distFolder }}all.min.css" rel="stylesheet" />-->
 		<link href="https://fonts.googleapis.com/css?family=Raleway:600,400" rel="stylesheet" />
 		<!--<meta name="dist" content="{{ site.distFolder }}" />-->
-		<ViewTransitions />
 	</head>
-	<body>
-		<div class="rail">
-			<header>
-				<a href="/" class="nejs-title">
-					<object data="/img/nebraska-outline-with-text-transparent.svg" type="image/svg+xml">
-						<img src="/img/nebraska-outline.png" alt="NebraskaJS Logo" />
-					</object>
-					<img src="/img/cornfield-640.jpg" class="nejs-title-img" />
-					<h1 class="mt-6">NebraskaJS</h1>
-				</a>
-			</header>
-			<aside>
-				<nav role="navigation">
-					<div class="navigation">
-						<div id="social" class="social">
-							{
-								mainLinks.map(link => (
-									<a
-										href={link.href}
-										class={link.class}
-										{...(link.isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-									>
-										{link.icon && <i class={link.icon} />} {link.label}
-									</a>
-								))
-							}
-						</div>
-						<div class="social other">
-							{
-								videoLinks.map(link => (
-									<a
-										href={link.href}
-										style={pathname === link.href ? 'color: #e51937;' : ''}
-										{...(link.isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-									>
-										{link.label}
-									</a>
-								))
-							}
-						</div>
-						<div class="social other">
-							{
-								otherLinks.map(link => (
-									<a href={link.href} {...(link.isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>
-										{link.label}
-									</a>
-								))
-							}
-						</div>
-					</div>
-				</nav>
-			</aside>
-		</div>
-		<div class="content" data-role="main">
-			<slot />
-		</div><!-- /.content -->
-		<script is:inline src="https://cdn.usefathom.com/script.js" data-site={metadata.fathom} defer></script>
+	<body class="text-js-dark bg-white font-sans leading-relaxed">
+		<Header />
+		<!-- Hero Section -->
+		<slot />
+		<Footer />
 	</body>
 </html>

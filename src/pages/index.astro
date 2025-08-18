@@ -1,12 +1,12 @@
 ---
 import MainEvent from '@/components/MainEvent.astro';
 import Hero from '@/components/Hero.astro';
-import Minimal from '../layouts/Minimal.astro';
+import Default from '../layouts/Default.astro';
 import Card from '@/components/NewCard.astro';
 const discordLink = `https://discord.gg/${import.meta.env.DISCORD_INVITE_CODE}`;
 ---
 
-<Minimal title="Home">
+<Default title="Home">
 	<Hero />
 	<MainEvent />
 	<div class="grid gap-8 px-6 py-8 md:grid-cols-3">
@@ -22,4 +22,4 @@ const discordLink = `https://discord.gg/${import.meta.env.DISCORD_INVITE_CODE}`;
 			We're committed to providing a welcoming and inclusive environment for all.
 		</Card>
 	</div>
-</Minimal>
+</Default>
