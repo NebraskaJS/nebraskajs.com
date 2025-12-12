@@ -3,37 +3,9 @@ import { getLatestEvent } from '@/utils/eventHelpers';
 
 const latestEvent = await getLatestEvent();
 
-// Format date and time if event exists
-let formattedDate = '';
-let formattedTime = '';
+// Get location
 let locationText = 'Online';
-
 if (latestEvent) {
-	const startDate = new Date(latestEvent.start_at);
-	const endDate = new Date(latestEvent.end_at);
-	
-	// Format date
-	formattedDate = startDate.toLocaleDateString('en-US', {
-		weekday: 'long',
-		year: 'numeric',
-		month: 'long',
-		day: 'numeric',
-	});
-	
-	// Format time
-	const startTime = startDate.toLocaleTimeString('en-US', {
-		hour: 'numeric',
-		minute: '2-digit',
-		hour12: true,
-	});
-	const endTime = endDate.toLocaleTimeString('en-US', {
-		hour: 'numeric',
-		minute: '2-digit',
-		hour12: true,
-	});
-	formattedTime = `${startTime} - ${endTime}`;
-	
-	// Get location
 	if (latestEvent.geo_address_json?.meeting_url) {
 		locationText = 'Online Event';
 	} else if (latestEvent.geo_address_json) {
@@ -51,11 +23,11 @@ if (latestEvent) {
 			<div class="mb-6 flex flex-wrap gap-6">
 				<div class="flex items-center gap-2">
 					<span>📅</span>
-					<span>{formattedDate}</span>
+					<span data-date={latestEvent.start_at}>Loading...</span>
 				</div>
 				<div class="flex items-center gap-2">
 					<span>🕒</span>
-					<span>{formattedTime}</span>
+					<span data-time-start={latestEvent.start_at} data-time-end={latestEvent.end_at}>Loading...</span>
 				</div>
 				<div class="flex items-center gap-2">
 					<span>📍</span>
@@ -85,6 +57,37 @@ if (latestEvent) {
 			</div>
 		</div>
 	</div>
+
+	<script>
+		// Format dates in client's timezone
+		document.querySelectorAll('[data-date]').forEach((el) => {
+			const date = new Date(el.getAttribute('data-date')!);
+			el.textContent = date.toLocaleDateString('en-US', {
+				weekday: 'long',
+				year: 'numeric',
+				month: 'long',
+				day: 'numeric',
+			});
+		});
+
+		document.querySelectorAll('[data-time-start]').forEach((el) => {
+			const startDate = new Date(el.getAttribute('data-time-start')!);
+			const endDate = new Date(el.getAttribute('data-time-end')!);
+			
+			const startTime = startDate.toLocaleTimeString('en-US', {
+				hour: 'numeric',
+				minute: '2-digit',
+				hour12: true,
+			});
+			const endTime = endDate.toLocaleTimeString('en-US', {
+				hour: 'numeric',
+				minute: '2-digit',
+				hour12: true,
+			});
+			
+			el.textContent = `${startTime} - ${endTime}`;
+		});
+	</script>
 ) : (
 	<div class="flex px-6">
 		<div class="bg-js-yellow text-js-dark relative z-10 mx-auto my-12 -mt-8 max-w-4xl rounded-xl px-6 py-12 shadow-2xl">
