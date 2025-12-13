@@ -3,9 +3,40 @@ import { getLatestEvent } from '@/utils/eventHelpers';
 
 const latestEvent = await getLatestEvent();
 
-// Get location
+// Format date and time if event exists
+let formattedDate = '';
+let formattedTime = '';
+
 let locationText = 'Online';
 if (latestEvent) {
+	const startDate = new Date(latestEvent.start_at);
+	const endDate = new Date(latestEvent.end_at);
+
+	// Format date
+	formattedDate = startDate.toLocaleDateString('en-US', {
+		weekday: 'long',
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric',
+		timeZone: 'America/Chicago',
+	});
+
+	// Format time
+	const startTime = startDate.toLocaleTimeString('en-US', {
+		hour: 'numeric',
+		minute: '2-digit',
+		hour12: true,
+		timeZone: 'America/Chicago',
+	});
+	const endTime = endDate.toLocaleTimeString('en-US', {
+		hour: 'numeric',
+		minute: '2-digit',
+		hour12: true,
+		timeZone: 'America/Chicago',
+	});
+	formattedTime = `${startTime} - ${endTime} CST`;
+
+	// Get location
 	if (latestEvent.geo_address_json?.meeting_url) {
 		locationText = 'Online Event';
 	} else if (latestEvent.geo_address_json) {
@@ -14,96 +45,65 @@ if (latestEvent) {
 }
 ---
 
-{latestEvent ? (
-	<div class="flex px-6">
-		<div class="bg-js-yellow text-js-dark relative z-10 mx-auto my-12 -mt-8 max-w-4xl rounded-xl px-6 py-12 shadow-2xl">
-			<div class="mb-4 text-sm font-semibold tracking-wider uppercase">Next Meetup</div>
-			<h2 class="mb-4 text-3xl font-bold">{latestEvent.name}</h2>
+{
+	latestEvent ? (
+		<div class="flex px-6">
+			<div class="bg-js-yellow text-js-dark relative z-10 mx-auto my-12 -mt-8 max-w-4xl rounded-xl px-6 py-12 shadow-2xl">
+				<div class="mb-4 text-sm font-semibold tracking-wider uppercase">Next Meetup</div>
+				<h2 class="mb-4 text-3xl font-bold">{latestEvent.name}</h2>
 
-			<div class="mb-6 flex flex-wrap gap-6">
-				<div class="flex items-center gap-2">
-					<span>📅</span>
-					<span data-date={latestEvent.start_at}>Loading...</span>
+				<div class="mb-6 flex flex-wrap gap-6">
+					<div class="flex items-center gap-2">
+						<span>📅</span>
+						<span>{formattedDate}</span>
+					</div>
+					<div class="flex items-center gap-2">
+						<span>🕒</span>
+						<span>{formattedTime}</span>
+					</div>
+					<div class="flex items-center gap-2">
+						<span>📍</span>
+						<span>{locationText}</span>
+					</div>
 				</div>
-				<div class="flex items-center gap-2">
-					<span>🕒</span>
-					<span data-time-start={latestEvent.start_at} data-time-end={latestEvent.end_at}>Loading...</span>
+
+				{latestEvent.description && <p class="mb-6 text-gray-700">{latestEvent.description}</p>}
+
+				<div class="flex flex-wrap gap-4">
+					<a
+						href={latestEvent.url}
+						target="_blank"
+						class="bg-js-dark inline-block rounded-lg px-8 py-3 font-semibold text-white transition-all hover:-translate-y-0.5 hover:shadow-lg"
+					>
+						Register on Luma
+					</a>
+					<a
+						href="https://lu.ma/nebraskajs"
+						target="_blank"
+						class="text-js-dark inline-block rounded-lg bg-white px-8 py-3 font-semibold transition-all hover:-translate-y-0.5 hover:shadow-lg"
+					>
+						View All Events
+					</a>
 				</div>
-				<div class="flex items-center gap-2">
-					<span>📍</span>
-					<span>{locationText}</span>
-				</div>
-			</div>
-
-			{latestEvent.description && (
-				<p class="mb-6 text-gray-700">{latestEvent.description}</p>
-			)}
-
-			<div class="flex flex-wrap gap-4">
-				<a
-					href={latestEvent.url}
-					target="_blank"
-					class="bg-js-dark inline-block rounded-lg px-8 py-3 font-semibold text-white transition-all hover:-translate-y-0.5 hover:shadow-lg"
-				>
-					Register on Luma
-				</a>
-				<a
-					href="https://lu.ma/nebraskajs"
-					target="_blank"
-					class="text-js-dark inline-block rounded-lg bg-white px-8 py-3 font-semibold transition-all hover:-translate-y-0.5 hover:shadow-lg"
-				>
-					View All Events
-				</a>
-			</div>
-		</div>
-	</div>
-
-	<script>
-		// Format dates in client's timezone
-		document.querySelectorAll('[data-date]').forEach((el) => {
-			const date = new Date(el.getAttribute('data-date')!);
-			el.textContent = date.toLocaleDateString('en-US', {
-				weekday: 'long',
-				year: 'numeric',
-				month: 'long',
-				day: 'numeric',
-			});
-		});
-
-		document.querySelectorAll('[data-time-start]').forEach((el) => {
-			const startDate = new Date(el.getAttribute('data-time-start')!);
-			const endDate = new Date(el.getAttribute('data-time-end')!);
-			
-			const startTime = startDate.toLocaleTimeString('en-US', {
-				hour: 'numeric',
-				minute: '2-digit',
-				hour12: true,
-			});
-			const endTime = endDate.toLocaleTimeString('en-US', {
-				hour: 'numeric',
-				minute: '2-digit',
-				hour12: true,
-			});
-			
-			el.textContent = `${startTime} - ${endTime}`;
-		});
-	</script>
-) : (
-	<div class="flex px-6">
-		<div class="bg-js-yellow text-js-dark relative z-10 mx-auto my-12 -mt-8 max-w-4xl rounded-xl px-6 py-12 shadow-2xl">
-			<div class="mb-4 text-sm font-semibold tracking-wider uppercase">Meetups</div>
-			<h2 class="mb-4 text-3xl font-bold">No Upcoming Events</h2>
-			<p class="mb-6 text-gray-700">Check back soon for our next JavaScript meetup!</p>
-			
-			<div class="flex flex-wrap gap-4">
-				<a
-					href="https://lu.ma/nebraskajs"
-					target="_blank"
-					class="bg-js-dark inline-block rounded-lg px-8 py-3 font-semibold text-white transition-all hover:-translate-y-0.5 hover:shadow-lg"
-				>
-					View Past Events
-				</a>
 			</div>
 		</div>
-	</div>
-)}
+	) : (
+		<div class="flex px-6">
+			<div class="bg-js-yellow text-js-dark relative z-10 mx-auto my-12 -mt-8 max-w-4xl rounded-xl px-6 py-12 shadow-2xl">
+				<div class="mb-4 text-sm font-semibold tracking-wider uppercase">Meetups</div>
+				<h2 class="mb-4 text-3xl font-bold">No Upcoming Events</h2>
+				<p class="mb-6 text-gray-700">Check back soon for our next JavaScript meetup!</p>
+
+				<div class="flex flex-wrap gap-4">
+					<a
+						href="https://lu.ma/nebraskajs"
+						target="_blank"
+						class="bg-js-dark inline-block rounded-lg px-8 py-3 font-semibold text-white transition-all hover:-translate-y-0.5 hover:shadow-lg"
+					>
+						View Past Events
+					</a>
+				</div>
+			</div>
+		</div>
+	)
+}
