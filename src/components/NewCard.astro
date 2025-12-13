@@ -7,6 +7,7 @@ interface Props {
 }
 
 const { title, icon, cta, ctaLink } = Astro.props;
+const isInternalLink = ctaLink.startsWith('/');
 ---
 
 <div class="border border-gray-200 rounded-xl bg-white p-8 shadow-md transition-all hover:-translate-y-1 hover:shadow-xl">
@@ -15,7 +16,7 @@ const { title, icon, cta, ctaLink } = Astro.props;
 	<p class="mb-6 text-gray-600"><slot /></p>
 	<a
 		href={ctaLink}
-		target="_blank"
+		target={isInternalLink ? undefined : "_blank"}
 		class="bg-js-dark inline-block rounded-lg px-6 py-3 font-semibold text-white transition-all hover:-translate-y-0.5 hover:shadow-lg"
 	>
 		{cta}
