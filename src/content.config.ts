@@ -1,5 +1,6 @@
-import { defineCollection, z } from 'astro:content';
-import { lumaEventLoader } from '../loaders/staticLumaLoader';
+import { defineCollection } from 'astro:content';
+import { z } from 'astro/zod';
+import { lumaEventLoader } from './loaders/staticLumaLoader';
 
 const events = defineCollection({
 	loader: lumaEventLoader({

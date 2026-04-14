@@ -11,19 +11,19 @@
 		"format": "prettier --check --write src/**/*"
 	},
 	"dependencies": {
-		"@astrojs/check": "0.9.4",
-		"@astrojs/cloudflare": "^12.6.4",
-		"@tailwindcss/typography": "^0.5.16",
-		"astro": "5.13.2",
-		"tailwindcss": "4.1.12",
-		"typescript": "5.6.3"
+		"@astrojs/check": "0.9.8",
+		"@astrojs/cloudflare": "^13.1.9",
+		"@tailwindcss/typography": "^0.5.19",
+		"astro": "6.1.6",
+		"tailwindcss": "4.2.2",
+		"typescript": "6.0.2"
 	},
 	"devDependencies": {
 		"@nicknisi/standard": "0.1.0",
-		"@tailwindcss/vite": "^4.1.12",
-		"prettier": "3.3.3",
+		"@tailwindcss/vite": "^4.2.2",
+		"prettier": "3.8.2",
 		"prettier-plugin-astro": "^0.14.1",
-		"prettier-plugin-tailwindcss": "0.6.14",
-		"vite": "^7.3.2"
+		"prettier-plugin-tailwindcss": "0.7.2",
+		"vite": "^8.0.8"
 	}
 }
